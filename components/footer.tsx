@@ -1,0 +1,55 @@
+import Link from "next/link"
+
+export function Footer() {
+  return (
+    <footer className="bg-black text-white py-16 border-t border-slate-800">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* Brand */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Muus.life Design</h3>
+            <p className="text-slate-400">Estonya Merkezli</p>
+            <div className="flex items-center gap-2 text-sm text-slate-400">
+              <div className="w-6 h-4 border border-slate-700 flex flex-col">
+                <div className="bg-[#0072CE] h-1/3 w-full" />
+                <div className="bg-black h-1/3 w-full" />
+                <div className="bg-white h-1/3 w-full" />
+              </div>
+              <span>e-Residency Certified</span>
+            </div>
+          </div>
+
+          {/* Address */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Adres</h4>
+            <div className="space-y-1 text-slate-400">
+              <p>Tallinn</p>
+              <p>Estonia, EU</p>
+              <p className="mt-2 pt-2 border-t border-slate-800 font-mono text-sm">Vergi No: EE102xxxxxx</p>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Quick Links</h4>
+            <nav className="flex flex-col space-y-2 text-slate-400">
+              <Link href="#about" className="hover:text-white transition-colors">
+                Hakkımızda
+              </Link>
+              <Link href="#portfolio" className="hover:text-white transition-colors">
+                Portfolyo
+              </Link>
+              <Link href="#contact" className="hover:text-white transition-colors">
+                İletişim
+              </Link>
+            </nav>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+          <p>© 2025 Muus.life Design. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
