@@ -28,10 +28,10 @@ export function FloatingSocials() {
 
       {/* Instagram Button */}
       <a
-        href="https://instagram.com/muus.life"
+        href="https://instagram.com/muus_life"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+        className="w-14 h-14 bg-linear-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
         aria-label="Instagram'da takip et"
       >
         <Instagram className="w-7 h-7" />
