@@ -1,7 +1,9 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Hash, MessageCircle } from "lucide-react"
+import { MapPin, Phone, MessageCircle } from "lucide-react"
 
 export function Contact() {
   return (
@@ -42,6 +44,9 @@ export function Contact() {
             <Button
               variant="outline"
               className="w-full h-12 text-base border-slate-200 hover:bg-slate-50 gap-2 bg-transparent"
+              onClick={() =>
+                window.open("https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?", "_blank")
+              }
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp ile iletişim
@@ -50,42 +55,32 @@ export function Contact() {
 
           {/* Info Cards */}
           <div className="space-y-6">
-            <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm flex items-start gap-6">
-              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
+            <a
+              href="https://share.google/jFXedXUDGI9kDfjky"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow flex items-start gap-6 group"
+            >
+              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0 group-hover:bg-slate-100 transition-colors">
                 <MapPin className="w-6 h-6 text-slate-700" />
               </div>
               <div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">Adres</h3>
-                <p className="text-slate-600">Tallinn</p>
-                <p className="text-slate-600">Estonia, European Union</p>
+                <p className="text-slate-600">Şehit Osman Avcı, Kaplan Cd.</p>
+                <p className="text-slate-600">no:11 No 9, 06824</p>
+                <p className="text-slate-600">Etimesgut/Ankara</p>
+                <p className="text-blue-600 text-sm mt-2 font-medium">Haritada Göster &rarr;</p>
               </div>
-            </div>
+            </a>
 
             <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm flex items-start gap-6">
               <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
-                <Hash className="w-6 h-6 text-slate-700" />
+                <Phone className="w-6 h-6 text-slate-700" />
               </div>
               <div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Vergi Numarası</h3>
-                <p className="text-slate-600 font-mono">EE102xxxxxx</p>
-              </div>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm flex items-start gap-6">
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-sm overflow-hidden shadow-sm">
-                <div className="flex flex-col w-full h-full">
-                  <div className="bg-[#0072CE] h-1/3 w-full" />
-                  <div className="bg-black h-1/3 w-full" />
-                  <div className="bg-white h-1/3 w-full" />
-                </div>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg text-slate-900 mb-1">e-Residency Certified</h3>
-                <p className="text-sm text-slate-500 mb-2">Digital Business Excellence</p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Operating from Estonia's advanced digital infrastructure, we provide seamless global services with
-                  European quality standards.
-                </p>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">İletişim</h3>
+                <p className="text-slate-600 font-mono text-lg">0501 530 77 36</p>
+                <p className="text-slate-500 text-sm mt-1">Hafta içi 09:00 - 18:00</p>
               </div>
             </div>
           </div>

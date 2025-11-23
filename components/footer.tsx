@@ -7,25 +7,21 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Muus.life Design</h3>
-            <p className="text-slate-400">Estonya Merkezli</p>
+            <h3 className="text-2xl font-bold">Muus.life</h3>
+            <p className="text-slate-400">Mobilya Üretim & Tasarım</p>
             <div className="flex items-center gap-2 text-sm text-slate-400">
-              <div className="w-6 h-4 border border-slate-700 flex flex-col">
-                <div className="bg-[#0072CE] h-1/3 w-full" />
-                <div className="bg-black h-1/3 w-full" />
-                <div className="bg-white h-1/3 w-full" />
-              </div>
-              <span>e-Residency Certified</span>
+              <span>Ankara, Türkiye</span>
             </div>
           </div>
 
           {/* Address */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Adres</h4>
+            <h4 className="font-semibold text-lg">İletişim</h4>
             <div className="space-y-1 text-slate-400">
-              <p>Tallinn</p>
-              <p>Estonia, EU</p>
-              <p className="mt-2 pt-2 border-t border-slate-800 font-mono text-sm">Vergi No: EE102xxxxxx</p>
+              <p>Şehit Osman Avcı, Kaplan Cd.</p>
+              <p>no:11 No 9, 06824</p>
+              <p>Etimesgut/Ankara</p>
+              <p className="mt-2 pt-2 border-t border-slate-800 font-mono text-sm">Tel: 0501 530 77 36</p>
             </div>
           </div>
 
