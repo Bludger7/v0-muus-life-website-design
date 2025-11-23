@@ -25,7 +25,7 @@ export function Hero() {
           Ruhlu Mekanlar Tasarlıyoruz
         </h1>
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl font-light">
-          Profesyonel 3D Mimari Görselleştirme & Tasarım Stüdyosu
+          Profesyonel Mobilya Üretim & Tasarım Çözümleri
         </p>
         <Button
           size="lg"
