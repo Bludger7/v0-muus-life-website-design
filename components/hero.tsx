@@ -28,7 +28,7 @@ export function Hero() {
         <p className="text-lg md:text-xl text-slate-600 max-w-2xl font-light">
           Profesyonel Mobilya Üretim & Tasarım Çözümleri
         </p>
-        <Link href="#portfolio" scroll={false}>
+        <Link href="#portfolio">
           <Button
             size="lg"
             className="bg-slate-800 hover:bg-slate-900 text-white rounded-md px-8 py-6 text-base mt-4 shadow-lg shadow-slate-200/50 transition-all hover:scale-105"
