@@ -119,7 +119,7 @@ export async function InstagramFeed() {
 
         <div className="mt-12 text-center">
           <Link
-            href="https://instagram.com"
+            href="https://instagram.com/muus_life"
             target="_blank"
             className="inline-flex items-center justify-center h-10 px-8 text-sm font-medium transition-colors border border-stone-200 bg-white hover:bg-stone-50 hover:text-stone-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-stone-950"
           >
