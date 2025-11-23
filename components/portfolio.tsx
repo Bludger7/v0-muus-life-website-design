@@ -53,7 +53,7 @@ export function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-[4/3]"
+              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-4/3"
             >
               <Image
                 src={project.image || "/placeholder.svg"}
