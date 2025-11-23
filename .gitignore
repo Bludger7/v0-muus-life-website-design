@@ -67,3 +67,13 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Next.js build dosyaları
+.next/
+out/
+build/
+dist/
+
+# Diğer gereksizler
+node_modules/
+.DS_Storegit rm -r --cached .
