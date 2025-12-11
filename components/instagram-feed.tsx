@@ -45,7 +45,7 @@ function VideoItem({ post }: { post: InstagramPost }) {
       <video
         ref={videoRef}
         src={post.mediaUrl}
-        className="w-full h-auto aspect-[9/16] object-cover cursor-pointer"
+        className="w-full h-auto aspect-9/16 object-cover cursor-pointer"
         muted={isMuted}
         loop
         playsInline
