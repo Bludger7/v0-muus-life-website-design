@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, Home, ChevronDown } from "lucide-react"
+import { Building2, Home, ChevronDown, X, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -93,9 +93,32 @@ const categoryImages = {
 
 export function Services() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [currentCategory, setCurrentCategory] = useState<string>("")
 
   const toggleCategory = (category: string) => {
     setExpandedCategory(expandedCategory === category ? null : category)
+  }
+
+  const openLightbox = (category: string, index: number) => {
+    setCurrentCategory(category)
+    setCurrentImageIndex(index)
+    setLightboxOpen(true)
+  }
+
+  const closeLightbox = () => {
+    setLightboxOpen(false)
+  }
+
+  const nextImage = () => {
+    const images = categoryImages[currentCategory as keyof typeof categoryImages]
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
+
+  const prevImage = () => {
+    const images = categoryImages[currentCategory as keyof typeof categoryImages]
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
   return (
@@ -150,7 +173,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.ofis.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("ofis", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Ofis ${idx + 1}`}
@@ -185,7 +212,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.magaza.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("magaza", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Mağaza ${idx + 1}`}
@@ -220,7 +251,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.restorant.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("restorant", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Restoran ${idx + 1}`}
@@ -283,7 +318,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.mutfak.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("mutfak", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Mutfak ${idx + 1}`}
@@ -318,7 +357,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.giyinmeodasi.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("giyinmeodasi", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Giyinme Odası ${idx + 1}`}
@@ -353,7 +396,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.yasam.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("yasam", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Yaşam Alanı ${idx + 1}`}
@@ -388,7 +435,11 @@ export function Services() {
                     <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.antre.map((img, idx) => (
-                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                          <div
+                            key={idx}
+                            className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
+                            onClick={() => openLightbox("antre", idx)}
+                          >
                             <Image
                               src={img || "/placeholder.svg"}
                               alt={`Antre ${idx + 1}`}
@@ -406,6 +457,52 @@ export function Services() {
           </div>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={closeLightbox}>
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white hover:text-[#A34A1B] transition-colors z-10"
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              prevImage()
+            }}
+            className="absolute left-4 text-white hover:text-[#A34A1B] transition-colors z-10"
+          >
+            <ChevronLeft className="w-12 h-12" />
+          </button>
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              nextImage()
+            }}
+            className="absolute right-4 text-white hover:text-[#A34A1B] transition-colors z-10"
+          >
+            <ChevronRight className="w-12 h-12" />
+          </button>
+
+          <div className="relative w-full max-w-4xl aspect-square" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={
+                categoryImages[currentCategory as keyof typeof categoryImages][currentImageIndex] || "/placeholder.svg"
+              }
+              alt="Lightbox Image"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
+            {currentImageIndex + 1} / {categoryImages[currentCategory as keyof typeof categoryImages].length}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
