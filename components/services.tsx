@@ -1,7 +1,103 @@
-import { Building2, Home } from "lucide-react"
+"use client"
+
+import { Building2, Home, ChevronDown } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
+
+const categoryImages = {
+  ofis: [
+    "/images/ofis2.jpg",
+    "/images/ofis3.jpg",
+    "/images/ofis4.jpg",
+    "/images/ofis5.jpg",
+    "/images/ofis6.jpg",
+    "/images/ofis7.jpg",
+    "/images/ofis8.jpg",
+    "/images/ofis9.jpg",
+    "/images/ofis10.jpg",
+    "/images/ofis11.jpg",
+    "/images/ofis12.jpg",
+    "/images/ofis13.jpg",
+    "/images/ofis14.jpg",
+  ],
+  magaza: [
+    "/images/magaza2.jpg",
+    "/images/magaza1.jpg",
+    "/images/magaza,3.jpg",
+    "/images/magaza4.jpg",
+    "/images/magaza6.jpg",
+    "/images/magaza8.jpg",
+    "/images/magaza9.jpg",
+  ],
+  restorant: [
+    "/images/restorant1.jpg",
+    "/images/restorant2.jpg",
+    "/images/restorant3.jpg",
+    "/images/restorant4.jpg",
+    "/images/restorant5.jpg",
+    "/images/restorant6.jpg",
+    "/images/restorant7.jpg",
+    "/images/restorant8.jpg",
+    "/images/restorant9.jpg",
+    "/images/restorant10.jpg",
+    "/images/restorant11.jpg",
+  ],
+  mutfak: [
+    "/images/mutfak12.jpg",
+    "/images/mutfak1.jpg",
+    "/images/mutfak2.jpg",
+    "/images/mutfak5.jpg",
+    "/images/mutfak6.jpg",
+    "/images/mutfak7.jpg",
+    "/images/mutfak15.jpg",
+    "/images/mutfak17.jpg",
+    "/images/mutfak20.jpg",
+    "/images/mutfak21.jpg",
+    "/images/mutfak22.jpg",
+    "/images/mutfak23.jpg",
+  ],
+  giyinmeodasi: [
+    "/images/giyinmeodasi1.jpg",
+    "/images/giyinmeodasi3.jpg",
+    "/images/giyinmeodasi4.jpg",
+    "/images/giyinmeodası7.jpg",
+    "/images/giyinmeodasi8.jpg",
+    "/images/giyinmeodası9.jpg",
+  ],
+  yasam: [
+    "/images/yasam2.jpg",
+    "/images/yasam5.jpg",
+    "/images/yasam6.jpg",
+    "/images/yasam7.jpg",
+    "/images/yasam8.jpg",
+    "/images/yasam9.jpg",
+    "/images/yasam10.jpg",
+    "/images/yasam11.jpg",
+    "/images/yasam12.jpg",
+    "/images/yasam13.jpg",
+    "/images/yasam16.jpg",
+    "/images/yasam17.jpg",
+    "/images/yasam20.jpg",
+    "/images/yasam21.jpg",
+  ],
+  antre: [
+    "/images/antre3.jpg",
+    "/images/antre4.jpg",
+    "/images/antre5.jpg",
+    "/images/antre6.jpg",
+    "/images/antre7.jpg",
+    "/images/antre8.jpg",
+    "/images/antre10.jpg",
+  ],
+}
 
 export function Services() {
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+
+  const toggleCategory = (category: string) => {
+    setExpandedCategory(expandedCategory === category ? null : category)
+  }
+
   return (
     <section id="services" className="py-24 bg-[#FAF9F7]">
       <div className="container mx-auto px-4 md:px-6">
@@ -32,53 +128,113 @@ export function Services() {
                 kurumsal kimliğe tam uyum sağlayan profesyonel çözümler sunar.
               </p>
 
-              <div className="grid grid-cols-3 gap-3 mb-8">
-                <div className="relative aspect-square overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/ofis2.jpg"
-                    alt="Modern Ofis Alanı"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/magaza2.jpg"
-                    alt="Mağaza Tasarımı"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/restorant1.jpg"
-                    alt="Restoran Tasarımı"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-
               <div className="space-y-6">
-                <div className="border-b border-[#d4d3d0] pb-4">
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">1. Ofis ve Çalışma Alanları</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    Yönetici odaları, çalışma masası sistemleri, toplantı alanları, depolama çözümleri.
-                  </p>
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("ofis")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">1. Ofis ve Çalışma Alanları</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        Yönetici odaları, çalışma masası sistemleri, toplantı alanları, depolama çözümleri.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "ofis" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "ofis" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.ofis.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Ofis ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="border-b border-[#d4d3d0] pb-4">
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">2. Mağaza ve Perakende Alanları</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    Teşhir üniteleri, raf sistemleri, karşılama bankoları, mağaza dekorasyonu.
-                  </p>
+
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("magaza")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">2. Mağaza ve Perakende Alanları</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        Teşhir üniteleri, raf sistemleri, karşılama bankoları, mağaza dekorasyonu.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "magaza" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "magaza" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.magaza.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Mağaza ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="border-b border-[#d4d3d0] pb-4">
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">3. Restoran, Kafe ve Otel Alanları</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    Masa-sandalye grupları, sabit oturum alanları, servis üniteleri, otel mobilyaları.
-                  </p>
+
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("restorant")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">3. Restoran, Kafe ve Otel Alanları</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        Masa-sandalye grupları, sabit oturum alanları, servis üniteleri, otel mobilyaları.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "restorant" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "restorant" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.restorant.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Restoran ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div>
+
+                <div className="p-4 bg-white border border-[#d4d3d0] rounded-sm">
                   <h4 className="font-semibold text-[#0F1E2E] mb-2">4. Proje Yönetimi</h4>
                   <p className="text-sm text-[#0F1E2E]/60">
                     Marka uyumlu üretim, yerinde keşif, üretim takvimi oluşturma ve anahtar teslim montaj.
@@ -105,57 +261,145 @@ export function Services() {
                 yapıya sahiptir.
               </p>
 
-              <div className="grid grid-cols-3 gap-3 mb-8">
-                <div className="relative aspect-square overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/mutfak12.jpg"
-                    alt="Mutfak Tasarımı"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/yasam2.jpg"
-                    alt="Yaşam Alanı"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/giyinmeodasi1.jpg"
-                    alt="Giyinme Odası"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-
               <div className="space-y-6">
-                <div className="border-b border-[#d4d3d0] pb-4">
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">1. Mutfak Tasarımı</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    Ölçüye özel dolap sistemleri, modern ve klasik tasarım seçenekleri, üst düzey donanım.
-                  </p>
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("mutfak")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">1. Mutfak Tasarımı</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        Ölçüye özel dolap sistemleri, modern ve klasik tasarım seçenekleri, üst düzey donanım.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "mutfak" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "mutfak" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.mutfak.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Mutfak ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="border-b border-[#d4d3d0] pb-4">
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">2. Giyinme Odası ve Depolama</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    Walk-in giyinme odaları, ray dolaplar, özel modül kombinasyonları.
-                  </p>
+
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("giyinmeodasi")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">2. Giyinme Odası ve Depolama</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        Walk-in giyinme odaları, ray dolaplar, özel modül kombinasyonları.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "giyinmeodasi" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "giyinmeodasi" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.giyinmeodasi.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Giyinme Odası ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="border-b border-[#d4d3d0] pb-4">
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">3. Yaşam ve Dinlenme Alanları</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    TV üniteleri, kitaplıklar, yatak odası mobilyaları, başlık ve baza sistemleri.
-                  </p>
+
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("yasam")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">3. Yaşam ve Dinlenme Alanları</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        TV üniteleri, kitaplıklar, yatak odası mobilyaları, başlık ve baza sistemleri.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "yasam" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "yasam" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.yasam.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Yaşam Alanı ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div>
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">4. Antre</h4>
-                  <p className="text-sm text-[#0F1E2E]/60">
-                    Vestiyer sistemleri, yerinde ölçüm, malzeme seçimi ve uçtan uca süreç yönetimi.
-                  </p>
+
+                <div className="border border-[#d4d3d0] rounded-sm overflow-hidden">
+                  <button
+                    onClick={() => toggleCategory("antre")}
+                    className="w-full flex items-center justify-between p-4 bg-white hover:bg-[#FAF9F7] transition-colors"
+                  >
+                    <div className="text-left">
+                      <h4 className="font-semibold text-[#0F1E2E] mb-1">4. Antre</h4>
+                      <p className="text-sm text-[#0F1E2E]/60">
+                        Vestiyer sistemleri, yerinde ölçüm, malzeme seçimi ve uçtan uca süreç yönetimi.
+                      </p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#A34A1B] transition-transform ${
+                        expandedCategory === "antre" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedCategory === "antre" && (
+                    <div className="p-4 bg-[#FAF9F7] border-t border-[#d4d3d0] animate-in slide-in-from-top duration-300">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {categoryImages.antre.map((img, idx) => (
+                          <div key={idx} className="relative aspect-square overflow-hidden rounded-sm group">
+                            <Image
+                              src={img || "/placeholder.svg"}
+                              alt={`Antre ${idx + 1}`}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
