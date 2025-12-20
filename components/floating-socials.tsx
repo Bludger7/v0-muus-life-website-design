@@ -38,7 +38,7 @@ export function FloatingSocials() {
       </a>
 
       <a
-        href="https://youtube.com/@muuslife"
+        href="https://www.youtube.com/@muuslife"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-[#FF0000] hover:bg-[#cc0000] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
@@ -48,7 +48,7 @@ export function FloatingSocials() {
       </a>
 
       <a
-        href="https://pinterest.com/muuslife"
+        href="https://tr.pinterest.com/muuslife"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-[#E60023] hover:bg-[#bd081c] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
@@ -60,7 +60,7 @@ export function FloatingSocials() {
       </a>
 
       <a
-        href="https://tiktok.com/@muus.life"
+        href="https://www.tiktok.com/@muus.life.mobilya"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-black hover:bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
