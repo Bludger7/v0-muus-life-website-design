@@ -3,18 +3,18 @@ import Image from "next/image"
 export function Team() {
   const teamMembers = [
     {
-      name: "Anıl Yalçın",
+      name: "Selahattin Hacıhasanoğlu",
       role: "Kurucu & Tasarım Direktörü",
       image: "/images/whatsapp-20image-202025-12-15-20at-2010.jpeg",
     },
     {
-      name: "Damla Yalçın",
-      role: "Genel Müdür",
+      name: "Lorem ipsum",
+      role: "Örnek Üye",
       image: "/images/img-2094.jpeg",
     },
     {
-      name: "Sude Akyüz",
-      role: "İç Mimar",
+      name: "Lorem ipsum",
+      role: "Örnek Üye",
       image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
     },
   ]
