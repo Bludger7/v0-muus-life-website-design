@@ -1,13 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Montserrat, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { FloatingSocials } from "@/components/floating-socials"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 })
 
 const geistMono = Geist_Mono({
@@ -20,21 +21,8 @@ export const metadata: Metadata = {
   description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 }
 
@@ -45,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${montserrat.variable} ${geistMono.variable} font-sans antialiased`}>
         {children}
         <Analytics />
         <FloatingSocials />
