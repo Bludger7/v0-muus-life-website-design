@@ -97,9 +97,9 @@ export function Hero() {
       {/* Existing code */}
       <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-20">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 max-w-4xl">
-          Ruhlu Mekanlar Tasarlıyoruz
+          Yaşayan Mekanlar Tasarlıyoruz
         </h1>
-        <p className="text-lg md:text-xl text-slate-600 max-w-2xl font-light">
+        <p className="text-lg md:text-xl text-slate-700 max-w-2xl font-light">
           Profesyonel Mobilya Üretim & Tasarım Çözümleri
         </p>
         <Link href="#portfolio">

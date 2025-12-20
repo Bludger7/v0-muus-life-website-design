@@ -8,13 +8,13 @@ export function Team() {
       image: "/images/whatsapp-20image-202025-12-15-20at-2010.jpeg",
     },
     {
-      name: "Lorem ipsum",
-      role: "Örnek Üye",
+      name: "Gamze Turan",
+      role: "İç Mimar",
       image: "/images/img-2094.jpeg",
     },
     {
-      name: "Lorem ipsum",
-      role: "Örnek Üye",
+      name: "Aleyna Kılınç",
+      role: "İç Mimar",
       image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
     },
   ]

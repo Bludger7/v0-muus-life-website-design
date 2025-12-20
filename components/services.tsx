@@ -79,7 +79,7 @@ export function Services() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">4. Kurumsal Kimlik & Proje Yönetimi</h4>
+                  <h4 className="font-semibold text-[#0F1E2E] mb-2">4. Proje Yönetimi</h4>
                   <p className="text-sm text-[#0F1E2E]/60">
                     Marka uyumlu üretim, yerinde keşif, üretim takvimi oluşturma ve anahtar teslim montaj.
                   </p>
@@ -152,7 +152,7 @@ export function Services() {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#0F1E2E] mb-2">4. Antre & Proje Yönetimi</h4>
+                  <h4 className="font-semibold text-[#0F1E2E] mb-2">4. Antre</h4>
                   <p className="text-sm text-[#0F1E2E]/60">
                     Vestiyer sistemleri, yerinde ölçüm, malzeme seçimi ve uçtan uca süreç yönetimi.
                   </p>
