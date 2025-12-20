@@ -37,6 +37,17 @@
   --sidebar-accent-foreground: #faf9f7;
   --sidebar-border: #d4d3d0;
   --sidebar-ring: #a34a1b;
+  /* Brand colors for social buttons */
+  --brand-whatsapp: #25D366;
+  --brand-whatsapp-hover: #20bd5a;
+  --brand-youtube: #FF0000;
+  --brand-youtube-hover: #cc0000;
+  --brand-pinterest: #E60023;
+  --brand-pinterest-hover: #bd081c;
+  --brand-tiktok: #000000;
+  --instagram-from: #f09433;
+  --instagram-via: #dc2743;
+  --instagram-to: #bc1888;
 }
 
 .dark {

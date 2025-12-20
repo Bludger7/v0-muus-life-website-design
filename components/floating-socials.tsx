@@ -20,7 +20,7 @@ export function FloatingSocials() {
             href="https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 md:w-14 md:h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+            className="w-12 h-12 md:w-14 md:h-14 bg-(--brand-whatsapp) hover:bg-[var(--brand-whatsapp-hover)] text-[var(--color-background)] rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
             aria-label="WhatsApp ile iletişime geç"
           >
             <svg viewBox="0 0 24 24" width="24" height="24" className="md:w-7 md:h-7 fill-white stroke-none">
@@ -33,7 +33,7 @@ export function FloatingSocials() {
             href="https://instagram.com/muus_life"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+            className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-tr from-[var(--instagram-from)] via-[var(--instagram-via)] to-[var(--instagram-to)] text-[var(--color-background)] rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110 hover:ring-2 hover:ring-[var(--color-accent)]"
             aria-label="Instagram'da takip et"
           >
             <Instagram className="w-6 h-6 md:w-7 md:h-7" />
@@ -44,7 +44,7 @@ export function FloatingSocials() {
             href="https://www.youtube.com/@muuslife"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 md:w-14 md:h-14 bg-[#FF0000] hover:bg-[#cc0000] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+            className="w-12 h-12 md:w-14 md:h-14 bg-[var(--brand-youtube)] hover:bg-[var(--brand-youtube-hover)] text-[var(--color-background)] rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
             aria-label="YouTube'da takip et"
           >
             <Youtube className="w-6 h-6 md:w-7 md:h-7" />
@@ -55,7 +55,7 @@ export function FloatingSocials() {
             href="https://tr.pinterest.com/muuslife"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 md:w-14 md:h-14 bg-[#E60023] hover:bg-[#bd081c] text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+            className="w-12 h-12 md:w-14 md:h-14 bg-[var(--brand-pinterest)] hover:bg-[var(--brand-pinterest-hover)] text-[var(--color-background)] rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
             aria-label="Pinterest'te takip et"
           >
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="md:w-7 md:h-7 text-white">
@@ -68,7 +68,7 @@ export function FloatingSocials() {
             href="https://www.tiktok.com/@muus.life.mobilya"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 md:w-14 md:h-14 bg-black hover:bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+            className="w-12 h-12 md:w-14 md:h-14 bg-[var(--brand-tiktok)] hover:bg-[var(--brand-tiktok)]/80 text-[var(--color-background)] rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
             aria-label="TikTok'ta takip et"
           >
             <svg
@@ -86,7 +86,7 @@ export function FloatingSocials() {
         {/* Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 bg-slate-900 hover:bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
+          className={`w-14 h-14 bg-[var(--color-accent)] hover:bg-[var(--color-accent)]/90 text-[var(--color-accent-foreground)] rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
           aria-label="Sosyal medya menüsünü aç/kapat"
