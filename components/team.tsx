@@ -31,13 +31,13 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
           {teamMembers.map((member, index) => (
             <div
               key={index}
               className="group text-center transition-all hover:transform hover:-translate-y-2 duration-300"
             >
-              <div className="relative aspect-square mb-6 overflow-hidden rounded-sm shadow-md">
+              <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
@@ -45,8 +45,8 @@ export function Team() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">{member.name}</h3>
-              <p className="text-slate-600 text-sm">{member.role}</p>
+              <h3 className="text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-2">{member.name}</h3>
+              <p className="text-slate-600 text-xs md:text-sm">{member.role}</p>
             </div>
           ))}
         </div>
