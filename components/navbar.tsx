@@ -19,6 +19,9 @@ export function Navbar() {
           <Link href="#services" className="hover:text-slate-900 transition-colors">
             Hizmetler
           </Link>
+          <Link href="#team" className="hover:text-slate-900 transition-colors">
+            Ekibimiz
+          </Link>
           <Link href="#portfolio" className="hover:text-slate-900 transition-colors">
             Portfolyo
           </Link>
