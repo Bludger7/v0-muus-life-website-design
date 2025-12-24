@@ -1,4 +1,8 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
 const projects = [
   {
@@ -40,6 +44,9 @@ const projects = [
 ]
 
 export function Portfolio() {
+  const [showAll, setShowAll] = useState(false)
+  const displayedProjects = showAll ? projects : projects.slice(0, 3)
+
   return (
     <section id="portfolio" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -50,7 +57,7 @@ export function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {displayedProjects.map((project) => (
             <div
               key={project.id}
               className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-4/3"
@@ -68,6 +75,18 @@ export function Portfolio() {
             </div>
           ))}
         </div>
+
+        {!showAll && projects.length > 3 && (
+          <div className="flex justify-center mt-12">
+            <Button 
+              onClick={() => setShowAll(true)}
+              size="lg" 
+              className="rounded-md px-8 py-6 text-base shadow-lg transition-all hover:scale-105"
+            >
+              Daha Fazla Göster
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -1,4 +1,4 @@
-# Muus.life website design
+# muus.life website design
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 

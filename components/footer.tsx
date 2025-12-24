@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Muus.life</h3>
+            <h3 className="text-2xl font-bold">muus.life</h3>
             <p className="text-[var(--color-muted-foreground)]">Mobilya Üretim & Tasarım</p>
             <div className="flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
               <span>Ankara, Türkiye</span>
@@ -27,7 +27,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Quick Links</h4>
+            <h4 className="font-semibold text-lg">Hızlı Bağlantılar</h4>
             <nav className="flex flex-col space-y-2 text-[var(--color-muted-foreground)]">
               <Link href="#about" className="hover:text-[var(--color-background)] transition-colors">
                 Hakkımızda
@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-[var(--color-border)] text-center text-[var(--color-muted-foreground)] text-sm">
-          <p>© 2025 Muus.life Design. Tüm hakları saklıdır.</p>
+          <p>© 2025 muus.life Design. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>

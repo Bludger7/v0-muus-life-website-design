@@ -16,13 +16,13 @@
   --secondary-foreground: #0f1e2e;
   --muted: #e8e7e4;
   --muted-foreground: #5a6370;
-  --accent: #a34a1b;
+  --accent: #0f1e2e;
   --accent-foreground: #faf9f7;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #faf9f7;
   --border: #d4d3d0;
   --input: #d4d3d0;
-  --ring: #a34a1b;
+  --ring: #0f1e2e;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -33,10 +33,10 @@
   --sidebar-foreground: #0f1e2e;
   --sidebar-primary: #0f1e2e;
   --sidebar-primary-foreground: #faf9f7;
-  --sidebar-accent: #a34a1b;
+  --sidebar-accent: #0f1e2e;
   --sidebar-accent-foreground: #faf9f7;
   --sidebar-border: #d4d3d0;
-  --sidebar-ring: #a34a1b;
+  --sidebar-ring: #0f1e2e;
   /* Brand colors for social buttons */
   --brand-whatsapp: #25D366;
   --brand-whatsapp-hover: #20bd5a;
@@ -63,13 +63,13 @@
   --secondary-foreground: #faf9f7;
   --muted: #2a3948;
   --muted-foreground: #a8b0ba;
-  --accent: #a34a1b;
+  --accent: #0f1e2e;
   --accent-foreground: #faf9f7;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: #faf9f7;
   --border: #2a3948;
   --input: #2a3948;
-  --ring: #a34a1b;
+  --ring: #0f1e2e;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -79,10 +79,10 @@
   --sidebar-foreground: #faf9f7;
   --sidebar-primary: #faf9f7;
   --sidebar-primary-foreground: #0f1e2e;
-  --sidebar-accent: #a34a1b;
+  --sidebar-accent: #0f1e2e;
   --sidebar-accent-foreground: #faf9f7;
   --sidebar-border: #2a3948;
-  --sidebar-ring: #a34a1b;
+  --sidebar-ring: #0f1e2e;
 }
 
 @theme inline {
@@ -132,5 +132,66 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Easter Egg Shake Animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Fix for video elements on mobile */
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: transparent !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* iOS Safari video fix */
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Prevent layout shift on Instagram feed */
+.columns-1 > *,
+.columns-2 > *,
+.columns-3 > *,
+.columns-4 > * {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+/* iOS specific fixes - remove black backgrounds */
+@supports (-webkit-touch-callout: none) {
+  video {
+    background-color: transparent !important;
+    object-fit: cover !important;
+  }
+  
+  video::-webkit-media-controls-panel {
+    display: none !important;
+  }
+  
+  /* Instagram feed container fix */
+  [class*="instagram"], 
+  [class*="video"] {
+    background-color: transparent !important;
   }
 }

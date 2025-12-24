@@ -14,10 +14,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Services />
-      <Team />
-      <Portfolio />
       <InstagramFeed />
+      <Services />
+      <Portfolio />
+      <Team />
       <Contact />
       <Footer />
     </main>

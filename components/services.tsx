@@ -93,6 +93,7 @@ const categoryImages = {
 
 export function Services() {
   const [expandedCategory, setExpandedCategory] = useState<Set<string>>(new Set())
+  const [showAllImages, setShowAllImages] = useState<Record<string, boolean>>({})
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [currentCategory, setCurrentCategory] = useState<string>("")
@@ -127,6 +128,13 @@ export function Services() {
   const prevImage = () => {
     const images = categoryImages[currentCategory as keyof typeof categoryImages]
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+  }
+
+  const toggleShowAll = (category: string) => {
+    setShowAllImages(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }))
   }
 
   return (
@@ -180,7 +188,7 @@ export function Services() {
                   {expandedCategory.has("ofis") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.ofis.map((img, idx) => (
+                        {categoryImages.ofis.slice(0, showAllImages["ofis"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -195,6 +203,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.ofis.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("ofis")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["ofis"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.ofis.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -219,7 +235,7 @@ export function Services() {
                   {expandedCategory.has("magaza") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.magaza.map((img, idx) => (
+                        {categoryImages.magaza.slice(0, showAllImages["magaza"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -234,6 +250,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.magaza.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("magaza")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["magaza"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.magaza.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -258,7 +282,7 @@ export function Services() {
                   {expandedCategory.has("restorant") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.restorant.map((img, idx) => (
+                        {categoryImages.restorant.slice(0, showAllImages["restorant"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -273,6 +297,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.restorant.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("restorant")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["restorant"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.restorant.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -325,7 +357,7 @@ export function Services() {
                   {expandedCategory.has("mutfak") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.mutfak.map((img, idx) => (
+                        {categoryImages.mutfak.slice(0, showAllImages["mutfak"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -340,6 +372,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.mutfak.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("mutfak")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["mutfak"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.mutfak.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -364,7 +404,7 @@ export function Services() {
                   {expandedCategory.has("giyinmeodasi") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.giyinmeodasi.map((img, idx) => (
+                        {categoryImages.giyinmeodasi.slice(0, showAllImages["giyinmeodasi"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -379,6 +419,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.giyinmeodasi.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("giyinmeodasi")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["giyinmeodasi"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.giyinmeodasi.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -403,7 +451,7 @@ export function Services() {
                   {expandedCategory.has("yasam") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.yasam.map((img, idx) => (
+                        {categoryImages.yasam.slice(0, showAllImages["yasam"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -418,6 +466,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.yasam.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("yasam")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["yasam"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.yasam.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>
@@ -442,7 +498,7 @@ export function Services() {
                   {expandedCategory.has("antre") && (
                     <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {categoryImages.antre.map((img, idx) => (
+                        {categoryImages.antre.slice(0, showAllImages["antre"] ? undefined : 3).map((img, idx) => (
                           <div
                             key={idx}
                             className="relative aspect-square overflow-hidden rounded-sm group cursor-pointer"
@@ -457,6 +513,14 @@ export function Services() {
                           </div>
                         ))}
                       </div>
+                      {categoryImages.antre.length > 3 && (
+                        <button
+                          onClick={() => toggleShowAll("antre")}
+                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                        >
+                          {showAllImages["antre"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.antre.length - 3} adet)`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>

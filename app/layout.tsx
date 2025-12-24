@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Muus.life | Mobilya Üretim & Tasarım",
+  title: "muus.life | Mobilya Üretim & Tasarım",
   description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
   generator: "v0.app",
   icons: {
