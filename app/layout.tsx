@@ -24,6 +24,47 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
+  keywords: ["mobilya", "tasarım", "üretim", "özel mobilya", "muus.life"],
+  authors: [{ name: "muus.life" }],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
+  alternates: {
+    canonical: "https://muus.life",
+  },
+  openGraph: {
+    title: "muus.life | Mobilya Üretim & Tasarım",
+    description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
+    url: "https://muus.life",
+    siteName: "muus.life",
+    images: [
+      {
+        url: "https://muus.life/logo.png",
+        width: 120,
+        height: 40,
+        alt: "muus.life logo",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "muus.life | Mobilya Üretim & Tasarım",
+    description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
+    images: ["https://muus.life/logo.png"],
+  },
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 }
 
 export default function RootLayout({

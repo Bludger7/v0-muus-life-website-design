@@ -38,7 +38,7 @@ export function Team() {
     {
       name: "Yunus Emre İnanç",
       role: "Operasyon Sorumlusu",
-      image: "/images/img-2097.jpeg",
+      image: "/images/yunush.jpg",
     },
   ]
 

@@ -8,22 +8,20 @@ export function About() {
             <div className="w-16 h-1 bg-slate-900"></div>
 
             <p className="text-slate-600 leading-relaxed text-lg">
-              muus.life, kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi alanında faaliyet gösteren
-              modern bir üretim firmasıdır. Üretim yaklaşımımız; estetik tasarımı mühendislik doğruluğu, kaliteli
-              malzemeyi uzun ömürlü kullanım deneyimiyle birleştiren çağdaş bir anlayış üzerine kuruludur.
+              muus.life, kişiye özel ve kurumsal ölçekli mobilya üretiminde, tasarımı mühendislik disipliniyle birleştiren
+              çağdaş bir üretim markasıdır. Her projede estetik bütünlüğü, malzeme kalitesini ve uzun ömürlü kullanım
+              deneyimini aynı standartta sunmayı hedefler.
             </p>
+
             <p className="text-slate-600 leading-relaxed text-lg">
-              Kuruluşumuzdan itibaren her projeyi tekil bir ihtiyaç olarak ele aldık. Ev, ofis, mağaza, restoran ve
-              kurumsal alanlarda; ölçüye özel, işlevsel ve yüksek dayanıklılığa sahip mobilyalar üreterek
-              müşterilerimizin tüm beklentilerini karşılayan bütüncül çözümler sunuyoruz.
+              Üretim yaklaşımımız; ölçüye özel tasarım, yüksek dayanıklılık ve kusursuz işçilik üzerine kuruludur. Ev,
+              ofis ve ticari alanlar için geliştirilen tüm çözümlerimiz, baştan sona kontrollü ve şeffaf bir süreçle
+              hayata geçirilir.
             </p>
+
             <p className="text-slate-600 leading-relaxed text-lg">
-              muus.life, üretim süreçlerinde teknoloji odaklı bir sistem kullanır. Tasarımdan ölçü almaya, üretimden
-              montaj aşamasına kadar tüm operasyon, kalite kontrol standartlarıyla yönetilir ve her aşamada şeffaf bir
-              iletişim modeli uygulanır. İster tek bir yaşam alanı, ister komple bir kurumsal proje olsun; her işimizde
-              uzun vadeli memnuniyet, sürdürülebilir kalite ve düzenli hizmet anlayışı esastır. Bugün, yerli ve yabancı
-              birçok marka için özel üretim çözümleri geliştiriyor; bireysel kullanıcılar için ise tamamen ölçüye göre
-              tasarlanmış, karakter sahibi mobilyalar üretiyoruz.
+              muus.life, tekil yaşam alanlarından kapsamlı kurumsal projelere kadar her işinde kalıcı memnuniyet,
+              sürdürülebilir kalite ve zamansız tasarım anlayışını esas alır.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-8 mt-8 pt-8 border-t border-slate-100">

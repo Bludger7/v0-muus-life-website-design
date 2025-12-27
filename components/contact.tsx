@@ -158,8 +158,14 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">İletişim</h3>
-                <p className="text-slate-600 font-mono text-lg">0501 530 77 36</p>
-                <p className="text-slate-500 text-sm mt-1">Hafta içi 09:00 - 18:00</p>
+                <div className="text-slate-600 font-mono text-lg">
+                  <a href="tel:+905015307736" className="block hover:underline">0501 530 77 36</a>
+                  <a href="tel:+905015300767" className="block mt-1 hover:underline">0501 530 07 67</a>
+                </div>
+                <div className="mt-2">
+                  <a href="mailto:bilgi@muus.life" className="text-blue-600 font-medium hover:underline">bilgi@muus.life</a>
+                </div>
+                <p className="text-slate-500 text-sm mt-2">Hafta içi 09:00 - 18:00</p>
               </div>
             </div>
 
