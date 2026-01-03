@@ -32,8 +32,14 @@ export function Footer() {
               <Link href="#about" className="hover:text-[var(--color-background)] transition-colors">
                 Hakkımızda
               </Link>
+              <Link href="#team" className="hover:text-white transition-colors">
+                Ekibimiz
+              </Link>
               <Link href="#portfolio" className="hover:text-white transition-colors">
                 Portfolyo
+              </Link>
+              <Link href="/blog" className="hover:text-white transition-colors">
+                Blog
               </Link>
               <Link href="#contact" className="hover:text-white transition-colors">
                 İletişim

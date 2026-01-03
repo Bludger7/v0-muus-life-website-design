@@ -139,7 +139,7 @@ export function Team() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6 text-center bg-gradient-to-r from-slate-900 to-slate-700">
+              <div className="p-6 text-center bg-linear-to-r from-slate-900 to-slate-700">
                 <h3 className="text-2xl font-bold text-white mb-2">🎉 Komurcu akrep! 🎉</h3>
                 <p className="text-slate-300">Patronun ilk satışı✨</p>
               </div>

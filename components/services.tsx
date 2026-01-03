@@ -137,12 +137,12 @@ export function Services() {
   }
 
   return (
-    <section id="services" className="py-24 bg-[var(--color-background)]">
+    <section id="services" className="py-24 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-(--color-foreground) tracking-tight mb-4">Hizmetlerimiz</h2>
-          <div className="w-16 h-1 bg-[var(--color-accent)] mx-auto mb-6"></div>
-          <p className="text-[var(--color-muted-foreground)]">
+          <div className="w-16 h-1 bg-(--color-accent) mx-auto mb-6"></div>
+          <p className="text-(--color-muted-foreground)">
             Kişiye özel yaşam alanlarından kurumsal projelere kadar geniş bir yelpazede profesyonel mobilya üretim
             çözümleri sunuyoruz.
           </p>
@@ -150,10 +150,10 @@ export function Services() {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Kurumsal Projeler */}
-          <div className="bg-[var(--color-card)] shadow-sm border border-[var(--color-border)] transition-all hover:shadow-md overflow-hidden rounded-md">
-            <div className="bg-[var(--color-foreground)] text-[var(--color-background)] p-6">
+          <div className="bg-(--color-card) shadow-sm border border-(--color-border) transition-all hover:shadow-md overflow-hidden rounded-md">
+            <div className="bg-(--color-foreground) text-(--color-background) p-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[var(--color-accent)] flex items-center justify-center rounded-sm">
+                <div className="w-12 h-12 bg-(--color-accent) flex items-center justify-center rounded-sm">
                   <Building2 className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold">Kurumsal Projeler</h3>
@@ -161,31 +161,31 @@ export function Services() {
             </div>
 
             <div className="p-8 md:p-10">
-              <p className="text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+              <p className="text-(--color-muted-foreground) mb-8 leading-relaxed">
                 muus.life, kurumsal firmalara özel mobilya üretiminde yüksek hassasiyet, seri üretim disiplini ve
                 kurumsal kimliğe tam uyum sağlayan profesyonel çözümler sunar.
               </p>
 
               <div className="space-y-6">
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("ofis")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">1. Ofis ve Çalışma Alanları</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         Yönetici odaları, çalışma masası sistemleri, toplantı alanları, depolama çözümleri.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("ofis") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("ofis") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.ofis.slice(0, showAllImages["ofis"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -205,7 +205,7 @@ export function Services() {
                       {categoryImages.ofis.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("ofis")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["ofis"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.ofis.length - 3} adet)`}
                         </button>
@@ -214,25 +214,25 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("magaza")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">2. Mağaza ve Perakende Alanları</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         Teşhir üniteleri, raf sistemleri, karşılama bankoları, mağaza dekorasyonu.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("magaza") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("magaza") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.magaza.slice(0, showAllImages["magaza"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -252,7 +252,7 @@ export function Services() {
                       {categoryImages.magaza.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("magaza")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["magaza"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.magaza.length - 3} adet)`}
                         </button>
@@ -261,25 +261,25 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("restorant")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">3. Restoran, Kafe ve Otel Alanları</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         Masa-sandalye grupları, sabit oturum alanları, servis üniteleri, otel mobilyaları.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("restorant") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("restorant") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.restorant.slice(0, showAllImages["restorant"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -299,7 +299,7 @@ export function Services() {
                       {categoryImages.restorant.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("restorant")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["restorant"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.restorant.length - 3} adet)`}
                         </button>
@@ -308,9 +308,9 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-sm">
+                <div className="p-4 bg-(--color-card) border border-(--color-border) rounded-sm">
                   <h4 className="font-semibold text-(--color-foreground) mb-2">4. Proje Yönetimi</h4>
-                  <p className="text-sm text-[var(--color-muted-foreground)]">
+                  <p className="text-sm text-(--color-muted-foreground)">
                     Marka uyumlu üretim, yerinde keşif, üretim takvimi oluşturma ve anahtar teslim montaj.
                   </p>
                 </div>
@@ -319,10 +319,10 @@ export function Services() {
           </div>
 
           {/* Kişiye Özel Projeler */}
-          <div className="bg-[var(--color-card)] shadow-sm border border-[var(--color-border)] transition-all hover:shadow-md overflow-hidden rounded-md">
-            <div className="bg-[var(--color-foreground)] text-[var(--color-background)] p-6">
+          <div className="bg-(--color-card) shadow-sm border border-(--color-border) transition-all hover:shadow-md overflow-hidden rounded-md">
+            <div className="bg-(--color-foreground) text-(--color-background) p-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-[var(--color-accent)] flex items-center justify-center rounded-sm">
+                <div className="w-12 h-12 bg-(--color-accent) flex items-center justify-center rounded-sm">
                   <Home className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold">Kişiye Özel Projeler</h3>
@@ -330,31 +330,31 @@ export function Services() {
             </div>
 
             <div className="p-8 md:p-10">
-              <p className="text-[var(--color-muted-foreground)] mb-8 leading-relaxed">
+              <p className="text-(--color-muted-foreground) mb-8 leading-relaxed">
                 muus.life, yaşam alanlarını tamamen kişiye uygun hale getiren ölçüye özel mobilya üretiminde uzman bir
                 yapıya sahiptir.
               </p>
 
               <div className="space-y-6">
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("mutfak")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">1. Mutfak Tasarımı</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         Ölçüye özel dolap sistemleri, modern ve klasik tasarım seçenekleri, üst düzey donanım.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("mutfak") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("mutfak") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.mutfak.slice(0, showAllImages["mutfak"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -374,7 +374,7 @@ export function Services() {
                       {categoryImages.mutfak.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("mutfak")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["mutfak"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.mutfak.length - 3} adet)`}
                         </button>
@@ -383,25 +383,25 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("giyinmeodasi")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">2. Giyinme Odası ve Depolama</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         Walk-in giyinme odaları, ray dolaplar, özel modül kombinasyonları.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("giyinmeodasi") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("giyinmeodasi") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.giyinmeodasi.slice(0, showAllImages["giyinmeodasi"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -421,7 +421,7 @@ export function Services() {
                       {categoryImages.giyinmeodasi.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("giyinmeodasi")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["giyinmeodasi"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.giyinmeodasi.length - 3} adet)`}
                         </button>
@@ -430,25 +430,25 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("yasam")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">3. Yaşam ve Dinlenme Alanları</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         TV üniteleri, kitaplıklar, yatak odası mobilyaları, başlık ve baza sistemleri.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("yasam") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("yasam") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.yasam.slice(0, showAllImages["yasam"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -468,7 +468,7 @@ export function Services() {
                       {categoryImages.yasam.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("yasam")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["yasam"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.yasam.length - 3} adet)`}
                         </button>
@@ -477,25 +477,25 @@ export function Services() {
                   )}
                 </div>
 
-                <div className="border border-[var(--color-border)] rounded-sm overflow-hidden">
+                <div className="border border-(--color-border) rounded-sm overflow-hidden">
                   <button
                     onClick={() => toggleCategory("antre")}
-                    className="w-full flex items-center justify-between p-4 bg-[var(--color-card)] hover:bg-[var(--color-background)] transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
                       <h4 className="font-semibold text-(--color-foreground) mb-1">4. Antre</h4>
-                      <p className="text-sm text-[var(--color-muted-foreground)]">
+                      <p className="text-sm text-(--color-muted-foreground)">
                         Vestiyer sistemleri, yerinde ölçüm, malzeme seçimi ve uçtan uca süreç yönetimi.
                       </p>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[var(--color-accent)] transition-transform ${
+                      className={`w-5 h-5 text-(--color-accent) transition-transform ${
                         expandedCategory.has("antre") ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {expandedCategory.has("antre") && (
-                    <div className="p-4 bg-[var(--color-background)] border-t border-[var(--color-border)] animate-in slide-in-from-top duration-300">
+                    <div className="p-4 bg-(--color-background) border-t border-(--color-border) animate-in slide-in-from-top duration-300">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {categoryImages.antre.slice(0, showAllImages["antre"] ? undefined : 3).map((img, idx) => (
                           <div
@@ -515,7 +515,7 @@ export function Services() {
                       {categoryImages.antre.length > 3 && (
                         <button
                           onClick={() => toggleShowAll("antre")}
-                          className="mt-4 w-full py-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent)]/80 border border-[var(--color-accent)] rounded-sm hover:bg-[var(--color-accent)]/10 transition-colors"
+                          className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
                           {showAllImages["antre"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.antre.length - 3} adet)`}
                         </button>
@@ -533,7 +533,7 @@ export function Services() {
         <div className="fixed inset-0 z-50 bg-black/65 flex items-center justify-center p-4" onClick={closeLightbox}>
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-[var(--color-background)] hover:text-(--color-accent) transition-colors z-10"
+            className="absolute top-4 right-4 text-(--color-background) hover:text-(--color-accent) transition-colors z-10"
           >
             <X className="w-8 h-8" />
           </button>
@@ -543,7 +543,7 @@ export function Services() {
               e.stopPropagation()
               prevImage()
             }}
-            className="absolute left-4 text-[var(--color-background)] hover:text-(--color-accent) transition-colors z-10"
+            className="absolute left-4 text-(--color-background) hover:text-(--color-accent) transition-colors z-10"
           >
             <ChevronLeft className="w-12 h-12" />
           </button>
@@ -553,7 +553,7 @@ export function Services() {
               e.stopPropagation()
               nextImage()
             }}
-            className="absolute right-4 text-[var(--color-background)] hover:text-(--color-accent) transition-colors z-10"
+            className="absolute right-4 text-(--color-background) hover:text-(--color-accent) transition-colors z-10"
           >
             <ChevronRight className="w-12 h-12" />
           </button>

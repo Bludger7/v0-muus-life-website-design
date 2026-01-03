@@ -84,12 +84,12 @@ export function Hero() {
         <ChevronRight className="w-6 h-6 text-(--color-foreground)" />
       </button>
 
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${index === currentSlide ? 'bg-[var(--color-foreground)] w-8' : 'bg-[var(--color-foreground)]/50'}`}
+            className={`h-3 rounded-full transition-all cursor-pointer hover:opacity-80 ${index === currentSlide ? 'bg-(--color-foreground) w-10' : 'bg-foreground/50 w-3'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
@@ -100,7 +100,7 @@ export function Hero() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-(--color-foreground) max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
           Yaşayan Mekanlar Tasarlıyoruz
         </h1>
-        <p className="text-lg md:text-xl text-[var(--color-foreground)] max-w-2xl font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]">
+        <p className="text-lg md:text-xl text-(--color-foreground) max-w-2xl font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]">
           Profesyonel Mobilya Üretimleri & Tasarım Çözümleri
         </p>
         <Link href="#portfolio">

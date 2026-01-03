@@ -70,7 +70,7 @@ export function Contact() {
                   name="message"
                   placeholder="Mesajınız"
                   required
-                  className="min-h-[160px] bg-slate-50 border-slate-200 focus:border-slate-400 resize-none"
+                  className="min-h-40 bg-slate-50 border-slate-200 focus:border-slate-400 resize-none"
                 />
               </div>
 
@@ -135,12 +135,12 @@ export function Contact() {
           {/* Info Cards */}
           <div className="space-y-6">
             <a
-              href="https://share.google/jFXedXUDGI9kDfjky"
+              href="https://maps.app.goo.gl/ipK63ULuVAV9veNw9"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow flex items-start gap-6 group"
+              className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow flex items-start gap-6 group"
             >
-              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0 group-hover:bg-slate-100 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-slate-100 transition-colors">
                 <MapPin className="w-6 h-6 text-slate-700" />
               </div>
               <div>
@@ -153,7 +153,7 @@ export function Contact() {
             </a>
 
             <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm flex items-start gap-6">
-              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0">
                 <Phone className="w-6 h-6 text-slate-700" />
               </div>
               <div>
@@ -170,7 +170,7 @@ export function Contact() {
             </div>
 
             {/* Social Media Section */}
-            <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm mt-12">
+            <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm">
               <h3 className="font-bold text-lg text-slate-900 mb-4">Sosyal Medya</h3>
               <div className="flex flex-wrap gap-3">
                 {/* WhatsApp */}
@@ -178,7 +178,7 @@ export function Contact() {
                   href="https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="WhatsApp"
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" className="fill-white stroke-none">
@@ -191,7 +191,7 @@ export function Contact() {
                   href="https://instagram.com/muus_life"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -202,7 +202,7 @@ export function Contact() {
                   href="https://www.youtube.com/@muuslife"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-[#FF0000] hover:bg-[#cc0000] text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="YouTube"
                 >
                   <Youtube className="w-5 h-5" />
@@ -213,7 +213,7 @@ export function Contact() {
                   href="https://tr.pinterest.com/muuslife"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-[#E60023] hover:bg-[#bd081c] text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="Pinterest"
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="text-white">
@@ -226,7 +226,7 @@ export function Contact() {
                   href="https://www.tiktok.com/@muus.life.mobilya"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-black hover:bg-black/80 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="TikTok"
                 >
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" className="text-white">

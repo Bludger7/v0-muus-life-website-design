@@ -41,7 +41,7 @@ export function About() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-square md:aspect-[4/5] bg-slate-100 overflow-hidden rounded-lg">
+          <div className="relative aspect-square md:aspect-4/5 bg-slate-100 overflow-hidden rounded-lg">
             <img
               src="/modern-furniture-production-workshop.jpg"
               alt="Modern Mobilya Üretim Atölyesi"

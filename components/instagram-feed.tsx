@@ -152,10 +152,10 @@ export default function InstagramFeed() {
       <h2 className="text-lg md:text-2xl font-bold text-center mb-4 md:mb-8">Sosyal Medya Akışı</h2>
       
       {/* MASONRY LAYOUT (Pinterest Tarzı)
-         columns-1 (mobil), columns-2 (tablet), columns-3 (masaüstü)
+         columns-2 (mobil), columns-2 (tablet), columns-3 (masaüstü)
          Bu sayede uzun videolar ve kısa resimler aralarında boşluk kalmadan dizilir.
       */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 md:gap-4">
+      <div className="columns-2 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 md:gap-4">
         {posts.map((post) => (
           post.mediaType === "VIDEO" 
             ? <VideoItem key={post.id} post={post} />

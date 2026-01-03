@@ -10,7 +10,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="muus.life" width={170} height={60} className="h-12 w-auto" />
+          <Image src="/logo.png" alt="muus.life" width={200} height={70} className="h-16 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-(--color-foreground) opacity-70">
