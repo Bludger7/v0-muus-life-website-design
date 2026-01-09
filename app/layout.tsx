@@ -4,6 +4,7 @@ import { Montserrat, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { FloatingSocials } from "@/components/floating-socials"
+import { LanguageProvider } from "@/lib/language-context"
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -75,7 +76,9 @@ export default function RootLayout({
   return (
     <html lang="tr" className="scroll-smooth">
       <body className={`${montserrat.variable} ${geistMono.variable} font-sans antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Analytics />
         <FloatingSocials />
       </body>

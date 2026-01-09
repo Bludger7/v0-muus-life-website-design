@@ -2,7 +2,10 @@
 
 import { Building2, Home, ChevronDown, X, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect, useCallback, TouchEvent } from "react"
+import { useLanguage } from "@/lib/language-context"
+
+
 
 const categoryImages = {
   ofis: [
@@ -96,6 +99,12 @@ export function Services() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [currentCategory, setCurrentCategory] = useState<string>("")
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  const { t } = useLanguage()
+
+  // Minimum swipe distance
+  const minSwipeDistance = 50
 
   const toggleCategory = (category: string) => {
     setExpandedCategory(prev => {
@@ -115,18 +124,80 @@ export function Services() {
     setLightboxOpen(true)
   }
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setLightboxOpen(false)
-  }
+  }, [])
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
+    if (!currentCategory) return
     const images = categoryImages[currentCategory as keyof typeof categoryImages]
+    if (!images) return
     setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }, [currentCategory])
+
+  const prevImage = useCallback(() => {
+    if (!currentCategory) return
+    const images = categoryImages[currentCategory as keyof typeof categoryImages]
+    if (!images) return
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+  }, [currentCategory])
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!lightboxOpen) return
+      
+      switch (e.key) {
+        case "Escape":
+          closeLightbox()
+          break
+        case "ArrowLeft":
+          prevImage()
+          break
+        case "ArrowRight":
+          nextImage()
+          break
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [lightboxOpen, closeLightbox, prevImage, nextImage])
+
+  // Prevent body scroll when lightbox is open
+  useEffect(() => {
+    if (lightboxOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [lightboxOpen])
+
+  // Touch handlers for swipe
+  const onTouchStart = (e: TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
   }
 
-  const prevImage = () => {
-    const images = categoryImages[currentCategory as keyof typeof categoryImages]
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+  const onTouchMove = (e: TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe) {
+      nextImage()
+    }
+    if (isRightSwipe) {
+      prevImage()
+    }
   }
 
   const toggleShowAll = (category: string) => {
@@ -140,11 +211,10 @@ export function Services() {
     <section id="services" className="py-24 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-(--color-foreground) tracking-tight mb-4">Hizmetlerimiz</h2>
+          <h2 className="text-3xl font-bold text-(--color-foreground) tracking-tight mb-4">{t("services.title")}</h2>
           <div className="w-16 h-1 bg-(--color-accent) mx-auto mb-6"></div>
           <p className="text-(--color-muted-foreground)">
-            Kişiye özel yaşam alanlarından kurumsal projelere kadar geniş bir yelpazede profesyonel mobilya üretim
-            çözümleri sunuyoruz.
+            {t("services.subtitle")}
           </p>
         </div>
 
@@ -156,14 +226,13 @@ export function Services() {
                 <div className="w-12 h-12 bg-(--color-accent) flex items-center justify-center rounded-sm">
                   <Building2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold">Kurumsal Projeler</h3>
+                <h3 className="text-2xl font-bold">{t("services.corporate")}</h3>
               </div>
             </div>
 
             <div className="p-8 md:p-10">
               <p className="text-(--color-muted-foreground) mb-8 leading-relaxed">
-                muus.life, kurumsal firmalara özel mobilya üretiminde yüksek hassasiyet, seri üretim disiplini ve
-                kurumsal kimliğe tam uyum sağlayan profesyonel çözümler sunar.
+                {t("services.corporate.desc")}
               </p>
 
               <div className="space-y-6">
@@ -173,9 +242,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">1. Ofis ve Çalışma Alanları</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.office")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        Yönetici odaları, çalışma masası sistemleri, toplantı alanları, depolama çözümleri.
+                        {t("services.office.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -207,7 +276,7 @@ export function Services() {
                           onClick={() => toggleShowAll("ofis")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["ofis"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.ofis.length - 3} adet)`}
+                          {showAllImages["ofis"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.ofis.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -220,9 +289,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">2. Mağaza ve Perakende Alanları</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.store")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        Teşhir üniteleri, raf sistemleri, karşılama bankoları, mağaza dekorasyonu.
+                        {t("services.store.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -254,7 +323,7 @@ export function Services() {
                           onClick={() => toggleShowAll("magaza")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["magaza"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.magaza.length - 3} adet)`}
+                          {showAllImages["magaza"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.magaza.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -267,9 +336,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">3. Restoran, Kafe ve Otel Alanları</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.restaurant")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        Masa-sandalye grupları, sabit oturum alanları, servis üniteleri, otel mobilyaları.
+                        {t("services.restaurant.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -301,7 +370,7 @@ export function Services() {
                           onClick={() => toggleShowAll("restorant")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["restorant"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.restorant.length - 3} adet)`}
+                          {showAllImages["restorant"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.restorant.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -309,9 +378,9 @@ export function Services() {
                 </div>
 
                 <div className="p-4 bg-(--color-card) border border-(--color-border) rounded-sm">
-                  <h4 className="font-semibold text-(--color-foreground) mb-2">4. Proje Yönetimi</h4>
+                  <h4 className="font-semibold text-(--color-foreground) mb-2">{t("services.project")}</h4>
                   <p className="text-sm text-(--color-muted-foreground)">
-                    Marka uyumlu üretim, yerinde keşif, üretim takvimi oluşturma ve anahtar teslim montaj.
+                    {t("services.project.desc")}
                   </p>
                 </div>
               </div>
@@ -325,14 +394,13 @@ export function Services() {
                 <div className="w-12 h-12 bg-(--color-accent) flex items-center justify-center rounded-sm">
                   <Home className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold">Kişiye Özel Projeler</h3>
+                <h3 className="text-2xl font-bold">{t("services.custom")}</h3>
               </div>
             </div>
 
             <div className="p-8 md:p-10">
               <p className="text-(--color-muted-foreground) mb-8 leading-relaxed">
-                muus.life, yaşam alanlarını tamamen kişiye uygun hale getiren ölçüye özel mobilya üretiminde uzman bir
-                yapıya sahiptir.
+                {t("services.custom.desc")}
               </p>
 
               <div className="space-y-6">
@@ -342,9 +410,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">1. Mutfak Tasarımı</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.kitchen")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        Ölçüye özel dolap sistemleri, modern ve klasik tasarım seçenekleri, üst düzey donanım.
+                        {t("services.kitchen.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -376,7 +444,7 @@ export function Services() {
                           onClick={() => toggleShowAll("mutfak")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["mutfak"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.mutfak.length - 3} adet)`}
+                          {showAllImages["mutfak"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.mutfak.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -389,9 +457,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">2. Giyinme Odası ve Depolama</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.wardrobe")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        Walk-in giyinme odaları, ray dolaplar, özel modül kombinasyonları.
+                        {t("services.wardrobe.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -423,7 +491,7 @@ export function Services() {
                           onClick={() => toggleShowAll("giyinmeodasi")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["giyinmeodasi"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.giyinmeodasi.length - 3} adet)`}
+                          {showAllImages["giyinmeodasi"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.giyinmeodasi.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -436,9 +504,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">3. Yaşam ve Dinlenme Alanları</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.living")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        TV üniteleri, kitaplıklar, yatak odası mobilyaları, başlık ve baza sistemleri.
+                        {t("services.living.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -470,7 +538,7 @@ export function Services() {
                           onClick={() => toggleShowAll("yasam")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["yasam"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.yasam.length - 3} adet)`}
+                          {showAllImages["yasam"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.yasam.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -483,9 +551,9 @@ export function Services() {
                     className="w-full flex items-center justify-between p-4 bg-(--color-card) hover:bg-(--color-background) transition-colors cursor-pointer"
                   >
                     <div className="text-left">
-                      <h4 className="font-semibold text-(--color-foreground) mb-1">4. Antre</h4>
+                      <h4 className="font-semibold text-(--color-foreground) mb-1">{t("services.entry")}</h4>
                       <p className="text-sm text-(--color-muted-foreground)">
-                        Vestiyer sistemleri, yerinde ölçüm, malzeme seçimi ve uçtan uca süreç yönetimi.
+                        {t("services.entry.desc")}
                       </p>
                     </div>
                     <ChevronDown
@@ -517,7 +585,7 @@ export function Services() {
                           onClick={() => toggleShowAll("antre")}
                           className="mt-4 w-full py-2 text-sm font-medium text-(--color-accent) hover:opacity-80 border border-(--color-accent) rounded-sm hover:bg-slate-100 transition-colors"
                         >
-                          {showAllImages["antre"] ? "Daha Az Göster" : `+ Daha Fazla (${categoryImages.antre.length - 3} adet)`}
+                          {showAllImages["antre"] ? t("services.showLess") : `${t("services.showMore")} (${categoryImages.antre.length - 3})`}
                         </button>
                       )}
                     </div>
@@ -529,13 +597,20 @@ export function Services() {
         </div>
       </div>
 
-      {lightboxOpen && (
-        <div className="fixed inset-0 z-50 bg-black/65 flex items-center justify-center p-4" onClick={closeLightbox}>
+      {lightboxOpen && currentCategory && categoryImages[currentCategory as keyof typeof categoryImages] && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-2 sm:p-4" 
+          onClick={closeLightbox}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-(--color-background) hover:text-(--color-accent) transition-colors z-10"
+            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-(--color-accent) transition-colors z-20 p-2 bg-black/50 rounded-full"
+            aria-label="Kapat"
           >
-            <X className="w-8 h-8" />
+            <X className="w-6 h-6 sm:w-8 sm:h-8" />
           </button>
 
           <button
@@ -543,9 +618,10 @@ export function Services() {
               e.stopPropagation()
               prevImage()
             }}
-            className="absolute left-4 text-(--color-background) hover:text-(--color-accent) transition-colors z-10"
+            className="absolute left-2 sm:left-4 text-white hover:text-(--color-accent) transition-colors z-20 p-2 bg-black/50 rounded-full hidden sm:flex items-center justify-center"
+            aria-label="Önceki"
           >
-            <ChevronLeft className="w-12 h-12" />
+            <ChevronLeft className="w-8 h-8 sm:w-12 sm:h-12" />
           </button>
 
           <button
@@ -553,12 +629,16 @@ export function Services() {
               e.stopPropagation()
               nextImage()
             }}
-            className="absolute right-4 text-(--color-background) hover:text-(--color-accent) transition-colors z-10"
+            className="absolute right-2 sm:right-4 text-white hover:text-(--color-accent) transition-colors z-20 p-2 bg-black/50 rounded-full hidden sm:flex items-center justify-center"
+            aria-label="Sonraki"
           >
-            <ChevronRight className="w-12 h-12" />
+            <ChevronRight className="w-8 h-8 sm:w-12 sm:h-12" />
           </button>
 
-          <div className="relative w-full max-w-4xl aspect-square" onClick={(e) => e.stopPropagation()}>
+          <div 
+            className="relative w-full h-full max-w-6xl max-h-[85vh] flex items-center justify-center" 
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={
                 categoryImages[currentCategory as keyof typeof categoryImages][currentImageIndex] || "/placeholder.svg"
@@ -566,11 +646,18 @@ export function Services() {
               alt="Lightbox Image"
               fill
               className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              priority
             />
           </div>
 
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
             {currentImageIndex + 1} / {categoryImages[currentCategory as keyof typeof categoryImages].length}
+          </div>
+
+          {/* Mobile swipe hint */}
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/60 text-xs sm:hidden">
+            Kaydırarak geçiş yapın
           </div>
         </div>
       )}

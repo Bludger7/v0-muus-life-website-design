@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Mouse, ChevronLeft, ChevronRight } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 const heroImages = [
   {
@@ -31,6 +32,7 @@ const heroImages = [
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -98,14 +100,14 @@ export function Hero() {
       {/* Existing code */}
       <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-20">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-(--color-foreground) max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
-          Yaşayan Mekanlar Tasarlıyoruz
+          {t("hero.title")}
         </h1>
         <p className="text-lg md:text-xl text-(--color-foreground) max-w-2xl font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]">
-          Profesyonel Mobilya Üretimleri & Tasarım Çözümleri
+          {t("hero.subtitle")}
         </p>
         <Link href="#portfolio">
           <Button size="lg" className="rounded-md px-8 py-6 text-base mt-4 shadow-lg transition-all hover:scale-105">
-            Çalışmalarımızı Keşfedin
+            {t("hero.cta")}
           </Button>
         </Link>
       </div>

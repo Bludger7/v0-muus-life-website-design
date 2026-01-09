@@ -3,41 +3,44 @@
 import Image from "next/image"
 import { useState, useRef, useEffect } from "react"
 import { X } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function Team() {
   const [clickCount, setClickCount] = useState(0)
   const [showEasterEgg, setShowEasterEgg] = useState(false)
   const [shakeIndex, setShakeIndex] = useState<number | null>(null)
   const clickTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const { t } = useLanguage()
 
   const teamMembers = [
     {
       name: "Selahattin Hacıhasanoğlu",
-      role: "Kurucu Ortak",
+      role: t("team.role.founder"),
       image: "/images/whatsapp-20image-202025-12-15-20at-2010.jpeg",
     },
     {
       name: "Gamze Turan",
-      role: "İç Mimar",
+      role: t("team.role.architect"),
       image: "/images/img-2094.jpeg",
     },
     {
       name: "Aleyna Kılınç",
-      role: "İç Mimar",
+      role: t("team.role.architect"),
       image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
     },
     {
       name: "Mücahit Okcu",
-      role: "Kurucu Ortak / Tasarım Direktörü",
+      role: t("team.role.director"),
       image: "/images/mucahit.jpeg",
     },
-    {   name: "Emrah Bey",
-      role: "Şantiye Şefi",
+    {
+      name: "Emrah Bey",
+      role: t("team.role.site"),
       image: "/images/IMG_4275.jpg",
     },
     {
       name: "Yunus Emre İnanç",
-      role: "Operasyon Sorumlusu",
+      role: t("team.role.operations"),
       image: "/images/yunush.jpg",
     },
   ]
@@ -83,11 +86,10 @@ export function Team() {
     <section id="team" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-4"><span className="text-slate-600 font-light">the </span>Ekip</h2>
+          <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-4"><span className="text-slate-600 font-light">{t("team.thePrefix")}</span>{t("team.title")}</h2>
           <div className="w-16 h-1 bg-slate-900 mx-auto mb-6"></div>
           <p className="text-slate-600">
-            Profesyonel ekibimizle her projede mükemmelliği hedefliyoruz. Deneyim ve yaratıcılığı bir araya getirerek
-            hayalinizdeki mekanları gerçeğe dönüştürüyoruz.
+            {t("team.subtitle")}
           </p>
         </div>
 

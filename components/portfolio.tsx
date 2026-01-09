@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/lib/language-context"
 
 const projects = [
   {
@@ -46,14 +47,15 @@ const projects = [
 export function Portfolio() {
   const [showAll, setShowAll] = useState(false)
   const displayedProjects = showAll ? projects : projects.slice(0, 3)
+  const { t } = useLanguage()
 
   return (
     <section id="portfolio" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Portfolyo</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">{t("portfolio.title")}</h2>
           <div className="h-1 w-20 bg-slate-800" />
-          <p className="text-slate-500 text-lg">Son Projelerimizi Keşfedin</p>
+          <p className="text-slate-500 text-lg">{t("portfolio.subtitle")}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,7 +85,7 @@ export function Portfolio() {
               size="lg" 
               className="rounded-md px-8 py-6 text-base shadow-lg transition-all hover:scale-105"
             >
-              Daha Fazla Göster
+              {t("portfolio.showMore")}
             </Button>
           </div>
         )}

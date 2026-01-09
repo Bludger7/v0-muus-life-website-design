@@ -7,9 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, MessageCircle, Upload, X, Instagram, Youtube } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function Contact() {
   const [files, setFiles] = useState<File[]>([])
+  const { t } = useLanguage()
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -36,9 +38,8 @@ export function Contact() {
     <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">İletişime Geçin</h2>
-          <div className="h-1 w-20 bg-slate-800" />
-          <p className="text-slate-500 text-lg">Vizyonunuzu birlikte hayata geçirelim</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">{t("contact.title")}</h2>
+          <p className="text-slate-500 text-lg">{t("contact.subtitle")}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -46,36 +47,36 @@ export function Contact() {
           <div className="space-y-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">Ad Soyad</label>
+                <label className="text-sm font-semibold text-slate-900">{t("contact.name")}</label>
                 <Input
                   name="name"
-                  placeholder="Ad Soyad"
+                  placeholder={t("contact.name")}
                   required
                   className="h-12 bg-slate-50 border-slate-200 focus:border-slate-400"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">E-posta</label>
+                <label className="text-sm font-semibold text-slate-900">{t("contact.email")}</label>
                 <Input
                   name="email"
-                  placeholder="E-posta"
+                  placeholder={t("contact.email")}
                   type="email"
                   required
                   className="h-12 bg-slate-50 border-slate-200 focus:border-slate-400"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">Mesajınız</label>
+                <label className="text-sm font-semibold text-slate-900">{t("contact.message")}</label>
                 <Textarea
                   name="message"
-                  placeholder="Mesajınız"
+                  placeholder={t("contact.message")}
                   required
                   className="min-h-40 bg-slate-50 border-slate-200 focus:border-slate-400 resize-none"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">Dosya Ekle (İsteğe bağlı)</label>
+                <label className="text-sm font-semibold text-slate-900">{t("contact.file")}</label>
                 <div className="relative">
                   <input
                     type="file"
@@ -90,7 +91,7 @@ export function Contact() {
                     className="flex items-center justify-center gap-2 h-12 px-4 border-2 border-dashed border-slate-200 rounded-md hover:border-slate-400 cursor-pointer bg-slate-50 transition-colors"
                   >
                     <Upload className="w-5 h-5 text-slate-500" />
-                    <span className="text-sm text-slate-600">Dosya seçin veya sürükleyin</span>
+                    <span className="text-sm text-slate-600">{t("contact.fileSelect")}</span>
                   </label>
                 </div>
 
@@ -116,7 +117,7 @@ export function Contact() {
               </div>
 
               <Button type="submit" className="w-full h-12 text-base bg-slate-800 hover:bg-slate-900">
-                Gönder
+                {t("contact.send")}
               </Button>
             </form>
 
@@ -128,7 +129,7 @@ export function Contact() {
               }
             >
               <MessageCircle className="w-5 h-5" />
-              WhatsApp ile iletişim
+              {t("contact.whatsapp")}
             </Button>
           </div>
 
@@ -144,11 +145,11 @@ export function Contact() {
                 <MapPin className="w-6 h-6 text-slate-700" />
               </div>
               <div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">Adres</h3>
-                <p className="text-slate-600">Şehit Osman Avcı Mah. Kaplan Cd.</p>
-                <p className="text-slate-600">Alpak&Neva ARMONIA no:11 C Blok No: 9</p>
-                <p className="text-slate-600"> 06824 Etimesgut/Ankara</p>
-                <p className="text-blue-600 text-sm mt-2 font-medium">Haritada Göster &rarr;</p>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">{t("contact.address")}</h3>
+                <p className="text-slate-600">Şehit Osman Avcı Mah. Kaplan Cad. No:11</p>
+                <p className="text-slate-600">Alpak&Neva ARMONIA Sitesi C Blok No:9, 06824</p>
+                <p className="text-slate-600">Etimesgut/Ankara</p>
+                <p className="text-blue-600 text-sm mt-2 font-medium">{t("contact.showMap")} &rarr;</p>
               </div>
             </a>
 
@@ -157,7 +158,7 @@ export function Contact() {
                 <Phone className="w-6 h-6 text-slate-700" />
               </div>
               <div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">İletişim</h3>
+                <h3 className="font-bold text-lg text-slate-900 mb-2">{t("contact.phone")}</h3>
                 <div className="text-slate-600 font-mono text-lg">
                   <a href="tel:+905015307736" className="block hover:underline">0501 530 77 36</a>
                   <a href="tel:+905015300767" className="block mt-1 hover:underline">0501 530 07 67</a>
@@ -165,13 +166,13 @@ export function Contact() {
                 <div className="mt-2">
                   <a href="mailto:bilgi@muus.life" className="text-blue-600 font-medium hover:underline">bilgi@muus.life</a>
                 </div>
-                <p className="text-slate-500 text-sm mt-2">Hafta içi 09:00 - 18:00</p>
+                <p className="text-slate-500 text-sm mt-2">{t("contact.hours")}</p>
               </div>
             </div>
 
             {/* Social Media Section */}
             <div className="p-8 rounded-2xl border border-slate-100 bg-white shadow-sm">
-              <h3 className="font-bold text-lg text-slate-900 mb-4">Sosyal Medya</h3>
+              <h3 className="font-bold text-lg text-slate-900 mb-4">{t("contact.social")}</h3>
               <div className="flex flex-wrap gap-3">
                 {/* WhatsApp */}
                 <a

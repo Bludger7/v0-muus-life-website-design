@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 // --- TİP TANIMLAMALARI ---
 interface InstagramPost {
@@ -132,6 +133,7 @@ function ImageItem({ post }: { post: InstagramPost }) {
 // --- ANA BİLEŞEN ---
 export default function InstagramFeed() {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const FEED_URL = "https://feeds.behold.so/zqIPBjAuRllG8n28KWf2";
@@ -149,7 +151,7 @@ export default function InstagramFeed() {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-2 md:px-6 py-4 md:py-8 overflow-hidden">
-      <h2 className="text-lg md:text-2xl font-bold text-center mb-4 md:mb-8">Sosyal Medya Akışı</h2>
+      <h2 className="text-lg md:text-2xl font-bold text-center mb-4 md:mb-8">{t("social.media.title")}</h2>
       
       {/* MASONRY LAYOUT (Pinterest Tarzı)
          columns-2 (mobil), columns-2 (tablet), columns-3 (masaüstü)
