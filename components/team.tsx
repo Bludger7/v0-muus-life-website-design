@@ -34,7 +34,7 @@ export function Team() {
       image: "/images/mucahit.jpeg",
     },
     {
-      name: "Emrah Bey",
+      name: "Emrah Zengin",
       role: t("team.role.site"),
       image: "/images/IMG_4275.jpg",
     },
@@ -43,6 +43,12 @@ export function Team() {
       role: t("team.role.operations"),
       image: "/images/yunush.jpg",
     },
+    {
+      name: "Selin Sude Portakal",
+      role: t("team.role.architect"),
+      image: "/images/selin.jpeg",
+    },
+
   ]
 
   const handleMucahitClick = () => {
@@ -93,28 +99,54 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-8 lg:gap-12 max-w-5xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
-                shakeIndex === index ? "animate-shake" : ""
-              }`}
-              onClick={index === 3 ? handleMucahitClick : undefined}
-              style={{ cursor: index === 3 ? "pointer" : "default" }}
-            >
-              <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">
-                <Image
-                  src={member.image || "/placeholder.svg"}
-                  alt={member.name}
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
+        <div className="max-w-6xl mx-auto">
+          {/* İlk 4 kişi */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12 mb-4 md:mb-8 lg:mb-12">
+            {teamMembers.slice(0, 4).map((member, index) => (
+              <div
+                key={index}
+                className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
+                  shakeIndex === index ? "animate-shake" : ""
+                }`}
+                onClick={index === 3 ? handleMucahitClick : undefined}
+                style={{ cursor: index === 3 ? "pointer" : "default" }}
+              >
+                <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">
+                  <Image
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <h3 className="text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-2">{member.name}</h3>
+                <p className="text-slate-600 text-xs md:text-sm">{member.role}</p>
               </div>
-              <h3 className="text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-2">{member.name}</h3>
-              <p className="text-slate-600 text-xs md:text-sm">{member.role}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          {/* Son 3 kişi - ortada */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 lg:gap-12 max-w-3xl mx-auto">
+            {teamMembers.slice(4).map((member, index) => (
+              <div
+                key={index + 4}
+                className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
+                  shakeIndex === index + 4 ? "animate-shake" : ""
+                }`}
+              >
+                <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">
+                  <Image
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <h3 className="text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-2">{member.name}</h3>
+                <p className="text-slate-600 text-xs md:text-sm">{member.role}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
