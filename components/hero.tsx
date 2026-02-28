@@ -37,7 +37,7 @@ export function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length)
-    }, 5000)
+    }, 3000)
     return () => clearInterval(timer)
   }, [])
 
@@ -50,12 +50,12 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
+    <section id="home" className="relative h-[85vh] md:h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background">
       <div className="absolute inset-0 z-0">
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-700 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -68,52 +68,59 @@ export function Hero() {
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-white/30" />
+        {/* Stronger gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
       </div>
 
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 transition-colors"
+        className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6 text-(--color-foreground)" />
+        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 transition-colors"
+        className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6 text-(--color-foreground)" />
+        <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
       </button>
 
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-20 md:bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:gap-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-3 rounded-full transition-all cursor-pointer hover:opacity-80 ${index === currentSlide ? 'bg-(--color-foreground) w-10' : 'bg-foreground/50 w-3'}`}
+            className={`h-2 md:h-3 rounded-full transition-all cursor-pointer hover:opacity-80 ${index === currentSlide ? 'bg-white w-8 md:w-10' : 'bg-white/50 w-2 md:w-3'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Existing code */}
-      <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-6 mt-20">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-(--color-foreground) max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+      <div className="relative z-10 container mx-auto px-4 text-center flex flex-col items-center gap-4 md:gap-6 mt-10 md:mt-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white max-w-4xl leading-tight">
           {t("hero.title")}
         </h1>
-        <p className="text-lg md:text-xl text-(--color-foreground) max-w-2xl font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]">
+        <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl font-medium leading-relaxed">
           {t("hero.subtitle")}
         </p>
-        <Link href="#portfolio">
-          <Button size="lg" className="rounded-md px-8 py-6 text-base mt-4 shadow-lg transition-all hover:scale-105">
-            {t("hero.cta")}
-          </Button>
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 mt-2 md:mt-4">
+          <Link href="/urunler">
+            <Button size="lg" className="rounded-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-base shadow-lg transition-all hover:scale-105 w-full sm:w-auto">
+              {t("hero.cta")}
+            </Button>
+          </Link>
+          <Link href="/hizmetler">
+            <Button size="lg" variant="outline" className="rounded-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-base shadow-lg transition-all hover:scale-105 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white w-full sm:w-auto">
+              {t("hero.cta2")}
+            </Button>
+          </Link>
+        </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-slate-400">
-        <Mouse className="w-6 h-6" />
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
+        <Mouse className="w-5 h-5 md:w-6 md:h-6" />
       </div>
     </section>
   )

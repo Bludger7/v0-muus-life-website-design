@@ -35,43 +35,44 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">{t("contact.title")}</h2>
-          <p className="text-slate-500 text-lg">{t("contact.subtitle")}</p>
+        <div className="flex flex-col items-center text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">{t("contact.title")}</h2>
+          <div className="h-1 w-16 bg-slate-800" />
+          <p className="text-sm md:text-base lg:text-lg text-slate-500">{t("contact.subtitle")}</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {/* Form Section */}
           <div className="space-y-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">{t("contact.name")}</label>
+                <label className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.name")}</label>
                 <Input
                   name="name"
                   placeholder={t("contact.name")}
                   required
-                  className="h-12 bg-slate-50 border-slate-200 focus:border-slate-400"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">{t("contact.email")}</label>
+                <label className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.email")}</label>
                 <Input
                   name="email"
                   placeholder={t("contact.email")}
                   type="email"
                   required
-                  className="h-12 bg-slate-50 border-slate-200 focus:border-slate-400"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">{t("contact.message")}</label>
+                <label className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.message")}</label>
                 <Textarea
                   name="message"
                   placeholder={t("contact.message")}
                   required
-                  className="min-h-40 bg-slate-50 border-slate-200 focus:border-slate-400 resize-none"
+                  className="min-h-32 md:min-h-40 bg-slate-50 border-slate-200 focus:border-slate-400 resize-none text-sm md:text-base"
                 />
               </div>
 
@@ -116,14 +117,14 @@ export function Contact() {
                 )}
               </div>
 
-              <Button type="submit" className="w-full h-12 text-base bg-slate-800 hover:bg-slate-900">
+              <Button type="submit" className="w-full h-11 md:h-12 text-sm md:text-base bg-slate-800 hover:bg-slate-900">
                 {t("contact.send")}
               </Button>
             </form>
 
             <Button
               variant="outline"
-              className="w-full h-12 text-base border-slate-200 hover:bg-slate-50 gap-2 bg-transparent"
+              className="w-full h-11 md:h-12 text-sm md:text-base border-slate-200 hover:bg-slate-50 gap-2 bg-transparent"
               onClick={() =>
                 window.open("https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?", "_blank")
               }

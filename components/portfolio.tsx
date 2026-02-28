@@ -50,15 +50,15 @@ export function Portfolio() {
   const { t } = useLanguage()
 
   return (
-    <section id="portfolio" className="py-24 bg-slate-50">
+    <section id="portfolio" className="py-16 md:py-24 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">{t("portfolio.title")}</h2>
-          <div className="h-1 w-20 bg-slate-800" />
-          <p className="text-slate-500 text-lg">{t("portfolio.subtitle")}</p>
+        <div className="flex flex-col items-center text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">{t("portfolio.title")}</h2>
+          <div className="h-1 w-16 md:w-20 bg-slate-800" />
+          <p className="text-sm md:text-base lg:text-lg text-slate-500">{t("portfolio.subtitle")}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {displayedProjects.map((project) => (
             <div
               key={project.id}

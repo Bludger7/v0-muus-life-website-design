@@ -208,17 +208,17 @@ export function Services() {
   }
 
   return (
-    <section id="services" className="py-24 bg-(--color-background)">
+    <section id="services" className="py-16 md:py-24 bg-(--color-background)">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-(--color-foreground) tracking-tight mb-4">{t("services.title")}</h2>
-          <div className="w-16 h-1 bg-(--color-accent) mx-auto mb-6"></div>
-          <p className="text-(--color-muted-foreground)">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-(--color-foreground) tracking-tight mb-4">{t("services.title")}</h2>
+          <div className="w-16 h-1 bg-(--color-accent) mx-auto mb-4 md:mb-6"></div>
+          <p className="text-sm md:text-base text-(--color-muted-foreground) leading-relaxed">
             {t("services.subtitle")}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Kurumsal Projeler */}
           <div className="bg-(--color-card) shadow-sm border border-(--color-border) transition-all hover:shadow-md overflow-hidden rounded-md">
             <div className="bg-(--color-foreground) text-(--color-background) p-6">

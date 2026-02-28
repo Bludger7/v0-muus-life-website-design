@@ -41,14 +41,13 @@ function VideoItem({ post }: { post: InstagramPost }) {
   };
 
   return (
-    <div className="relative w-full max-w-[240px] sm:max-w-sm mx-auto overflow-hidden rounded-lg border border-gray-200 mb-3 md:mb-4 break-inside-avoid shadow-md" style={{ backgroundColor: 'transparent' }}>
+    <div className="relative w-full aspect-9/16 overflow-hidden rounded-lg border border-gray-200 shadow-md" style={{ backgroundColor: 'transparent' }}>
       {/* Video Element - iOS için basitleştirilmiş yapı */}
       <video
         ref={videoRef}
         src={post.mediaUrl}
-        className="w-full h-auto block rounded-lg"
+        className="w-full h-full object-cover block rounded-lg"
         style={{ 
-          aspectRatio: '9/16',
           backgroundColor: 'transparent',
           WebkitTransform: 'translateZ(0)',
           transform: 'translateZ(0)'
@@ -110,12 +109,12 @@ function ImageItem({ post }: { post: InstagramPost }) {
       href={post.permalink}
       target="_blank"
       rel="noopener noreferrer"
-      className="block relative group overflow-hidden rounded-lg max-w-[240px] sm:max-w-sm mx-auto mb-3 md:mb-4 break-inside-avoid shadow-md hover:shadow-lg transition-shadow"
+      className="block relative w-full aspect-9/16 group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow"
     >
       <img
         src={post.mediaUrl}
         alt={post.caption || "Instagram Post"}
-        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
       {/* Hover Overlay */}
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
@@ -134,6 +133,7 @@ function ImageItem({ post }: { post: InstagramPost }) {
 export default function InstagramFeed() {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
   const { t } = useLanguage();
+  const visiblePosts = posts.slice(0, 6);
 
   useEffect(() => {
     const FEED_URL = "https://feeds.behold.so/zqIPBjAuRllG8n28KWf2";
@@ -147,21 +147,28 @@ export default function InstagramFeed() {
       .catch((err) => console.error("Instagram hatası:", err));
   }, []);
 
-  if (!posts.length) return null;
+  if (!visiblePosts.length) return null;
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-2 md:px-6 py-4 md:py-8 overflow-hidden">
-      <h2 className="text-lg md:text-2xl font-bold text-center mb-4 md:mb-8">{t("social.media.title")}</h2>
+    <section className="w-full max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-16 overflow-hidden">
+      <div className="text-center mb-6 md:mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">{t("social.media.title")}</h2>
+        <div className="w-12 h-1 bg-slate-900 mx-auto mb-4"></div>
+        <a 
+          href="https://instagram.com/muus_life" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-sm md:text-base text-slate-500 hover:text-slate-700 transition-colors"
+        >
+          @muus_life
+        </a>
+      </div>
       
-      {/* MASONRY LAYOUT (Pinterest Tarzı)
-         columns-2 (mobil), columns-2 (tablet), columns-3 (masaüstü)
-         Bu sayede uzun videolar ve kısa resimler aralarında boşluk kalmadan dizilir.
-      */}
-      <div className="columns-2 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 md:gap-4">
-        {posts.map((post) => (
-          post.mediaType === "VIDEO" 
-            ? <VideoItem key={post.id} post={post} />
-            : <ImageItem key={post.id} post={post} />
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 place-items-center max-w-4xl mx-auto">
+        {visiblePosts.map((post) => (
+          <div key={post.id} className="w-full max-w-60">
+            {post.mediaType === "VIDEO" ? <VideoItem post={post} /> : <ImageItem post={post} />}
+          </div>
         ))}
       </div>
     </section>

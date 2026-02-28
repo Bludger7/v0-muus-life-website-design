@@ -1,10 +1,8 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Services } from "@/components/services"
-import { Team } from "@/components/team"
-import { Portfolio } from "@/components/portfolio"
+import { ServicesSummary } from "@/components/services-summary"
 import InstagramFeed from "@/components/instagram-feed"
+import { Portfolio } from "@/components/portfolio"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -13,11 +11,9 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <About />
+      <ServicesSummary />
       <InstagramFeed />
-      <Services />
       <Portfolio />
-      <Team />
       <Contact />
       <Footer />
     </main>

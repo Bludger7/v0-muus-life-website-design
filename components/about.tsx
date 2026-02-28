@@ -6,35 +6,35 @@ export function About() {
   const { t } = useLanguage()
   
   return (
-    <section id="about" className="py-24 bg-white border-b border-slate-100">
+    <section id="about" className="py-16 md:py-24 bg-white border-b border-slate-100">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">{t("about.title")}</h2>
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div className="space-y-5 md:space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">{t("about.title")}</h2>
             <div className="w-16 h-1 bg-slate-900"></div>
 
-            <p className="text-slate-600 leading-relaxed text-lg">
+            <p className="text-sm md:text-base lg:text-lg text-slate-600 leading-relaxed">
               {t("about.p1")}
             </p>
 
-            <p className="text-slate-600 leading-relaxed text-lg">
+            <p className="text-sm md:text-base lg:text-lg text-slate-600 leading-relaxed">
               {t("about.p2")}
             </p>
 
-            <p className="text-slate-600 leading-relaxed text-lg">
+            <p className="text-sm md:text-base lg:text-lg text-slate-600 leading-relaxed">
               {t("about.p3")}
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-8 mt-8 pt-8 border-t border-slate-100">
-              <div className="space-y-3">
-                <h3 className="font-semibold text-slate-900 text-xl">{t("about.mission")}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+            <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mt-6 md:mt-8 pt-6 md:pt-8 border-t border-slate-100">
+              <div className="space-y-2 md:space-y-3">
+                <h3 className="font-semibold text-slate-900 text-lg md:text-xl">{t("about.mission")}</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                   {t("about.mission.text")}
                 </p>
               </div>
-              <div className="space-y-3">
-                <h3 className="font-semibold text-slate-900 text-xl">{t("about.vision")}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+              <div className="space-y-2 md:space-y-3">
+                <h3 className="font-semibold text-slate-900 text-lg md:text-xl">{t("about.vision")}</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                   {t("about.vision.text")}
                 </p>
               </div>

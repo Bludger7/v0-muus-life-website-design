@@ -14,8 +14,10 @@ const translations: Record<Language, Record<string, string>> = {
   tr: {
     // Navbar
     "nav.home": "Ana Sayfa",
-    "nav.about": "Hakkımızda",
     "nav.services": "Hizmetler",
+    "nav.products": "Ürünler",
+    "nav.office": "Ofis Çalışmaları",
+    "nav.about": "Hakkımızda",
     "nav.team": "Ekibimiz",
     "nav.portfolio": "Portfolyo",
     "nav.contact": "İletişim",
@@ -24,6 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.title": "Yaşayan Mekanlar Tasarlıyoruz",
     "hero.subtitle": "Profesyonel Mobilya Üretimleri & Tasarım Çözümleri",
     "hero.cta": "Çalışmalarımızı Keşfedin",
+    "hero.cta2": "Hizmetlerimizi İnceleyin",
     
     // About
     "about.title": "Hakkımızda",
@@ -103,8 +106,10 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navbar
     "nav.home": "Home",
-    "nav.about": "About",
     "nav.services": "Services",
+    "nav.products": "Products",
+    "nav.office": "Office Projects",
+    "nav.about": "About",
     "nav.team": "Team",
     "nav.portfolio": "Portfolio",
     "nav.contact": "Contact",
@@ -113,6 +118,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.title": "We Design Living Spaces",
     "hero.subtitle": "Professional Furniture Production & Design Solutions",
     "hero.cta": "Explore Our Work",
+    "hero.cta2": "View Our Services",
     
     // About
     "about.title": "About Us",
