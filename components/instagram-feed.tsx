@@ -6,6 +6,7 @@ import { useLanguage } from "@/lib/language-context";
 interface InstagramPost {
   id: string;
   mediaUrl: string;
+  thumbnailUrl?: string;
   permalink: string;
   caption?: string;
   mediaType: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
@@ -41,11 +42,12 @@ function VideoItem({ post }: { post: InstagramPost }) {
   };
 
   return (
-    <div className="relative w-full aspect-9/16 overflow-hidden rounded-lg border border-gray-200 shadow-md" style={{ backgroundColor: 'transparent' }}>
+    <div className="relative w-full aspect-9/16 overflow-hidden rounded-lg border border-gray-200 shadow-md bg-slate-100" style={{ backgroundColor: 'transparent' }}>
       {/* Video Element - iOS için basitleştirilmiş yapı */}
       <video
         ref={videoRef}
         src={post.mediaUrl}
+        poster={post.thumbnailUrl || undefined}
         className="w-full h-full object-cover block rounded-lg"
         style={{ 
           backgroundColor: 'transparent',
@@ -155,12 +157,12 @@ export default function InstagramFeed() {
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">{t("social.media.title")}</h2>
         <div className="w-12 h-1 bg-slate-900 mx-auto mb-4"></div>
         <a 
-          href="https://instagram.com/muus_life" 
+          href="https://instagram.com/noyerhome" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-sm md:text-base text-slate-500 hover:text-slate-700 transition-colors"
         >
-          @muus_life
+          @noyerhome
         </a>
       </div>
       

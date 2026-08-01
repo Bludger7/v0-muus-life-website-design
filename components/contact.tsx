@@ -190,7 +190,7 @@ export function Contact() {
 
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com/muus_life"
+                  href="https://instagram.com/noyerhome"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
@@ -201,7 +201,7 @@ export function Contact() {
 
                 {/* YouTube */}
                 <a
-                  href="https://www.youtube.com/@muuslife"
+                  href="https://www.youtube.com/@noyerhome"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
@@ -212,7 +212,7 @@ export function Contact() {
 
                 {/* Pinterest */}
                 <a
-                  href="https://tr.pinterest.com/muuslife"
+                  href="https://tr.pinterest.com/noyerhome"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
@@ -225,7 +225,7 @@ export function Contact() {
 
                 {/* TikTok */}
                 <a
-                  href="https://www.tiktok.com/@muus.life.mobilya"
+                  href="https://www.tiktok.com/@noyerhome"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
