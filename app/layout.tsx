@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "muus.life | Mobilya Üretim & Tasarım",
+  title: "Noyer Home | Mobilya Üretim & Tasarım",
   description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
   generator: "v0.app",
   verification: {
@@ -29,27 +29,27 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
-  keywords: ["mobilya", "tasarım", "üretim", "özel mobilya", "muus.life"],
-  authors: [{ name: "muus.life" }],
+  keywords: ["mobilya", "tasarım", "üretim", "özel mobilya", "noyer home", "Noyer Home"],
+  authors: [{ name: "Noyer Home" }],
   robots: {
     index: true,
     follow: true,
     nocache: false,
   },
   alternates: {
-    canonical: "https://muus.life",
+    canonical: "https://noyerhome.com",
   },
   openGraph: {
-    title: "muus.life | Mobilya Üretim & Tasarım",
+    title: "Noyer Home | Mobilya Üretim & Tasarım",
     description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
-    url: "https://muus.life",
-    siteName: "muus.life",
+    url: "https://noyerhome.com",
+    siteName: "Noyer Home",
     images: [
       {
-        url: "https://muus.life/logo.png",
+        url: "https://noyerhome.com/logo.png",
         width: 120,
         height: 40,
-        alt: "muus.life logo",
+        alt: "Noyer Home logo",
       },
     ],
     locale: "tr_TR",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "muus.life | Mobilya Üretim & Tasarım",
+    title: "Noyer Home | Mobilya Üretim & Tasarım",
     description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
-    images: ["https://muus.life/logo.png"],
+    images: ["https://noyerhome.com/logo.png"],
   },
 }
 

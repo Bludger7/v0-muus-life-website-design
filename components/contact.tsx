@@ -39,7 +39,7 @@ export function Contact() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">{t("contact.title")}</h2>
-          <div className="h-1 w-16 bg-slate-800" />
+          <div className="h-1 w-16 bg-[#704f36]" />
           <p className="text-sm md:text-base lg:text-lg text-slate-500">{t("contact.subtitle")}</p>
         </div>
 
@@ -117,7 +117,7 @@ export function Contact() {
                 )}
               </div>
 
-              <Button type="submit" className="w-full h-11 md:h-12 text-sm md:text-base bg-slate-800 hover:bg-slate-900">
+              <Button type="submit" className="w-full h-11 md:h-12 text-sm md:text-base bg-[#704f36] hover:bg-slate-900">
                 {t("contact.send")}
               </Button>
             </form>
@@ -165,7 +165,7 @@ export function Contact() {
                   <a href="tel:+905015300767" className="block mt-1 hover:underline">0501 530 07 67</a>
                 </div>
                 <div className="mt-2">
-                  <a href="mailto:bilgi@muus.life" className="text-blue-600 font-medium hover:underline">bilgi@muus.life</a>
+                  <a href="mailto:bilgi@noyerhome.com" className="text-blue-600 font-medium hover:underline">bilgi@noyerhome.com</a>
                 </div>
                 <p className="text-slate-500 text-sm mt-2">{t("contact.hours")}</p>
               </div>
@@ -180,7 +180,7 @@ export function Contact() {
                   href="https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="WhatsApp"
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" className="fill-white stroke-none">
@@ -193,7 +193,7 @@ export function Contact() {
                   href="https://instagram.com/muus_life"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -204,7 +204,7 @@ export function Contact() {
                   href="https://www.youtube.com/@muuslife"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="YouTube"
                 >
                   <Youtube className="w-5 h-5" />
@@ -215,7 +215,7 @@ export function Contact() {
                   href="https://tr.pinterest.com/muuslife"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="Pinterest"
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="text-white">
@@ -228,7 +228,7 @@ export function Contact() {
                   href="https://www.tiktok.com/@muus.life.mobilya"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
+                  className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
                   aria-label="TikTok"
                 >
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" className="text-white">

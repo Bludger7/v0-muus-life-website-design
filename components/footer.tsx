@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-12">
           {/* Brand */}
           <div className="space-y-3 md:space-y-4">
-            <h3 className="text-xl md:text-2xl font-bold">muus.life</h3>
+            <h3 className="text-xl md:text-2xl font-bold">Noyer Home</h3>
             <p className="text-[var(--color-muted-foreground)] text-sm md:text-base">{t("footer.tagline")}</p>
             <div className="flex items-center gap-2 text-xs md:text-sm text-[var(--color-muted-foreground)]">
               <span>Ankara, Türkiye</span>
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
 
         <div className="pt-6 md:pt-8 border-t border-[var(--color-border)] text-center text-[var(--color-muted-foreground)] text-xs md:text-sm">
-          <p>© 2025 muus.life Design. {t("footer.rights")}</p>
+          <p>© 2026 Noyer Home. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>
