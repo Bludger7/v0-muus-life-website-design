@@ -19,8 +19,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Noyer Home | Mobilya Üretim & Tasarım",
-  description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
+  title: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
+  description:
+    "Ankara'da mutfak, gardırop, TV ünitesi ve kurumsal projeler için ölçüye özel mobilya üretimi. Keşiften montaja tek elden.",
   generator: "v0.app",
   verification: {
     google: "DFcAXn8g7_IrBoPbdJxD6-gVCtsAWESx9tLGiGMEPqQ",
@@ -29,7 +30,18 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
-  keywords: ["mobilya", "tasarım", "üretim", "özel mobilya", "noyer home", "Noyer Home"],
+  keywords: [
+    "mobilya",
+    "tasarım",
+    "üretim",
+    "özel mobilya",
+    "noyer home",
+    "Noyer Home",
+    "ölçüye özel mobilya",
+    "mutfak dolabı ankara",
+    "gardırop",
+    "mobilya üretim ankara",
+  ],
   authors: [{ name: "Noyer Home" }],
   robots: {
     index: true,
@@ -40,8 +52,9 @@ export const metadata: Metadata = {
     canonical: "https://noyerhome.com",
   },
   openGraph: {
-    title: "Noyer Home | Mobilya Üretim & Tasarım",
-    description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
+    title: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
+    description:
+      "Ankara'da mutfak, gardırop, TV ünitesi ve kurumsal projeler için ölçüye özel mobilya üretimi. Keşiften montaja tek elden.",
     url: "https://noyerhome.com",
     siteName: "Noyer Home",
     images: [
@@ -57,8 +70,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noyer Home | Mobilya Üretim & Tasarım",
-    description: "Kişiye özel mobilya çözümleri ve kurumsal ölçekte mobilya üretimi yapan modern üretim firması.",
+    title: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
+    description:
+      "Ankara'da mutfak, gardırop, TV ünitesi ve kurumsal projeler için ölçüye özel mobilya üretimi. Keşiften montaja tek elden.",
     images: ["https://noyerhome.com/logo.png"],
   },
 }

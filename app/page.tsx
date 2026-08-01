@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { ServicesSummary } from "@/components/services-summary"
+import { TrustBand } from "@/components/trust-band"
+import { ServiceCategories } from "@/components/service-categories"
+import { ProcessStrip } from "@/components/process-strip"
 import InstagramFeed from "@/components/instagram-feed"
 import { Portfolio } from "@/components/portfolio"
 import { Contact } from "@/components/contact"
@@ -11,7 +13,9 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <ServicesSummary />
+      <TrustBand />
+      <ServiceCategories />
+      <ProcessStrip />
       <InstagramFeed />
       <Portfolio />
       <Contact />

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Mouse, ChevronLeft, ChevronRight } from "lucide-react"
+import { Mouse, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 const heroImages = [
@@ -105,15 +105,24 @@ export function Hero() {
         <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl font-medium leading-relaxed">
           {t("hero.subtitle")}
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 mt-2 md:mt-4">
-          <Link href="/urunler">
-            <Button size="lg" className="rounded-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-base shadow-lg transition-all hover:scale-105 w-full sm:w-auto">
-              {t("hero.cta")}
+        <div className="flex flex-col sm:flex-row gap-3 mt-2 md:mt-4 w-full sm:w-auto items-stretch sm:items-center">
+          <a
+            href="https://wa.me/905015307736?text=Merhaba%2C%20mobilya%20teklifi%20almak%20istiyorum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <Button
+              size="lg"
+              className="rounded-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-base shadow-lg transition-all hover:scale-105 w-full sm:w-auto bg-[#704f36] hover:bg-[#5c402b] text-white gap-2"
+            >
+              <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
+              {t("hero.ctaWhatsapp")}
             </Button>
-          </Link>
-          <Link href="/hizmetler">
+          </a>
+          <Link href="/urunler" className="w-full sm:w-auto">
             <Button size="lg" variant="outline" className="rounded-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-base shadow-lg transition-all hover:scale-105 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white w-full sm:w-auto">
-              {t("hero.cta2")}
+              {t("hero.cta")}
             </Button>
           </Link>
         </div>

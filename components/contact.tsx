@@ -6,32 +6,61 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, MessageCircle, Upload, X, Instagram, Youtube } from "lucide-react"
+import { MapPin, Phone, MessageCircle, Instagram, Youtube, AlertCircle, CheckCircle2 } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
+
+const furnitureTypes = [
+  { value: "mutfak", key: "form.type.kitchen" },
+  { value: "gardirop", key: "form.type.wardrobe" },
+  { value: "tv-salon", key: "form.type.living" },
+  { value: "banyo", key: "form.type.bathroom" },
+  { value: "genc-cocuk", key: "form.type.kids" },
+  { value: "ofis", key: "form.type.office" },
+  { value: "diger", key: "form.type.other" },
+]
+
+type FormStatus = "idle" | "loading" | "success" | "error"
+
 export function Contact() {
-  const [files, setFiles] = useState<File[]>([])
+  const [status, setStatus] = useState<FormStatus>("idle")
   const { t } = useLanguage()
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setFiles(Array.from(e.target.files))
-    }
-  }
-
-  const removeFile = (index: number) => {
-    setFiles(files.filter((_, i) => i !== index))
-  }
+  const formEnabled = Boolean(WEB3FORMS_KEY)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    files.forEach((file) => {
-      formData.append("files", file)
+    if (!formEnabled) return
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const payload: Record<string, string> = {
+      access_key: WEB3FORMS_KEY as string,
+      subject: "Noyer Home - Yeni Teklif Talebi",
+      from_name: "Noyer Home Web Sitesi",
+    }
+    formData.forEach((value, key) => {
+      payload[key] = typeof value === "string" ? value : ""
     })
 
-    // TODO: Implement email sending with attachments
-    console.log("[v0] Form submitted with files:", files)
+    setStatus("loading")
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      })
+      const data = await res.json()
+      if (res.ok && data.success) {
+        setStatus("success")
+        form.reset()
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
   }
 
   return (
@@ -48,8 +77,9 @@ export function Contact() {
           <div className="space-y-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.name")}</label>
+                <label htmlFor="contact-name" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.name")}</label>
                 <Input
+                  id="contact-name"
                   name="name"
                   placeholder={t("contact.name")}
                   required
@@ -57,18 +87,69 @@ export function Contact() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.email")}</label>
+                <label htmlFor="contact-phone" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.phoneField")}</label>
                 <Input
-                  name="email"
-                  placeholder={t("contact.email")}
-                  type="email"
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  placeholder="05XX XXX XX XX"
                   required
                   className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.message")}</label>
+                <label htmlFor="contact-email" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.emailOptional")}</label>
+                <Input
+                  id="contact-email"
+                  name="email"
+                  placeholder={t("contact.email")}
+                  type="email"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="contact-type" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.furnitureType")}</label>
+                <select
+                  id="contact-type"
+                  name="furniture_type"
+                  required
+                  defaultValue=""
+                  className="w-full h-11 md:h-12 px-3 rounded-md bg-slate-50 border border-slate-200 focus:border-slate-400 focus:outline-none text-sm md:text-base text-slate-900"
+                >
+                  <option value="" disabled>
+                    {t("contact.furnitureTypeSelect")}
+                  </option>
+                  {furnitureTypes.map((type) => (
+                    <option key={type.value} value={t(type.key)}>
+                      {t(type.key)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="contact-location" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.location")}</label>
+                <Input
+                  id="contact-location"
+                  name="location"
+                  placeholder={t("contact.locationPlaceholder")}
+                  required
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="contact-size" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.size")}</label>
+                <Input
+                  id="contact-size"
+                  name="approx_size"
+                  placeholder={t("contact.sizePlaceholder")}
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="contact-message" className="text-xs md:text-sm font-semibold text-slate-900">{t("contact.message")}</label>
                 <Textarea
+                  id="contact-message"
                   name="message"
                   placeholder={t("contact.message")}
                   required
@@ -76,49 +157,49 @@ export function Contact() {
                 />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-900">{t("contact.file")}</label>
-                <div className="relative">
-                  <input
-                    type="file"
-                    id="file-upload"
-                    multiple
-                    onChange={handleFileChange}
-                    className="hidden"
-                    accept="image/*,.pdf,.doc,.docx"
-                  />
-                  <label
-                    htmlFor="file-upload"
-                    className="flex items-center justify-center gap-2 h-12 px-4 border-2 border-dashed border-slate-200 rounded-md hover:border-slate-400 cursor-pointer bg-slate-50 transition-colors"
-                  >
-                    <Upload className="w-5 h-5 text-slate-500" />
-                    <span className="text-sm text-slate-600">{t("contact.fileSelect")}</span>
-                  </label>
-                </div>
+              <p className="text-xs text-slate-500">{t("contact.photoNote")}</p>
 
-                {files.length > 0 && (
-                  <div className="space-y-2 mt-3">
-                    {files.map((file, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center justify-between p-2 bg-slate-50 rounded-md border border-slate-200"
-                      >
-                        <span className="text-sm text-slate-700 truncate flex-1">{file.name}</span>
-                        <button
-                          type="button"
-                          onClick={() => removeFile(index)}
-                          className="ml-2 p-1 hover:bg-slate-200 rounded"
-                        >
-                          <X className="w-4 h-4 text-slate-500" />
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                )}
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="contact-kvkk"
+                  name="kvkk_consent"
+                  value={t("contact.kvkkValue")}
+                  required
+                  className="mt-0.5 w-4 h-4 shrink-0 accent-[#704f36] cursor-pointer"
+                />
+                <label htmlFor="contact-kvkk" className="text-xs md:text-sm text-slate-600 leading-relaxed cursor-pointer">
+                  {t("contact.kvkk")}
+                </label>
               </div>
 
-              <Button type="submit" className="w-full h-11 md:h-12 text-sm md:text-base bg-[#704f36] hover:bg-slate-900">
-                {t("contact.send")}
+              {!formEnabled && (
+                <div className="flex items-start gap-2 p-3 rounded-md bg-amber-50 border border-amber-200 text-amber-800 text-xs md:text-sm">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{t("contact.formDisabled")}</span>
+                </div>
+              )}
+
+              {status === "success" && (
+                <div className="flex items-start gap-2 p-3 rounded-md bg-green-50 border border-green-200 text-green-800 text-xs md:text-sm">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{t("contact.success")}</span>
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="flex items-start gap-2 p-3 rounded-md bg-red-50 border border-red-200 text-red-800 text-xs md:text-sm">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{t("contact.error")}</span>
+                </div>
+              )}
+
+              <Button
+                type="submit"
+                disabled={!formEnabled || status === "loading"}
+                className="w-full h-11 md:h-12 text-sm md:text-base bg-[#704f36] hover:bg-slate-900 disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {status === "loading" ? t("contact.sending") : t("contact.send")}
               </Button>
             </form>
 
@@ -126,7 +207,7 @@ export function Contact() {
               variant="outline"
               className="w-full h-11 md:h-12 text-sm md:text-base border-slate-200 hover:bg-slate-50 gap-2 bg-transparent"
               onClick={() =>
-                window.open("https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?", "_blank")
+                window.open("https://wa.me/905015307736?text=Merhaba%2C%20mobilya%20teklifi%20almak%20istiyorum", "_blank")
               }
             >
               <MessageCircle className="w-5 h-5" />
@@ -160,9 +241,9 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">{t("contact.phone")}</h3>
-                <div className="text-slate-600 font-mono text-lg">
-                  <a href="tel:+905015307736" className="block hover:underline">0501 530 77 36</a>
-                  <a href="tel:+905015300767" className="block mt-1 hover:underline">0501 530 07 67</a>
+                <div className="flex flex-col items-start gap-1.5 text-slate-600 font-mono text-lg leading-relaxed">
+                  <a href="tel:+905015307736" className="block w-full hover:underline">0501 530 77 36</a>
+                  <a href="tel:+905015300767" className="block w-full hover:underline">0501 530 07 67</a>
                 </div>
                 <div className="mt-2">
                   <a href="mailto:bilgi@noyerhome.com" className="text-blue-600 font-medium hover:underline">bilgi@noyerhome.com</a>
@@ -177,7 +258,7 @@ export function Contact() {
               <div className="flex flex-wrap gap-3">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/905015307736?text=Merhabalar%20bilgi%20alabilir%20miyim?"
+                  href="https://wa.me/905015307736?text=Merhaba%2C%20mobilya%20teklifi%20almak%20istiyorum"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"

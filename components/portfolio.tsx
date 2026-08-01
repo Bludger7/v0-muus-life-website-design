@@ -8,38 +8,32 @@ import { useLanguage } from "@/lib/language-context"
 const projects = [
   {
     id: 1,
-    title: "Modern Villa",
-    category: "Exterior",
+    categoryKey: "portfolio.cat.villa",
     image: "/modern-luxury-villa-exterior-architecture.jpg",
   },
   {
     id: 2,
-    title: "Open Office",
-    category: "Interior",
+    categoryKey: "portfolio.cat.office",
     image: "/modern-office-interior-sunlight.jpg",
   },
   {
     id: 3,
-    title: "Luxury Bedroom",
-    category: "Interior",
+    categoryKey: "portfolio.cat.bedroom",
     image: "/luxury-bedroom.png",
   },
   {
     id: 4,
-    title: "Fine Dining",
-    category: "Commercial",
+    categoryKey: "portfolio.cat.restaurant",
     image: "/upscale-restaurant-interior-dark-moody.jpg",
   },
   {
     id: 5,
-    title: "Glass Façade",
-    category: "Exterior",
+    categoryKey: "portfolio.cat.commercial",
     image: "/modern-commercial-building-glass-facade.jpg",
   },
   {
     id: 6,
-    title: "Public Atrium",
-    category: "Public",
+    categoryKey: "portfolio.cat.public",
     image: "/bright-modern-public-building-atrium.jpg",
   },
 ]
@@ -66,12 +60,13 @@ export function Portfolio() {
             >
               <Image
                 src={project.image || "/placeholder.svg"}
-                alt={project.title}
+                alt={t(project.categoryKey)}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-slate-900 shadow-sm z-10">
-                Noyer Home
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg shadow-sm z-10 text-right">
+                <div className="text-xs font-semibold text-slate-900 leading-tight">{t(project.categoryKey)}</div>
+                <div className="text-[10px] text-slate-500 leading-tight mt-0.5">Noyer Home</div>
               </div>
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
