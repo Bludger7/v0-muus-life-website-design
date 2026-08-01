@@ -14,16 +14,6 @@ export function Team() {
 
   const teamMembers = [
     {
-      name: "Selahattin Hacıhasanoğlu",
-      role: t("team.role.founder"),
-      image: "/images/whatsapp-20image-202025-12-15-20at-2010.jpeg",
-    },
-    {
-      name: "Gamze Turan",
-      role: t("team.role.architect"),
-      image: "/images/img-2094.jpeg",
-    },
-    {
       name: "Aleyna Kılınç",
       role: t("team.role.architect"),
       image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
@@ -42,13 +32,7 @@ export function Team() {
       name: "Yunus Emre İnanç",
       role: t("team.role.operations"),
       image: "/images/yunush.jpg",
-    },
-    {
-      name: "Selin Sude Portakal",
-      role: t("team.role.architect"),
-      image: "/images/selin.jpeg",
-    },
-
+    }
   ]
 
   const handleMucahitClick = () => {

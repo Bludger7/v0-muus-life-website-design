@@ -71,7 +71,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.subtitle": "Profesyonel ekibimizle her projede mükemmelliği hedefliyoruz. Deneyim ve yaratıcılığı bir araya getirerek hayalinizdeki mekanları gerçeğe dönüştürüyoruz.",
     "team.role.founder": "Kurucu Ortak",
     "team.role.architect": "İç Mimar",
-    "team.role.director": "Kurucu Ortak / Tasarım Direktörü",
+    "team.role.director": "Firma Sahibi",
     "team.role.site": "Şantiye Şefi",
     "team.role.operations": "Operasyon Sorumlusu",
     
@@ -163,7 +163,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.subtitle": "We aim for excellence in every project with our professional team. By combining experience and creativity, we turn the spaces of your dreams into reality.",
     "team.role.founder": "Co-Founder",
     "team.role.architect": "Interior Architect",
-    "team.role.director": "Co-Founder / Design Director",
+    "team.role.director": "Owner",
     "team.role.site": "Site Manager",
     "team.role.operations": "Operations Manager",
     
