@@ -14,14 +14,14 @@ export function Team() {
 
   const teamMembers = [
     {
-      name: "Aleyna Kılınç",
-      role: t("team.role.architect"),
-      image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
-    },
-    {
       name: "Mücahit Okcu",
       role: t("team.role.director"),
       image: "/images/mucahit.jpeg",
+    },
+    {
+      name: "Aleyna Kılınç",
+      role: t("team.role.architect"),
+      image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
     },
     {
       name: "Emrah Zengin",
