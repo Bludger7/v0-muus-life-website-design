@@ -30,7 +30,7 @@ export function FloatingSocials() {
 
           {/* Instagram Button */}
           <a
-            href="https://instagram.com/noyerhome"
+            href="https://instagram.com/noyer.home"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 md:w-14 md:h-14 bg-slate-800 hover:bg-slate-900 text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"

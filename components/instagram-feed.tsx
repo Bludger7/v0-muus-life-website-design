@@ -157,12 +157,12 @@ export default function InstagramFeed() {
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">{t("social.media.title")}</h2>
         <div className="w-12 h-1 bg-slate-900 mx-auto mb-4"></div>
         <a 
-          href="https://instagram.com/noyerhome" 
+          href="https://instagram.com/noyer.home" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-sm md:text-base text-slate-500 hover:text-slate-700 transition-colors"
         >
-          @noyerhome
+          @noyer.home
         </a>
       </div>
       
