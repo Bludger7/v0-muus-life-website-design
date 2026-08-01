@@ -55,7 +55,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="Noyer Home" width={140} height={48} className="h-9 md:h-10 w-auto" />
+          <Image src="/logo.png" alt="Noyer Home" width={140} height={48} className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
