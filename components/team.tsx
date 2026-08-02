@@ -24,6 +24,11 @@ export function Team() {
       image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
     },
     {
+      name: "Sena Çopur",
+      role: t("team.role.architect"),
+      image: "/images/sena.jpeg",
+    },
+    {
       name: "Emrah Zengin",
       role: t("team.role.site"),
       image: "/images/IMG_4275.jpg",
@@ -38,7 +43,7 @@ export function Team() {
   const handleMucahitClick = () => {
     const newCount = clickCount + 1
     setClickCount(newCount)
-    setShakeIndex(3) // Mücahit'in index'i
+    setShakeIndex(0) // Mücahit'in index'i
 
     // Shake animasyonunu kaldır
     setTimeout(() => setShakeIndex(null), 500)
@@ -84,16 +89,16 @@ export function Team() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* İlk 4 kişi */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12 mb-4 md:mb-8 lg:mb-12">
-            {teamMembers.slice(0, 4).map((member, index) => (
+          {/* İlk 3 kişi */}
+          <div className="grid grid-cols-3 gap-4 md:gap-8 lg:gap-12 mb-4 md:mb-8 lg:mb-12">
+            {teamMembers.slice(0, 3).map((member, index) => (
               <div
                 key={index}
                 className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
                   shakeIndex === index ? "animate-shake" : ""
                 }`}
-                onClick={index === 3 ? handleMucahitClick : undefined}
-                style={{ cursor: index === 3 ? "pointer" : "default" }}
+                onClick={index === 0 ? handleMucahitClick : undefined}
+                style={{ cursor: index === 0  ? "pointer" : "default" }}
               >
                 <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">
                   <Image
@@ -109,13 +114,13 @@ export function Team() {
             ))}
           </div>
           
-          {/* Son 3 kişi - ortada */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 lg:gap-12 max-w-3xl mx-auto">
-            {teamMembers.slice(4).map((member, index) => (
+          {/* Son 2 kişi - ortada */}
+          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 max-w-2xl mx-auto">
+            {teamMembers.slice(3).map((member, index) => (
               <div
-                key={index + 4}
+                key={index + 3}
                 className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
-                  shakeIndex === index + 4 ? "animate-shake" : ""
+                  shakeIndex === index + 3  ? "animate-shake" : ""
                 }`}
               >
                 <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">
