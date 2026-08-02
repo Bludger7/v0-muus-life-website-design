@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "_comment_redirects": "TUR 2A: URL gocu henuz canliya alinmadi. /urunler -> /projeler ve /ofis-calismalari -> /kurumsal-projeler 301 yonlendirmeleri, gercek galeriler yayina girene kadar DEVRE DISI birakildi. Tur 2B'de asagidaki '_disabled_redirects' icerigi 'redirects' anahtarina tasinarak acilacak.",
+  "_disabled_redirects": [
+    { "source": "/urunler", "destination": "/projeler", "permanent": true },
+    { "source": "/urunler/", "destination": "/projeler", "permanent": true },
+    { "source": "/ofis-calismalari", "destination": "/kurumsal-projeler", "permanent": true },
+    { "source": "/ofis-calismalari/", "destination": "/kurumsal-projeler", "permanent": true }
+  ]
+}

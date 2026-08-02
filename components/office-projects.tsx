@@ -1,3 +1,7 @@
+// TUR 2A: Bu bilesen su anda HICBIR SAYFADA render edilmiyor. Gosterdigi 30
+// gorselin gercek uygulama fotografi oldugu dogrulanmadigi icin /kurumsal-projeler
+// ve /ofis-calismalari sayfalari gecici olarak <GalleryPlaceholder /> gosteriyor.
+// Gorsel dosyalari arsiv/webp-dogrulama-bekleyen/ klasorunde. Tur 2B'de geri acilacak.
 "use client"
 
 import { useState, useEffect, useCallback, TouchEvent } from "react"
@@ -5,43 +9,50 @@ import Image from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
-const officeImages = [
-  "/images/ofis2.jpg",
-  "/images/ofis3.jpg",
-  "/images/ofis4.jpg",
-  "/images/ofis5.jpg",
-  "/images/ofis6.jpg",
-  "/images/ofis7.jpg",
-  "/images/ofis8.jpg",
-  "/images/ofis9.jpg",
-  "/images/ofis10.jpg",
-  "/images/ofis11.jpg",
-  "/images/ofis12.jpg",
-  "/images/ofis13.jpg",
-  "/images/ofis14.jpg",
+type GalleryImage = { slug: string; altTr: string; altEn: string }
+
+const img = (slug: string, altTr: string, altEn: string): GalleryImage => ({ slug, altTr, altEn })
+
+// Alt metinler yalnizca gorselde gorulen mobilyayi/mekani tarif eder.
+// Gorsellerin gercek cekim mi tasarim gorsellestirmesi mi oldugu dogrulanmadigi
+// icin "tamamlanan uygulama", "tarafimizdan uretildi" gibi iddialar kullanilmaz.
+const officeImages: GalleryImage[] = [
+  img("ofis-02", "Ofis bekleme alanı mobilya tasarımı", "Office waiting area furniture design"),
+  img("ofis-03", "Ahşap kaplamalı kurumsal karşılama bankosu", "Corporate reception desk with wood cladding"),
+  img("ofis-04", "Ofis girişi karşılama bankosu", "Reception desk at an office entrance"),
+  img("ofis-05", "Ofis karşılama bankosu ve arkalık paneli", "Office reception desk and back panel"),
+  img("ofis-06", "Çalışma masası ve duvar ünitesi", "Work desk and wall unit"),
+  img("ofis-07", "Toplantı odası masası ve depolama üniteleri", "Meeting room table and storage units"),
+  img("ofis-08", "Toplantı masası ve sunum duvarı", "Meeting table and presentation wall"),
+  img("ofis-09", "Toplantı odası masası", "Meeting room table"),
+  img("ofis-10", "Yönetici odası çalışma masası ve raf ünitesi", "Executive desk and shelving unit"),
+  img("ofis-11", "Yönetici masası ve arkalık depolama", "Executive desk and rear storage"),
+  img("ofis-12", "Yönetici odası mobilya tasarımı", "Executive office furniture design"),
+  img("ofis-13", "Ofis çalışma masası ve dolap birimi", "Office desk and cabinet unit"),
+  img("ofis-14", "Yönetici odası çalışma masası ve arkalık ünitesi", "Executive desk and rear storage unit"),
 ]
 
-const storeImages = [
-  "/images/magaza2.jpg",
-  "/images/magaza1.jpg",
-  "/images/magaza,3.jpg",
-  "/images/magaza4.jpg",
-  "/images/magaza6.jpg",
-  "/images/magaza8.jpg",
-  "/images/magaza9.jpg",
+const storeImages: GalleryImage[] = [
+  img("magaza-02", "Mağaza teşhir ve kasa alanı", "Retail display and checkout area"),
+  img("magaza-01", "Mağaza teşhir ve raf sistemi tasarımı", "Retail display and shelving system design"),
+  img("magaza-03", "Camlı teşhir üniteleri ve mağaza bankosu", "Glass display units and retail counter"),
+  img("magaza-04", "Mağaza duvar rafları ve teşhir üniteleri", "Retail wall shelving and display units"),
+  img("magaza-06", "Mağaza karşılama bankosu", "Retail reception counter"),
+  img("magaza-08", "Mağaza kasa bankosu", "Retail checkout counter"),
+  img("magaza-09", "Mağaza kasa bankosu ve teşhir alanı", "Retail checkout counter and display area"),
 ]
 
-const restaurantImages = [
-  "/images/restorant1.jpg",
-  "/images/restorant2.jpg",
-  "/images/restorant3.jpg",
-  "/images/restorant4.jpg",
-  "/images/restorant6.jpg",
-  "/images/restorant7.jpg",
-  "/images/restorant8.jpg",
-  "/images/restorant9.jpg",
-  "/images/restorant10.jpg",
-  "/images/restorant11.jpg",
+const restaurantImages: GalleryImage[] = [
+  img("restoran-01", "Restoran oturma alanı mobilyaları", "Restaurant seating area furniture"),
+  img("restoran-02", "Kafe sabit oturma birimleri", "Fixed seating units for a cafe"),
+  img("restoran-03", "Kafe servis bankosu", "Cafe service counter"),
+  img("restoran-04", "Lounge oturma alanı mobilyaları", "Lounge seating area furniture"),
+  img("restoran-06", "Lobi oturma alanı mobilyaları", "Lobby seating area furniture"),
+  img("restoran-07", "Karşılama bankosu", "Reception counter"),
+  img("restoran-08", "Kafe iç mekân oturma birimleri", "Interior seating units for a cafe"),
+  img("restoran-09", "Kafe servis alanı ve oturma birimleri", "Cafe service area and seating units"),
+  img("restoran-10", "Karşılama bankosu ve arkalık paneli", "Reception counter and back panel"),
+  img("restoran-11", "Kafe oturma alanı iç mekân tasarımı", "Cafe seating area interior design"),
 ]
 
 const categories = [
@@ -56,7 +67,7 @@ export function OfficeProjects() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const minSwipeDistance = 50
 
@@ -142,29 +153,32 @@ export function OfficeProjects() {
             <button
               key={cat.key}
               onClick={() => setActiveTab(cat.key)}
+              aria-pressed={activeTab === cat.key}
               className={`px-4 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-medium transition-all cursor-pointer ${
                 activeTab === cat.key
                   ? "bg-slate-900 text-white shadow-lg"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
               }`}
             >
-              {tabLabels[cat.key]?.tr}
+              {language === "en" ? tabLabels[cat.key]?.en : tabLabels[cat.key]?.tr}
             </button>
           ))}
         </div>
 
         {/* Image Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {currentImages.map((img, idx) => (
+          {currentImages.map((photo, idx) => (
             <div
-              key={idx}
+              key={photo.slug}
               className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer shadow-sm hover:shadow-md transition-shadow"
               onClick={() => openLightbox(idx)}
             >
               <Image
-                src={img || "/placeholder.svg"}
-                alt={`${activeTab} ${idx + 1}`}
+                src={`/img/${photo.slug}-thumb.webp`}
+                alt={language === "en" ? photo.altEn : photo.altTr}
                 fill
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
@@ -184,6 +198,7 @@ export function OfficeProjects() {
         >
           <button
             onClick={closeLightbox}
+            aria-label={t("gallery.close")}
             className="absolute top-3 right-3 sm:top-4 sm:right-4 text-white hover:text-slate-300 transition-colors z-20 p-2 bg-black/50 rounded-full"
           >
             <X className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -191,6 +206,7 @@ export function OfficeProjects() {
 
           <button
             onClick={(e) => { e.stopPropagation(); prevImage() }}
+            aria-label={t("gallery.prev")}
             className="absolute left-2 sm:left-4 text-white hover:text-slate-300 transition-colors z-20 p-2 bg-black/50 rounded-full hidden sm:flex items-center justify-center"
           >
             <ChevronLeft className="w-8 h-8 sm:w-12 sm:h-12" />
@@ -198,6 +214,7 @@ export function OfficeProjects() {
 
           <button
             onClick={(e) => { e.stopPropagation(); nextImage() }}
+            aria-label={t("gallery.next")}
             className="absolute right-2 sm:right-4 text-white hover:text-slate-300 transition-colors z-20 p-2 bg-black/50 rounded-full hidden sm:flex items-center justify-center"
           >
             <ChevronRight className="w-8 h-8 sm:w-12 sm:h-12" />
@@ -208,8 +225,12 @@ export function OfficeProjects() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={currentImages[currentImageIndex] || "/placeholder.svg"}
-              alt="Lightbox Image"
+              src={`/img/${currentImages[currentImageIndex].slug}.webp`}
+              alt={
+                language === "en"
+                  ? currentImages[currentImageIndex].altEn
+                  : currentImages[currentImageIndex].altTr
+              }
               fill
               className="object-contain"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"

@@ -31,9 +31,28 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Trust band
     "trust.custom": "Ölçüye Özel Üretim",
-    "trust.survey": "Ankara'da Ücretsiz Keşif",
+    "trust.survey": "Ankara'da Yerinde Keşif",
     "trust.install": "Profesyonel Montaj",
     "trust.warranty": "1 Yıl Garanti",
+
+    // Uygulama galerisi
+    "gallery.title": "Proje Galerisi",
+    "gallery.subtitle": "Ölçüye özel mobilya, yaşam alanı ve kurumsal mekân çalışmalarımızdan seçkiler.",
+    "gallery.all": "Tümü",
+    "gallery.filterLabel": "Kategori filtresi",
+    "gallery.close": "Görseli kapat",
+    "gallery.prev": "Önceki görsel",
+    "gallery.next": "Sonraki görsel",
+    "gallery.empty": "Bu kategoride görsel bulunmuyor.",
+
+    // Gecici galeri sayfasi (gorsel dogrulamasi bekleniyor)
+    "placeholder.title": "Proje Arşivimizi Hazırlıyoruz",
+    "placeholder.text": "Proje görsellerimizi yeniden düzenliyoruz. Bu bölüm kısa süre içinde yayına alınacak. Bu arada mekânınızın fotoğraflarını veya yaklaşık ölçülerini WhatsApp üzerinden gönderebilir, ihtiyacınızı birlikte değerlendirebiliriz.",
+    "placeholder.services": "Hizmetlerimizi İnceleyin",
+
+    // Son teklif cagrisi
+    "cta.title": "Projenizi Birlikte Değerlendirelim",
+    "cta.text": "Mekânınızın fotoğraflarını veya yaklaşık ölçülerini WhatsApp üzerinden gönderin; sizin için değerlendirip dönüş yapalım.",
 
     // Process strip
     "process.title": "Nasıl Çalışıyoruz?",
@@ -43,7 +62,7 @@ const translations: Record<Language, Record<string, string>> = {
     "process.step2": "Tasarım",
     "process.step2.desc": "Ölçülere uygun tasarımı hazırlıyor, malzeme ve renk seçimini birlikte netleştiriyoruz.",
     "process.step3": "Üretim",
-    "process.step3.desc": "Onaylanan projeyi kendi atölyemizde üretiyoruz.",
+    "process.step3.desc": "Onaylanan projeyi planlı ve kontrollü bir üretim süreciyle hazırlıyoruz.",
     "process.step4": "Montaj",
     "process.step4.desc": "Ürünleri mekânınıza kuruyor, teslim öncesi son kontrolleri yapıyoruz.",
 
@@ -61,6 +80,8 @@ const translations: Record<Language, Record<string, string>> = {
     "cat.bathroom.desc": "Neme dayanıklı malzemelerle banyo dolabı ve lavabo altı üniteleri hazırlıyoruz.",
     "cat.kids": "Genç ve Çocuk Odaları",
     "cat.kids.desc": "Çalışma masası, dolap ve yatak birimlerini oda ölçüsüne göre birlikte kurguluyoruz.",
+    "cat.antre": "Antre ve Vestiyer",
+    "cat.antre.desc": "Antre dolabı, vestiyer ve ayna ünitelerini giriş ölçüsüne göre üretiyoruz.",
     "cat.office": "Ofis ve Kurumsal",
     "cat.office.desc": "Ofis, mağaza ve restoran projelerinde seri üretim disipliniyle çalışıyoruz.",
     "cat.other": "Ölçüye Özel Diğer Üretimler",
@@ -104,8 +125,8 @@ const translations: Record<Language, Record<string, string>> = {
     "services.showMore": "+ Daha Fazla",
     
     // Team
-    "team.title": "Ekip",
-    "team.thePrefix": "the ",
+    "team.title": "Ekibimiz",
+    "team.thePrefix": "",
     "team.subtitle": "Profesyonel ekibimizle her projede mükemmelliği hedefliyoruz. Deneyim ve yaratıcılığı bir araya getirerek hayalinizdeki mekanları gerçeğe dönüştürüyoruz.",
     "team.role.founder": "Kurucu Ortak",
     "team.role.architect": "İç Mimar",
@@ -115,8 +136,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Portfolio
     "portfolio.title": "Portfolyo",
-    "portfolio.subtitle": "Son Projelerimizi Keşfedin",
-    "portfolio.showMore": "Daha Fazla Göster",
+    "portfolio.subtitle": "Çalışmalarımızdan seçkiler",
+    "portfolio.showMore": "Tüm Projeleri Gör",
+    "portfolio.card.kitchen": "Mutfak Tasarımı",
+    "portfolio.card.wardrobe": "Giyinme Odası Tasarımı",
+    "portfolio.card.corporate": "Kurumsal Mobilya Tasarımı",
     "portfolio.cat.villa": "Villa Projesi",
     "portfolio.cat.office": "Ofis Projesi",
     "portfolio.cat.bedroom": "Yatak Odası",
@@ -164,7 +188,7 @@ const translations: Record<Language, Record<string, string>> = {
     "form.type.other": "Diğer",
     
     // Footer
-    "footer.tagline": "Mobilya Üretim & Tasarım",
+    "footer.tagline": "Ölçüye Özel Mobilya Üretimi",
     "footer.contact": "İletişim",
     "footer.quickLinks": "Hızlı Bağlantılar",
     "footer.blog": "Blog",
@@ -190,9 +214,28 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Trust band
     "trust.custom": "Made-to-Measure Production",
-    "trust.survey": "Free Survey in Ankara",
+    "trust.survey": "On-Site Survey in Ankara",
     "trust.install": "Professional Installation",
     "trust.warranty": "1 Year Warranty",
+
+    // Project gallery
+    "gallery.title": "Project Gallery",
+    "gallery.subtitle": "A selection from our made-to-measure furniture, living space and corporate interior work.",
+    "gallery.all": "All",
+    "gallery.filterLabel": "Category filter",
+    "gallery.close": "Close image",
+    "gallery.prev": "Previous image",
+    "gallery.next": "Next image",
+    "gallery.empty": "There are no images in this category.",
+
+    // Temporary gallery page (awaiting image verification)
+    "placeholder.title": "We Are Preparing Our Project Archive",
+    "placeholder.text": "We are reorganising our project visuals and this section will be published shortly. In the meantime you can send photos of your space or its approximate dimensions via WhatsApp and we can review your needs together.",
+    "placeholder.services": "Explore Our Services",
+
+    // Final quote CTA
+    "cta.title": "Let's Review Your Project Together",
+    "cta.text": "Send photos of your space or its approximate dimensions via WhatsApp and we will review them and get back to you.",
 
     // Process strip
     "process.title": "How We Work",
@@ -202,7 +245,7 @@ const translations: Record<Language, Record<string, string>> = {
     "process.step2": "Design",
     "process.step2.desc": "We prepare a design that fits the measurements and decide materials and colors together.",
     "process.step3": "Production",
-    "process.step3.desc": "We manufacture the approved project in our own workshop.",
+    "process.step3.desc": "We prepare the approved project through a planned and controlled production process.",
     "process.step4": "Installation",
     "process.step4.desc": "We install the units in your space and run final checks before handover.",
 
@@ -220,6 +263,8 @@ const translations: Record<Language, Record<string, string>> = {
     "cat.bathroom.desc": "We prepare bathroom cabinets and under-sink units using moisture-resistant materials.",
     "cat.kids": "Kids and Teen Rooms",
     "cat.kids.desc": "We plan desks, wardrobes and bed units together, sized to the room.",
+    "cat.antre": "Entryway and Coat Storage",
+    "cat.antre.desc": "We build entryway cabinets, coat units and mirror units sized to your hallway.",
     "cat.office": "Office and Corporate",
     "cat.office.desc": "We work with mass production discipline on office, retail and restaurant projects.",
     "cat.other": "Other Custom Production",
@@ -264,7 +309,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Team
     "team.title": "Team",
-    "team.thePrefix": "the ",
+    "team.thePrefix": "",
     "team.subtitle": "We aim for excellence in every project with our professional team. By combining experience and creativity, we turn the spaces of your dreams into reality.",
     "team.role.founder": "Co-Founder",
     "team.role.architect": "Interior Architect",
@@ -274,8 +319,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Portfolio
     "portfolio.title": "Portfolio",
-    "portfolio.subtitle": "Explore Our Latest Projects",
-    "portfolio.showMore": "Show More",
+    "portfolio.subtitle": "A selection of our work",
+    "portfolio.showMore": "View All Projects",
+    "portfolio.card.kitchen": "Kitchen Design",
+    "portfolio.card.wardrobe": "Dressing Room Design",
+    "portfolio.card.corporate": "Corporate Furniture Design",
     "portfolio.cat.villa": "Villa Project",
     "portfolio.cat.office": "Office Project",
     "portfolio.cat.bedroom": "Bedroom",
@@ -323,7 +371,7 @@ const translations: Record<Language, Record<string, string>> = {
     "form.type.other": "Other",
     
     // Footer
-    "footer.tagline": "Furniture Production & Design",
+    "footer.tagline": "Made-to-Measure Furniture Production",
     "footer.contact": "Contact",
     "footer.quickLinks": "Quick Links",
     "footer.blog": "Blog",

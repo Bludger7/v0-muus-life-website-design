@@ -8,6 +8,14 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, MessageCircle, Instagram, Youtube, AlertCircle, CheckCircle2 } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { trackContactFormSuccess, trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics"
+import {
+  WHATSAPP_QUOTE_URL,
+  PHONE_PRIMARY_DISPLAY,
+  PHONE_PRIMARY_TEL,
+  PHONE_SECONDARY_DISPLAY,
+  PHONE_SECONDARY_TEL,
+} from "@/lib/contact-info"
 
 const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
 
@@ -54,6 +62,8 @@ export function Contact() {
       const data = await res.json()
       if (res.ok && data.success) {
         setStatus("success")
+        // Yalnizca gercek basarili Web3Forms cevabindan sonra.
+        trackContactFormSuccess(payload.furniture_type)
         form.reset()
       } else {
         setStatus("error")
@@ -203,16 +213,16 @@ export function Contact() {
               </Button>
             </form>
 
-            <Button
-              variant="outline"
-              className="w-full h-11 md:h-12 text-sm md:text-base border-slate-200 hover:bg-slate-50 gap-2 bg-transparent"
-              onClick={() =>
-                window.open("https://wa.me/905015307736?text=Merhaba%2C%20mobilya%20teklifi%20almak%20istiyorum", "_blank")
-              }
+            <a
+              href={WHATSAPP_QUOTE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("contact")}
+              className="w-full h-11 md:h-12 text-sm md:text-base border border-slate-200 hover:bg-slate-50 gap-2 bg-transparent rounded-md inline-flex items-center justify-center font-medium text-slate-900 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               {t("contact.whatsapp")}
-            </Button>
+            </a>
           </div>
 
           {/* Info Cards */}
@@ -242,8 +252,20 @@ export function Contact() {
               <div>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">{t("contact.phone")}</h3>
                 <div className="flex flex-col items-start gap-1.5 text-slate-600 font-mono text-lg leading-relaxed">
-                  <a href="tel:+905015307736" className="block w-full hover:underline">0501 530 77 36</a>
-                  <a href="tel:+905015300767" className="block w-full hover:underline">0501 530 07 67</a>
+                  <a
+                    href={`tel:${PHONE_PRIMARY_TEL}`}
+                    onClick={() => trackPhoneClick("contact", PHONE_PRIMARY_TEL)}
+                    className="block w-full hover:underline"
+                  >
+                    {PHONE_PRIMARY_DISPLAY}
+                  </a>
+                  <a
+                    href={`tel:${PHONE_SECONDARY_TEL}`}
+                    onClick={() => trackPhoneClick("contact", PHONE_SECONDARY_TEL)}
+                    className="block w-full hover:underline"
+                  >
+                    {PHONE_SECONDARY_DISPLAY}
+                  </a>
                 </div>
                 <div className="mt-2">
                   <a href="mailto:bilgi@noyerhome.com" className="text-blue-600 font-medium hover:underline">bilgi@noyerhome.com</a>

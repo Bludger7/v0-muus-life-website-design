@@ -2,6 +2,8 @@
 
 import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
+import { PHONE_PRIMARY_DISPLAY, PHONE_PRIMARY_TEL } from "@/lib/contact-info"
+import { trackPhoneClick } from "@/lib/analytics"
 
 export function Footer() {
   const { t } = useLanguage()
@@ -24,12 +26,8 @@ export function Footer() {
               <Link href="/hizmetler" className="hover:text-[var(--color-background)] transition-colors">
                 {t("nav.services")}
               </Link>
-              <Link href="/urunler" className="hover:text-white transition-colors">
-                {t("nav.products")}
-              </Link>
-              <Link href="/ofis-calismalari" className="hover:text-white transition-colors">
-                {t("nav.office")}
-              </Link>
+              {/* TUR 2A: /projeler ve /kurumsal-projeler baglantilari, proje
+                  gorselleri dogrulanana kadar cikarildi. Tur 2B'de geri gelecek. */}
               <Link href="/hakkimizda" className="hover:text-white transition-colors">
                 {t("nav.about")}
               </Link>
@@ -45,7 +43,16 @@ export function Footer() {
               <p>Şehit Osman Avcı Mah. Kaplan Cad. No:11</p>
               <p>Alpak&Neva ARMONIA Sitesi C Blok No:9, 06824</p>
               <p>Etimesgut/Ankara</p>
-              <p className="mt-2 pt-2 border-t border-[var(--color-border)] font-mono text-xs md:text-sm">Tel: 0501 530 77 36</p>
+              <p className="mt-2 pt-2 border-t border-[var(--color-border)] font-mono text-xs md:text-sm">
+                Tel:{" "}
+                <a
+                  href={`tel:${PHONE_PRIMARY_TEL}`}
+                  onClick={() => trackPhoneClick("footer", PHONE_PRIMARY_TEL)}
+                  className="hover:text-[var(--color-background)] transition-colors"
+                >
+                  {PHONE_PRIMARY_DISPLAY}
+                </a>
+              </p>
             </div>
           </div>
         </div>

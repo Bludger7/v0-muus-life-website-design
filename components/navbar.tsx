@@ -30,11 +30,11 @@ export function Navbar() {
     setMobileMenuOpen(false)
   }, [pathname])
 
+  // TUR 2A: /projeler ve /kurumsal-projeler baglantilari, proje gorselleri
+  // dogrulanana kadar menuden cikarildi. Tur 2B'de geri eklenecek.
   const navLinks = [
     { href: "/", label: t("nav.home") },
     { href: "/hizmetler", label: t("nav.services") },
-    { href: "/urunler", label: t("nav.products") },
-    { href: "/ofis-calismalari", label: t("nav.office") },
     { href: "/hakkimizda", label: t("nav.about") },
     { href: "/iletisim", label: t("nav.contact") },
   ]

@@ -1,0 +1,44 @@
+# Vercel deploy paketine girmeyecek dosyalar.
+# DIKKAT: public/ altindaki yayin gorselleri (public/img, logo, favicon, og-image)
+# BILINCLI olarak burada YOKTUR; production build bunlara ihtiyac duyar.
+
+# Orijinal gorsel arsivi (~23 MB) - yalnizca repo kaydi icin tutuluyor,
+# sitede kullanilmiyor.
+arsiv/
+
+# Kontakt foyler ve gorsel inceleme ciktilari
+kontakt-foy/
+*-kontakt-foy.pdf
+sheet-*.jpg
+sheet-*.png
+
+# Ekran goruntuleri
+screenshots/
+*.screenshot.png
+
+# Gecici scriptler ve yerel test ciktilari
+scripts/tmp/
+tmp/
+*.tmp
+*.local
+
+# Build / bagimlilik ciktilari (Vercel kendisi uretir)
+.next/
+out/
+node_modules/
+coverage/
+
+# Ortam dosyalari
+.env
+.env.*
+!.env.example
+
+# Editor / OS artefaktlari
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Git ic dosyalari
+.git/
+.github/

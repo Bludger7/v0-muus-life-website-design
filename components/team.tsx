@@ -16,27 +16,27 @@ export function Team() {
     {
       name: "Mücahit Okcu",
       role: t("team.role.director"),
-      image: "/images/mucahit.jpeg",
+      image: "/img/ekip-mucahit-okcu.webp",
     },
     {
       name: "Aleyna Kılınç",
       role: t("team.role.architect"),
-      image: "/images/profil-20foto-c4-9fraf-c4-b1-20kare.jpg",
+      image: "/img/ekip-aleyna-kilinc.webp",
     },
     {
       name: "Sena Çopur",
       role: t("team.role.architect"),
-      image: "/images/sena.jpeg",
+      image: "/img/ekip-sena-copur.webp",
     },
     {
       name: "Emrah Zengin",
       role: t("team.role.site"),
-      image: "/images/IMG_4275.jpg",
+      image: "/img/ekip-emrah-zengin.webp",
     },
     {
       name: "Yunus Emre İnanç",
       role: t("team.role.operations"),
-      image: "/images/yunush.jpg",
+      image: "/img/ekip-yunus-emre-inanc.webp",
     }
   ]
 
@@ -156,7 +156,7 @@ export function Team() {
             <div className="bg-white rounded-lg overflow-hidden shadow-2xl animate-in zoom-in duration-500">
               <div className="relative aspect-square">
                 <Image
-                  src="/images/eastereggmuco.jpg"
+                  src="/img/ekip-easter-egg.webp"
                   alt="Easter Egg"
                   fill
                   className="object-cover"

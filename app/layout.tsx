@@ -6,6 +6,8 @@ import Script from "next/script"
 import "./globals.css"
 import { FloatingSocials } from "@/components/floating-socials"
 import { LanguageProvider } from "@/lib/language-context"
+import { JsonLd } from "@/components/json-ld"
+import { SITE_URL } from "@/lib/contact-info"
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -18,10 +20,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
+// NOT: title/description/canonical/openGraph/twitter her sayfanin kendi
+// page.tsx dosyasinda tanimlidir. Burada yalnizca tum sayfalarda ortak olan
+// alanlar bulunur; boylece alt sayfalara yanlis canonical miras kalmaz.
 export const metadata: Metadata = {
-  title: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
-  description:
-    "Ankara'da mutfak, gardırop, TV ünitesi ve kurumsal projeler için ölçüye özel mobilya üretimi. Keşiften montaja tek elden.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
+    template: "%s",
+  },
   generator: "v0.app",
   verification: {
     google: "DFcAXn8g7_IrBoPbdJxD6-gVCtsAWESx9tLGiGMEPqQ",
@@ -47,33 +54,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     nocache: false,
-  },
-  alternates: {
-    canonical: "https://noyerhome.com",
-  },
-  openGraph: {
-    title: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
-    description:
-      "Ankara'da mutfak, gardırop, TV ünitesi ve kurumsal projeler için ölçüye özel mobilya üretimi. Keşiften montaja tek elden.",
-    url: "https://noyerhome.com",
-    siteName: "Noyer Home",
-    images: [
-      {
-        url: "https://noyerhome.com/logo.png",
-        width: 120,
-        height: 40,
-        alt: "Noyer Home logo",
-      },
-    ],
-    locale: "tr_TR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Noyer Home | Ankara Ölçüye Özel Mobilya Üretimi",
-    description:
-      "Ankara'da mutfak, gardırop, TV ünitesi ve kurumsal projeler için ölçüye özel mobilya üretimi. Keşiften montaja tek elden.",
-    images: ["https://noyerhome.com/logo.png"],
   },
 }
 
@@ -118,6 +98,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       <body className={`${montserrat.variable} ${geistMono.variable} font-sans antialiased`}>
+        <JsonLd />
+
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -2,18 +2,23 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ChefHat, Shirt, Tv, Bath, Baby, Building2, Ruler } from "lucide-react"
+import { ArrowRight, ChefHat, Shirt, Tv, Bath, DoorOpen, Building2 } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
-// image: null -> imageless card (no suitable photo in public/images yet)
+// TUR 2A: Kart gorselleri gecici olarak kaldirildi. Kullanilan fotograflarin
+// gercek uygulama fotografi oldugu dogrulanmadi; hepsi image: null ile
+// gorselsiz (yalnizca ikonlu) karta dondu. Ikonlar korunuyor.
+// Tur 2B: dogrulanmis gorseller geldiginde tekrar atanacak.
+//
+// "Genc ve Cocuk Odalari" gercek gorsel bulunana kadar grid disinda; teklif
+// formunda secenek olarak duruyor.
 const categories = [
-  { key: "kitchen", icon: ChefHat, image: "/images/mutfak12.jpg" },
-  { key: "wardrobe", icon: Shirt, image: "/images/giyinmeodasi1.jpg" },
-  { key: "living", icon: Tv, image: "/images/yasam2.jpg" },
+  { key: "kitchen", icon: ChefHat, image: null },
+  { key: "wardrobe", icon: Shirt, image: null },
+  { key: "living", icon: Tv, image: null },
   { key: "bathroom", icon: Bath, image: null },
-  { key: "kids", icon: Baby, image: null },
-  { key: "office", icon: Building2, image: "/images/ofis2.jpg" },
-  { key: "other", icon: Ruler, image: "/images/antre3.jpg" },
+  { key: "antre", icon: DoorOpen, image: null },
+  { key: "office", icon: Building2, image: null },
 ]
 
 export function ServiceCategories() {
