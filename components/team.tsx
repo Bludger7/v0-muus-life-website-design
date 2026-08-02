@@ -81,7 +81,7 @@ export function Team() {
     <section id="team" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-4"><span className="text-slate-600 font-light">{t("team.thePrefix")}</span>{t("team.title")}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-4">{t("team.title")}</h2>
           <div className="w-16 h-1 bg-slate-900 mx-auto mb-4 md:mb-6"></div>
           <p className="text-sm md:text-base text-slate-600 leading-relaxed">
             {t("team.subtitle")}
