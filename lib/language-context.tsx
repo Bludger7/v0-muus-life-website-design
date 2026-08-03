@@ -308,7 +308,9 @@ const translations: Record<Language, Record<string, string>> = {
     "services.showMore": "+ Show More",
     
     // Team
-    "team.title": "Team",
+    "team.title": "Our Team",
+    // team.thePrefix artik team.tsx icinde render edilmiyor (baslik sadelestirildi);
+    // tam metin dogrudan team.title icinde tutuluyor.
     "team.thePrefix": "",
     "team.subtitle": "We aim for excellence in every project with our professional team. By combining experience and creativity, we turn the spaces of your dreams into reality.",
     "team.role.founder": "Co-Founder",
@@ -397,7 +399,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }
 
   const t = (key: string): string => {
-    return translations[language][key] || key
+    // NOT: `|| key` kullanilmaz. Bos string ("") falsy oldugu icin gecerli bir
+    // ceviri olmasina ragmen anahtarin kendisi ekrana basiliyordu
+    // (orn. team.thePrefix -> "team.thePrefixEkibimiz"). Yalnizca anahtar
+    // gercekten tanimsizsa anahtar adina dusulur.
+    const value = translations[language][key]
+    return value !== undefined ? value : key
   }
 
   return (
