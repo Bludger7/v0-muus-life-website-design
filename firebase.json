@@ -1,6 +1,13 @@
 {
   "hosting": {
     "public": "out",
+    "redirects": [
+      {
+        "source": "**",
+        "destination": "https://noyerhome.com",
+        "type": 301
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
