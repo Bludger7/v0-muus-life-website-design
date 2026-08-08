@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
-import { PHONE_PRIMARY_DISPLAY, PHONE_PRIMARY_TEL } from "@/lib/contact-info"
+import { PHONE_PRIMARY_DISPLAY, PHONE_PRIMARY_TEL, PHONE_SECONDARY_DISPLAY, PHONE_SECONDARY_TEL } from "@/lib/contact-info"
 import { trackPhoneClick } from "@/lib/analytics"
 
 export function Footer() {
@@ -51,6 +51,14 @@ export function Footer() {
                   className="hover:text-[var(--color-background)] transition-colors"
                 >
                   {PHONE_PRIMARY_DISPLAY}
+                </a>
+                {" · "}
+                <a
+                  href={`tel:${PHONE_SECONDARY_TEL}`}
+                  onClick={() => trackPhoneClick("footer", PHONE_SECONDARY_TEL)}
+                  className="hover:text-[var(--color-background)] transition-colors"
+                >
+                  {PHONE_SECONDARY_DISPLAY}
                 </a>
               </p>
             </div>

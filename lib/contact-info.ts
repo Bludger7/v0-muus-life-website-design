@@ -4,15 +4,15 @@
 export const SITE_URL = "https://noyerhome.com"
 
 /** WhatsApp hattı — sitede kullanilan numara. */
-export const WHATSAPP_PHONE = "905015307736"
+export const WHATSAPP_PHONE = "905016917736"
 export const WHATSAPP_MESSAGE = "Merhaba, mobilya teklifi almak istiyorum"
 export const WHATSAPP_QUOTE_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
 /** Sitede gorunen iki telefon numarasi. */
-export const PHONE_PRIMARY_DISPLAY = "0501 530 77 36"
-export const PHONE_PRIMARY_TEL = "+905015307736"
-export const PHONE_SECONDARY_DISPLAY = "0501 530 07 67"
-export const PHONE_SECONDARY_TEL = "+905015300767"
+export const PHONE_PRIMARY_DISPLAY = "0501 691 77 36"
+export const PHONE_PRIMARY_TEL = "+905016917736"
+export const PHONE_SECONDARY_DISPLAY = "0506 487 77 36"
+export const PHONE_SECONDARY_TEL = "+905064877736"
 
 export const EMAIL = "bilgi@noyerhome.com"
 

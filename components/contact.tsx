@@ -280,7 +280,7 @@ export function Contact() {
               <div className="flex flex-wrap gap-3">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/905015307736?text=Merhaba%2C%20mobilya%20teklifi%20almak%20istiyorum"
+                  href={WHATSAPP_QUOTE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
