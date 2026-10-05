@@ -898,27 +898,27 @@ export const productionGallery: Record<string, GalleryGroup[]> = {
       ]
     },
     {
-      "material": "Veteriner Kliniği",
+      "material": "İncek Veteriner Mobilya Uygulamamız",
       "images": [
         {
-          "src": "/img/projeler/veteriner-klinigi-1.webp",
-          "thumb": "/img/projeler/veteriner-klinigi-1-k.webp"
+          "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-1.webp",
+          "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-1-k.webp"
         },
         {
-          "src": "/img/projeler/veteriner-klinigi-2.webp",
-          "thumb": "/img/projeler/veteriner-klinigi-2-k.webp"
+          "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-2.webp",
+          "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-2-k.webp"
         },
         {
-          "src": "/img/projeler/veteriner-klinigi-3.webp",
-          "thumb": "/img/projeler/veteriner-klinigi-3-k.webp"
+          "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-3.webp",
+          "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-3-k.webp"
         },
         {
-          "src": "/img/projeler/veteriner-klinigi-4.webp",
-          "thumb": "/img/projeler/veteriner-klinigi-4-k.webp"
+          "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-4.webp",
+          "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-4-k.webp"
         },
         {
-          "src": "/img/projeler/veteriner-klinigi-5.webp",
-          "thumb": "/img/projeler/veteriner-klinigi-5-k.webp"
+          "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-5.webp",
+          "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-5-k.webp"
         }
       ]
     }

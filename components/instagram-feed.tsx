@@ -13,8 +13,8 @@ const CLIPS = [
   "metafor-rezidans-anahtar-teslim-mobilya-projemiz",
   "eryaman-ata-dostlar-sitesi",
   "baglica-anahtar-teslim-daire",
-  "emek-anahtar-teslim-daire",
-  "armonia-anahtar-teslim-daire",
+  "bahcelievler-anahtar-teslim-mobilya",
+  "yenimahalle-yda-park",
 ]
 
 function Clip({ slug }: { slug: string }) {

@@ -412,6 +412,118 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
+    "slug": "adres-ankara-anahtar-teslim-mobilya-projemiz",
+    "title": "Adres Ankara Anahtar Teslim Mobilya Projemiz",
+    "location": "Ankara",
+    "category": "konut",
+    "images": [
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-1.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-1-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-2.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-2-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-3.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-3-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-4.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-4-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-5.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-5-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-6.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-6-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-7.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-7-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-8.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-8-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-9.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-9-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-10.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-10-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-11.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-11-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-12.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-12-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-13.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-13-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-14.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-14-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-15.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-15-k.webp"
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-16.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-16-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-17.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-17-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-18.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-18-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-19.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-19-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-20.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-20-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-21.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-21-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-22.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-22-k.webp",
+        "render": true
+      },
+      {
+        "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-23.webp",
+        "thumb": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-23-k.webp",
+        "render": true
+      }
+    ],
+    "video": {
+      "src": "/video/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz.mp4",
+      "poster": "/video/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz.jpg"
+    }
+  },
+  {
     "slug": "gozde-cocuk-anaokulu",
     "title": "Gözde Çocuk Anaokulu",
     "location": "Ankara",
@@ -480,71 +592,71 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
-    "slug": "eryaman-anahtar-teslim-daire",
-    "title": "Eryaman Anahtar Teslim Daire",
+    "slug": "eryaman-yesil-vadi-sitesi",
+    "title": "Eryaman Yeşil Vadi Sitesi",
     "location": "Eryaman",
     "category": "konut",
     "images": [
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-1.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-1-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-1.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-1-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-2.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-2-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-2.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-2-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-3.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-3-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-3.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-3-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-4.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-4-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-4.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-4-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-5.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-5-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-5.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-5-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-6.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-6-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-6.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-6-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-7.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-7-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-7.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-7-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-8.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-8-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-8.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-8-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-9.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-9-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-9.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-9-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-10.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-10-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-10.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-10-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-11.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-11-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-11.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-11-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-12.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-12-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-12.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-12-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-13.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-13-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-13.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-13-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-daire-14.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-daire-14-k.webp"
+        "src": "/img/projeler/eryaman-yesil-vadi-sitesi-14.webp",
+        "thumb": "/img/projeler/eryaman-yesil-vadi-sitesi-14-k.webp"
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-anahtar-teslim-daire.mp4",
-      "poster": "/video/projeler/eryaman-anahtar-teslim-daire.jpg"
+      "src": "/video/projeler/eryaman-yesil-vadi-sitesi.mp4",
+      "poster": "/video/projeler/eryaman-yesil-vadi-sitesi.jpg"
     }
   },
   {
@@ -1014,163 +1126,63 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
-    "slug": "eryaman-anahtar-teslim-konut",
-    "title": "Eryaman Anahtar Teslim Konut",
+    "slug": "eryaman-goksu-park-vadi-evleri",
+    "title": "Eryaman Göksu Park Vadi Evleri",
     "location": "Eryaman",
     "category": "konut",
     "images": [
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-1.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-1-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-1.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-1-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-2.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-2-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-2.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-2-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-3.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-3-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-3.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-3-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-4.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-4-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-4.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-4-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-5.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-5-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-5.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-5-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-6.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-6-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-6.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-6-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-7.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-7-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-7.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-7-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-8.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-8-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-8.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-8-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-9.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-9-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-9.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-9-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-10.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-10-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-10.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-10-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-11.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-11-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-11.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-11-k.webp"
       },
       {
-        "src": "/img/projeler/eryaman-anahtar-teslim-konut-12.webp",
-        "thumb": "/img/projeler/eryaman-anahtar-teslim-konut-12-k.webp"
+        "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-12.webp",
+        "thumb": "/img/projeler/eryaman-goksu-park-vadi-evleri-12-k.webp"
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-anahtar-teslim-konut.mp4",
-      "poster": "/video/projeler/eryaman-anahtar-teslim-konut.jpg"
-    }
-  },
-  {
-    "slug": "adres-ankara",
-    "title": "Adres Ankara",
-    "location": "Ankara",
-    "category": "konut",
-    "images": [
-      {
-        "src": "/img/projeler/adres-ankara-1.webp",
-        "thumb": "/img/projeler/adres-ankara-1-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-2.webp",
-        "thumb": "/img/projeler/adres-ankara-2-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-3.webp",
-        "thumb": "/img/projeler/adres-ankara-3-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-4.webp",
-        "thumb": "/img/projeler/adres-ankara-4-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-5.webp",
-        "thumb": "/img/projeler/adres-ankara-5-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-6.webp",
-        "thumb": "/img/projeler/adres-ankara-6-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-7.webp",
-        "thumb": "/img/projeler/adres-ankara-7-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-8.webp",
-        "thumb": "/img/projeler/adres-ankara-8-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-9.webp",
-        "thumb": "/img/projeler/adres-ankara-9-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-10.webp",
-        "thumb": "/img/projeler/adres-ankara-10-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-11.webp",
-        "thumb": "/img/projeler/adres-ankara-11-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-12.webp",
-        "thumb": "/img/projeler/adres-ankara-12-k.webp"
-      },
-      {
-        "src": "/img/projeler/adres-ankara-13.webp",
-        "thumb": "/img/projeler/adres-ankara-13-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-14.webp",
-        "thumb": "/img/projeler/adres-ankara-14-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-15.webp",
-        "thumb": "/img/projeler/adres-ankara-15-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-16.webp",
-        "thumb": "/img/projeler/adres-ankara-16-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-17.webp",
-        "thumb": "/img/projeler/adres-ankara-17-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-18.webp",
-        "thumb": "/img/projeler/adres-ankara-18-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-19.webp",
-        "thumb": "/img/projeler/adres-ankara-19-k.webp",
-        "render": true
-      },
-      {
-        "src": "/img/projeler/adres-ankara-20.webp",
-        "thumb": "/img/projeler/adres-ankara-20-k.webp",
-        "render": true
-      }
-    ],
-    "video": {
-      "src": "/video/projeler/adres-ankara.mp4",
-      "poster": "/video/projeler/adres-ankara.jpg"
+      "src": "/video/projeler/eryaman-goksu-park-vadi-evleri.mp4",
+      "poster": "/video/projeler/eryaman-goksu-park-vadi-evleri.jpg"
     }
   },
   {
@@ -1226,187 +1238,90 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
-    "slug": "armonia-anahtar-teslim-daire",
-    "title": "Armonia Anahtar Teslim Daire",
+    "slug": "bahcelievler-anahtar-teslim-mobilya",
+    "title": "Bahçelievler Anahtar Teslim Mobilya",
+    "location": "Bahçelievler",
+    "category": "konut",
+    "images": [
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-1.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-1-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-2.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-2-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-3.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-3-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-4.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-4-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-5.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-5-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-6.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-6-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-7.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-7-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-8.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-8-k.webp"
+      },
+      {
+        "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-9.webp",
+        "thumb": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-9-k.webp"
+      }
+    ],
+    "video": {
+      "src": "/video/projeler/bahcelievler-anahtar-teslim-mobilya.mp4",
+      "poster": "/video/projeler/bahcelievler-anahtar-teslim-mobilya.jpg"
+    }
+  },
+  {
+    "slug": "eryaman-turkuaz-konutlari-anahtar-teslim-mobilya",
+    "title": "Eryaman Turkuaz Konutları Anahtar Teslim Mobilya",
     "location": "Eryaman",
     "category": "konut",
     "images": [
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-1.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-1-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-1.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-1-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-2.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-2-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-2.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-2-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-3.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-3-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-3.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-3-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-4.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-4-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-4.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-4-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-5.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-5-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-5.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-5-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-6.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-6-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-6.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-6-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-7.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-7-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-7.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-7-k.webp"
       },
       {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-8.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-8-k.webp"
-      },
-      {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-9.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-9-k.webp"
-      },
-      {
-        "src": "/img/projeler/armonia-anahtar-teslim-daire-10.webp",
-        "thumb": "/img/projeler/armonia-anahtar-teslim-daire-10-k.webp"
-      }
-    ],
-    "video": {
-      "src": "/video/projeler/armonia-anahtar-teslim-daire.mp4",
-      "poster": "/video/projeler/armonia-anahtar-teslim-daire.jpg"
-    }
-  },
-  {
-    "slug": "emek-anahtar-teslim-daire",
-    "title": "Emek Anahtar Teslim Daire",
-    "location": "Emek",
-    "category": "konut",
-    "images": [
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-1.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-1-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-2.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-2-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-3.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-3-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-4.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-4-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-5.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-5-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-6.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-6-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-7.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-7-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-8.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-8-k.webp"
-      },
-      {
-        "src": "/img/projeler/emek-anahtar-teslim-daire-9.webp",
-        "thumb": "/img/projeler/emek-anahtar-teslim-daire-9-k.webp"
-      }
-    ],
-    "video": {
-      "src": "/video/projeler/emek-anahtar-teslim-daire.mp4",
-      "poster": "/video/projeler/emek-anahtar-teslim-daire.jpg"
-    }
-  },
-  {
-    "slug": "ferra-west",
-    "title": "Ferra West",
-    "location": "Ankara",
-    "category": "konut",
-    "images": [
-      {
-        "src": "/img/projeler/ferra-west-1.webp",
-        "thumb": "/img/projeler/ferra-west-1-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-2.webp",
-        "thumb": "/img/projeler/ferra-west-2-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-3.webp",
-        "thumb": "/img/projeler/ferra-west-3-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-4.webp",
-        "thumb": "/img/projeler/ferra-west-4-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-5.webp",
-        "thumb": "/img/projeler/ferra-west-5-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-6.webp",
-        "thumb": "/img/projeler/ferra-west-6-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-7.webp",
-        "thumb": "/img/projeler/ferra-west-7-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-8.webp",
-        "thumb": "/img/projeler/ferra-west-8-k.webp"
-      },
-      {
-        "src": "/img/projeler/ferra-west-9.webp",
-        "thumb": "/img/projeler/ferra-west-9-k.webp"
-      }
-    ],
-    "video": null
-  },
-  {
-    "slug": "anahtar-teslim-daire-2",
-    "title": "Anahtar Teslim Daire",
-    "location": "Ankara",
-    "category": "konut",
-    "images": [
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-1.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-1-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-2.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-2-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-3.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-3-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-4.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-4-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-5.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-5-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-6.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-6-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-7.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-7-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-daire-2-8.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-8-k.webp"
+        "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-8.webp",
+        "thumb": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-8-k.webp"
       }
     ],
     "video": null
@@ -1497,57 +1412,57 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
-    "slug": "anahtar-teslim-konut-2",
-    "title": "Anahtar Teslim Konut",
-    "location": "Ankara",
+    "slug": "turgut-ozal-mahallesi-anahtar-teslim-mobilya",
+    "title": "Turgut Özal Mahallesi Anahtar Teslim Mobilya",
+    "location": "Turgut Özal Mahallesi",
     "category": "konut",
     "images": [
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-1.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-1-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-1.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-1-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-2.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-2-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-2.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-2-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-3.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-3-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-3.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-3-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-4.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-4-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-4.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-4-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-5.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-5-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-5.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-5-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-6.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-6-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-6.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-6-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-7.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-7-k.webp"
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-7.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-7-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-8.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-8-k.webp",
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-8.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-8-k.webp",
         "render": true
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-9.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-9-k.webp",
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-9.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-9-k.webp",
         "render": true
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-10.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-10-k.webp",
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-10.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-10-k.webp",
         "render": true
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-11.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-11-k.webp",
+        "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-11.webp",
+        "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-11-k.webp",
         "render": true
       }
     ],
@@ -1587,35 +1502,35 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
-    "slug": "anahtar-teslim-daire",
-    "title": "Anahtar Teslim Daire",
-    "location": "Ankara",
+    "slug": "eryaman-etaplar-anahtar-teslim-mobilya",
+    "title": "Eryaman Etaplar Anahtar Teslim Mobilya",
+    "location": "Eryaman",
     "category": "konut",
     "images": [
       {
-        "src": "/img/projeler/anahtar-teslim-daire-1.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-1-k.webp"
+        "src": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-1.webp",
+        "thumb": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-1-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-daire-2.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-2-k.webp"
+        "src": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-2.webp",
+        "thumb": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-2-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-daire-3.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-3-k.webp"
+        "src": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-3.webp",
+        "thumb": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-3-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-daire-4.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-4-k.webp"
+        "src": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-4.webp",
+        "thumb": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-4-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-daire-5.webp",
-        "thumb": "/img/projeler/anahtar-teslim-daire-5-k.webp"
+        "src": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-5.webp",
+        "thumb": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-5-k.webp"
       }
     ],
     "video": {
-      "src": "/video/projeler/anahtar-teslim-daire.mp4",
-      "poster": "/video/projeler/anahtar-teslim-daire.jpg"
+      "src": "/video/projeler/eryaman-etaplar-anahtar-teslim-mobilya.mp4",
+      "poster": "/video/projeler/eryaman-etaplar-anahtar-teslim-mobilya.jpg"
     }
   },
   {
@@ -1651,113 +1566,59 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
-    "slug": "veteriner-klinigi",
-    "title": "Veteriner Kliniği",
-    "location": "Ankara",
+    "slug": "incek-veteriner-mobilya-uygulamamiz",
+    "title": "İncek Veteriner Mobilya Uygulamamız",
+    "location": "İncek",
     "category": "kurumsal",
     "images": [
       {
-        "src": "/img/projeler/veteriner-klinigi-1.webp",
-        "thumb": "/img/projeler/veteriner-klinigi-1-k.webp"
+        "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-1.webp",
+        "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-1-k.webp"
       },
       {
-        "src": "/img/projeler/veteriner-klinigi-2.webp",
-        "thumb": "/img/projeler/veteriner-klinigi-2-k.webp"
+        "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-2.webp",
+        "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-2-k.webp"
       },
       {
-        "src": "/img/projeler/veteriner-klinigi-3.webp",
-        "thumb": "/img/projeler/veteriner-klinigi-3-k.webp"
+        "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-3.webp",
+        "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-3-k.webp"
       },
       {
-        "src": "/img/projeler/veteriner-klinigi-4.webp",
-        "thumb": "/img/projeler/veteriner-klinigi-4-k.webp"
+        "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-4.webp",
+        "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-4-k.webp"
       },
       {
-        "src": "/img/projeler/veteriner-klinigi-5.webp",
-        "thumb": "/img/projeler/veteriner-klinigi-5-k.webp"
+        "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-5.webp",
+        "thumb": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-5-k.webp"
       }
     ],
     "video": null
   },
   {
-    "slug": "anahtar-teslim-konut-2-2",
-    "title": "Anahtar Teslim Konut",
-    "location": "Ankara",
+    "slug": "gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi",
+    "title": "GOP Mahallesi Anahtar Teslim Mutfak ve Banyo Uygulaması",
+    "location": "GOP Mahallesi",
     "category": "konut",
     "images": [
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-2-1.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-2-1-k.webp"
+        "src": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-1.webp",
+        "thumb": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-1-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-2-2.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-2-2-k.webp"
+        "src": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-2.webp",
+        "thumb": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-2-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-2-3.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-2-3-k.webp"
+        "src": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-3.webp",
+        "thumb": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-3-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-2-4.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-2-4-k.webp"
+        "src": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-4.webp",
+        "thumb": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-4-k.webp"
       },
       {
-        "src": "/img/projeler/anahtar-teslim-konut-2-2-5.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-2-5-k.webp"
-      }
-    ],
-    "video": null
-  },
-  {
-    "slug": "lale-evleri",
-    "title": "Lale Evleri",
-    "location": "Ankara",
-    "category": "konut",
-    "images": [
-      {
-        "src": "/img/projeler/lale-evleri-1.webp",
-        "thumb": "/img/projeler/lale-evleri-1-k.webp"
-      },
-      {
-        "src": "/img/projeler/lale-evleri-2.webp",
-        "thumb": "/img/projeler/lale-evleri-2-k.webp"
-      },
-      {
-        "src": "/img/projeler/lale-evleri-3.webp",
-        "thumb": "/img/projeler/lale-evleri-3-k.webp"
-      },
-      {
-        "src": "/img/projeler/lale-evleri-4.webp",
-        "thumb": "/img/projeler/lale-evleri-4-k.webp"
-      },
-      {
-        "src": "/img/projeler/lale-evleri-5.webp",
-        "thumb": "/img/projeler/lale-evleri-5-k.webp"
-      }
-    ],
-    "video": null
-  },
-  {
-    "slug": "anahtar-teslim-konut",
-    "title": "Anahtar Teslim Konut",
-    "location": "Ankara",
-    "category": "konut",
-    "images": [
-      {
-        "src": "/img/projeler/anahtar-teslim-konut-1.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-1-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-konut-2.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-2-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-konut-3.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-3-k.webp"
-      },
-      {
-        "src": "/img/projeler/anahtar-teslim-konut-4.webp",
-        "thumb": "/img/projeler/anahtar-teslim-konut-4-k.webp"
+        "src": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-5.webp",
+        "thumb": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-5-k.webp"
       }
     ],
     "video": null
@@ -1991,14 +1852,14 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
-    "slug": "kecioren-mutfak",
-    "title": "Keçiören Mutfak",
-    "location": "Keçiören",
+    "slug": "haskoy-anahtar-teslim-mobilya",
+    "title": "Hasköy Anahtar Teslim Mobilya",
+    "location": "Hasköy",
     "category": "konut",
     "images": [],
     "video": {
-      "src": "/video/projeler/kecioren-mutfak.mp4",
-      "poster": "/video/projeler/kecioren-mutfak.jpg"
+      "src": "/video/projeler/haskoy-anahtar-teslim-mobilya.mp4",
+      "poster": "/video/projeler/haskoy-anahtar-teslim-mobilya.jpg"
     }
   }
 ]
