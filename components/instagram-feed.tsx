@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { Instagram } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { Instagram, Play } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { INSTAGRAM_URL } from "@/lib/contact-info"
 
@@ -19,6 +19,7 @@ const CLIPS = [
 
 function Clip({ slug }: { slug: string }) {
   const ref = useRef<HTMLVideoElement>(null)
+  const [playing, setPlaying] = useState(false)
   useEffect(() => {
     const v = ref.current
     if (!v) return
@@ -27,14 +28,32 @@ function Clip({ slug }: { slug: string }) {
     v.defaultMuted = true
     v.setAttribute("muted", "")
     v.setAttribute("playsinline", "")
-    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: 0.3 })
+    v.setAttribute("webkit-playsinline", "")
+    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: 0.25 })
     io.observe(v)
     return () => io.disconnect()
   }, [])
+  const toggle = () => {
+    const v = ref.current
+    if (!v) return
+    if (v.paused) v.play().catch(() => {})
+    else v.pause()
+  }
   return (
-    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="block relative w-full aspect-[9/16] overflow-hidden rounded-lg shadow-md bg-slate-100">
-      <video ref={ref} src={`/video/projeler/${slug}.mp4`} poster={`/video/projeler/${slug}.jpg`} muted autoPlay loop playsInline preload="metadata" className="w-full h-full object-cover" />
-    </a>
+    <button type="button" onClick={toggle} aria-label={playing ? "Videoyu durdur" : "Videoyu oynat"}
+      className="block relative w-full aspect-[9/16] overflow-hidden rounded-lg shadow-md bg-slate-200">
+      <img src={`/video/projeler/${slug}.jpg`} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+      <video ref={ref} src={`/video/projeler/${slug}.mp4`} poster={`/video/projeler/${slug}.jpg`} muted autoPlay loop playsInline preload="metadata"
+        onPlaying={() => setPlaying(true)} onPause={() => setPlaying(false)}
+        className="absolute inset-0 w-full h-full object-cover" />
+      {!playing && (
+        <span className="absolute inset-0 flex items-center justify-center">
+          <span className="w-12 h-12 rounded-full bg-black/55 flex items-center justify-center">
+            <Play className="w-6 h-6 text-white fill-white ml-0.5" />
+          </span>
+        </span>
+      )}
+    </button>
   )
 }
 

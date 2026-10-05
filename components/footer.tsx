@@ -71,6 +71,11 @@ export function Footer() {
 
         <div className="pt-6 md:pt-8 border-t border-[var(--color-border)] text-center text-[var(--color-muted-foreground)] text-xs md:text-sm">
           <p>© 2026 Noyer Home. {t("footer.rights")}</p>
+          <nav aria-label="Yasal bağlantılar" className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1">
+            <Link href="/kvkk-aydinlatma/" className="hover:text-white transition-colors">KVKK Aydınlatma Metni</Link>
+            <Link href="/gizlilik/" className="hover:text-white transition-colors">Gizlilik Politikası</Link>
+            <Link href="/cerez-politikasi/" className="hover:text-white transition-colors">Çerez Politikası</Link>
+          </nav>
         </div>
       </div>
     </footer>

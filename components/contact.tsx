@@ -188,16 +188,10 @@ export function Contact() {
                   className="mt-0.5 w-4 h-4 shrink-0 accent-[#704f36] cursor-pointer"
                 />
                 <label htmlFor="contact-kvkk" className="text-xs md:text-sm text-slate-600 leading-relaxed cursor-pointer">
-                  {t("contact.kvkk")}
+                  <a href="/kvkk-aydinlatma/" target="_blank" className="underline text-[#704f36]">KVKK Aydınlatma Metni</a>&apos;ni okudum; teklif için benimle iletişime geçilmesini istiyorum.
                 </label>
               </div>
 
-              {!formEnabled && (
-                <div className="flex items-start gap-2 p-3 rounded-md bg-amber-50 border border-amber-200 text-amber-800 text-xs md:text-sm">
-                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-                  <span>{t("contact.formDisabled")}</span>
-                </div>
-              )}
 
               {status === "success" && (
                 <div className="flex items-start gap-2 p-3 rounded-md bg-green-50 border border-green-200 text-green-800 text-xs md:text-sm">

@@ -6,6 +6,7 @@ import "./globals.css"
 import { FloatingSocials } from "@/components/floating-socials"
 import { LanguageProvider } from "@/lib/language-context"
 import { JsonLd } from "@/components/json-ld"
+import { CookieConsent } from "@/components/cookie-consent"
 import { SITE_URL } from "@/lib/contact-info"
 
 const montserrat = Montserrat({
@@ -91,6 +92,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            var c = null; try { c = localStorage.getItem('noyer-cookie-consent'); } catch (e) {}
+            gtag('consent', 'default', { analytics_storage: c === 'granted' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
             gtag('js', new Date());
             gtag('config', 'G-MS7QKJL8T1');
           `}
@@ -113,6 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {children}
         </LanguageProvider>
         <FloatingSocials />
+              <CookieConsent />
       </body>
     </html>
   )

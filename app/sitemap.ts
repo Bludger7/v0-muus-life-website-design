@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/projeler/", priority: 0.8, changeFrequency: "monthly" },
     { path: "/hakkimizda/", priority: 0.6, changeFrequency: "yearly" },
     { path: "/iletisim/", priority: 0.8, changeFrequency: "yearly" },
+    { path: "/kvkk-aydinlatma/", priority: 0.2, changeFrequency: "yearly" },
+    { path: "/gizlilik/", priority: 0.2, changeFrequency: "yearly" },
+    { path: "/cerez-politikasi/", priority: 0.2, changeFrequency: "yearly" },
   ]
 
   return pages.map((p) => ({
