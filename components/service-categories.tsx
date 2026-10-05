@@ -19,7 +19,7 @@ const categories = [
   { key: "living", icon: Tv, image: productionCovers.living as string | null },
   { key: "bathroom", icon: Bath, image: productionCovers.bathroom as string | null },
   { key: "antre", icon: DoorOpen, image: productionCovers.antre as string | null },
-  { key: "office", icon: Building2, image: null as string | null },
+  { key: "office", icon: Building2, image: productionCovers.office as string | null },
 ]
 
 export function ServiceCategories() {
@@ -130,7 +130,7 @@ function GalleryModal({ catKey, onClose }: { catKey: string; onClose: () => void
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <h3 className="text-lg md:text-2xl font-bold text-slate-900">{t(`cat.${catKey}`)}</h3>
-            <p className="text-xs md:text-sm text-slate-500 mt-1">{t("cat.galleryNote")}</p>
+            <p className="text-xs md:text-sm text-slate-500 mt-1">{catKey === "office" ? "Teslim ettiğimiz ofis ve kurumsal projelerden fotoğraflar." : t("cat.galleryNote")}</p>
           </div>
           <button type="button" onClick={onClose} aria-label={t("cat.close")} className="shrink-0 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center">
             <X className="w-5 h-5" />

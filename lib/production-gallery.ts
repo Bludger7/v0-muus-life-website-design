@@ -7,7 +7,8 @@ export const productionCovers: Record<string, string> = {
   "wardrobe": "/img/uretim/gardirop-camli-3-k.webp",
   "living": "/img/uretim/tv-unitesi-model-1-k.webp",
   "bathroom": "/img/uretim/banyo-balon-3-k.webp",
-  "antre": "/img/uretim/antre-vestiyer-dresuar-3-k.webp"
+  "antre": "/img/uretim/antre-vestiyer-dresuar-3-k.webp",
+  "office": "/img/projeler/metromall-dubleks-ofis-1-k.webp"
 }
 
 export const productionGallery: Record<string, GalleryGroup[]> = {
@@ -756,6 +757,168 @@ export const productionGallery: Record<string, GalleryGroup[]> = {
         {
           "src": "/img/uretim/antre-vestiyer-oturma-alanli-vestiyer-4.webp",
           "thumb": "/img/uretim/antre-vestiyer-oturma-alanli-vestiyer-4-k.webp"
+        }
+      ]
+    }
+  ],
+  "office": [
+    {
+      "material": "Metromall Dubleks Ofis",
+      "images": [
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-1.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-1-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-2.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-2-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-3.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-3-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-4.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-4-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-5.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-5-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-6.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-6-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-7.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-7-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-8.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-8-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-9.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-9-k.webp"
+        },
+        {
+          "src": "/img/projeler/metromall-dubleks-ofis-10.webp",
+          "thumb": "/img/projeler/metromall-dubleks-ofis-10-k.webp"
+        }
+      ]
+    },
+    {
+      "material": "İntegral Vize Eryaman Ofisi",
+      "images": [
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-1.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-1-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-2.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-2-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-3.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-3-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-4.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-4-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-5.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-5-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-6.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-6-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-7.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-7-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-8.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-8-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-9.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-9-k.webp"
+        },
+        {
+          "src": "/img/projeler/integral-vize-eryaman-ofisi-10.webp",
+          "thumb": "/img/projeler/integral-vize-eryaman-ofisi-10-k.webp"
+        }
+      ]
+    },
+    {
+      "material": "Gözde Çocuk Anaokulu",
+      "images": [
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-1.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-1-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-2.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-2-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-3.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-3-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-4.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-4-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-5.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-5-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-6.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-6-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-7.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-7-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-8.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-8-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-9.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-9-k.webp"
+        },
+        {
+          "src": "/img/projeler/gozde-cocuk-anaokulu-10.webp",
+          "thumb": "/img/projeler/gozde-cocuk-anaokulu-10-k.webp"
+        }
+      ]
+    },
+    {
+      "material": "Veteriner Kliniği",
+      "images": [
+        {
+          "src": "/img/projeler/veteriner-klinigi-1.webp",
+          "thumb": "/img/projeler/veteriner-klinigi-1-k.webp"
+        },
+        {
+          "src": "/img/projeler/veteriner-klinigi-2.webp",
+          "thumb": "/img/projeler/veteriner-klinigi-2-k.webp"
+        },
+        {
+          "src": "/img/projeler/veteriner-klinigi-3.webp",
+          "thumb": "/img/projeler/veteriner-klinigi-3-k.webp"
+        },
+        {
+          "src": "/img/projeler/veteriner-klinigi-4.webp",
+          "thumb": "/img/projeler/veteriner-klinigi-4-k.webp"
+        },
+        {
+          "src": "/img/projeler/veteriner-klinigi-5.webp",
+          "thumb": "/img/projeler/veteriner-klinigi-5-k.webp"
         }
       ]
     }

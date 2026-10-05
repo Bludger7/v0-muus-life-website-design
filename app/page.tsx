@@ -40,7 +40,7 @@ export default function Home() {
       <ServiceCategories />
       <ProcessStrip />
       <InstagramFeed />
-      <ProjectShowcase />
+      <ProjectShowcase limit={6} />
       <Contact />
       <QuoteCta location="home" />
       <Footer />

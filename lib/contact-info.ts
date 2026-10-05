@@ -25,7 +25,7 @@ export const ADDRESS = {
 }
 
 /** Dogrulanmis tek sosyal hesap. */
-export const INSTAGRAM_URL = "https://instagram.com/noyer.home"
+export const INSTAGRAM_URL = "https://www.instagram.com/noyer.home/"
 
 /** Hafta ici calisma saatleri (sitede yayinda). Cumartesi bilgisi teyit edilmedi, eklenmedi. */
 export const OPENING_HOURS = {

@@ -302,7 +302,7 @@ export function Contact() {
 
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com/noyer.home"
+                  href="https://www.instagram.com/noyer.home/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#704f36] hover:bg-slate-900 text-white rounded-full shadow-sm flex items-center justify-center transition-all hover:scale-110"
