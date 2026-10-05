@@ -1238,6 +1238,58 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
+    "slug": "integral-vize-tunali-ofisi",
+    "title": "İntegral Vize Tunalı Ofisi",
+    "location": "Tunalı",
+    "category": "kurumsal",
+    "images": [
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-1.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-1-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-2.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-2-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-3.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-3-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-4.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-4-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-5.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-5-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-6.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-6-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-7.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-7-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-8.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-8-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-9.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-9-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-tunali-ofisi-10.webp",
+        "thumb": "/img/projeler/integral-vize-tunali-ofisi-10-k.webp"
+      }
+    ],
+    "video": {
+      "src": "/video/projeler/integral-vize-tunali-ofisi.mp4",
+      "poster": "/video/projeler/integral-vize-tunali-ofisi.jpg"
+    }
+  },
+  {
     "slug": "bahcelievler-anahtar-teslim-mobilya",
     "title": "Bahçelievler Anahtar Teslim Mobilya",
     "location": "Bahçelievler",
@@ -1645,6 +1697,22 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
+    "slug": "haskoy-anahtar-teslim-mobilya",
+    "title": "Hasköy Anahtar Teslim Mobilya",
+    "location": "Hasköy",
+    "category": "konut",
+    "images": [
+      {
+        "src": "/img/projeler/haskoy-anahtar-teslim-mobilya-1.webp",
+        "thumb": "/img/projeler/haskoy-anahtar-teslim-mobilya-1-k.webp"
+      }
+    ],
+    "video": {
+      "src": "/video/projeler/haskoy-anahtar-teslim-mobilya.mp4",
+      "poster": "/video/projeler/haskoy-anahtar-teslim-mobilya.jpg"
+    }
+  },
+  {
     "slug": "natura-incek",
     "title": "Natura İncek",
     "location": "İncek",
@@ -1792,17 +1860,6 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
-    "slug": "integral-vize-tunali-ofisi",
-    "title": "İntegral Vize Tunalı Ofisi",
-    "location": "Tunalı",
-    "category": "kurumsal",
-    "images": [],
-    "video": {
-      "src": "/video/projeler/integral-vize-tunali-ofisi.mp4",
-      "poster": "/video/projeler/integral-vize-tunali-ofisi.jpg"
-    }
-  },
-  {
     "slug": "cafe-roma-via",
     "title": "Cafe Roma Via",
     "location": "Mutlukent",
@@ -1850,16 +1907,5 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": null
-  },
-  {
-    "slug": "haskoy-anahtar-teslim-mobilya",
-    "title": "Hasköy Anahtar Teslim Mobilya",
-    "location": "Hasköy",
-    "category": "konut",
-    "images": [],
-    "video": {
-      "src": "/video/projeler/haskoy-anahtar-teslim-mobilya.mp4",
-      "poster": "/video/projeler/haskoy-anahtar-teslim-mobilya.jpg"
-    }
   }
 ]

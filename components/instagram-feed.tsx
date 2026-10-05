@@ -22,13 +22,18 @@ function Clip({ slug }: { slug: string }) {
   useEffect(() => {
     const v = ref.current
     if (!v) return
+    // React "muted" niteligini HTML'e yazmadigi icin iOS/Safari otomatik oynatmayi reddeder.
+    v.muted = true
+    v.defaultMuted = true
+    v.setAttribute("muted", "")
+    v.setAttribute("playsinline", "")
     const io = new IntersectionObserver(([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: 0.3 })
     io.observe(v)
     return () => io.disconnect()
   }, [])
   return (
     <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="block relative w-full aspect-[9/16] overflow-hidden rounded-lg shadow-md bg-slate-100">
-      <video ref={ref} src={`/video/projeler/${slug}.mp4`} poster={`/video/projeler/${slug}.jpg`} muted loop playsInline preload="none" className="w-full h-full object-cover" />
+      <video ref={ref} src={`/video/projeler/${slug}.mp4`} poster={`/video/projeler/${slug}.jpg`} muted autoPlay loop playsInline preload="metadata" className="w-full h-full object-cover" />
     </a>
   )
 }
