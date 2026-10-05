@@ -76,8 +76,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz.mp4",
-      "poster": "/video/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz.jpg"
+      "src": "/media/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz.mp4",
+      "poster": "/media/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz.jpg"
     }
   },
   {
@@ -184,8 +184,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/mamak-skyline-tower.mp4",
-      "poster": "/video/projeler/mamak-skyline-tower.jpg"
+      "src": "/media/projeler/mamak-skyline-tower.mp4",
+      "poster": "/media/projeler/mamak-skyline-tower.jpg"
     }
   },
   {
@@ -287,8 +287,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/panorama-beytepe-villalari.mp4",
-      "poster": "/video/projeler/panorama-beytepe-villalari.jpg"
+      "src": "/media/projeler/panorama-beytepe-villalari.mp4",
+      "poster": "/media/projeler/panorama-beytepe-villalari.jpg"
     }
   },
   {
@@ -339,8 +339,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/next-level-loft-ofis.mp4",
-      "poster": "/video/projeler/next-level-loft-ofis.jpg"
+      "src": "/media/projeler/next-level-loft-ofis.mp4",
+      "poster": "/media/projeler/next-level-loft-ofis.jpg"
     }
   },
   {
@@ -407,8 +407,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/metromall-dubleks-ofis.mp4",
-      "poster": "/video/projeler/metromall-dubleks-ofis.jpg"
+      "src": "/media/projeler/metromall-dubleks-ofis.mp4",
+      "poster": "/media/projeler/metromall-dubleks-ofis.jpg"
     }
   },
   {
@@ -519,8 +519,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz.mp4",
-      "poster": "/video/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz.jpg"
+      "src": "/media/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz.mp4",
+      "poster": "/media/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz.jpg"
     }
   },
   {
@@ -587,8 +587,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/gozde-cocuk-anaokulu.mp4",
-      "poster": "/video/projeler/gozde-cocuk-anaokulu.jpg"
+      "src": "/media/projeler/gozde-cocuk-anaokulu.mp4",
+      "poster": "/media/projeler/gozde-cocuk-anaokulu.jpg"
     }
   },
   {
@@ -655,8 +655,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-yesil-vadi-sitesi.mp4",
-      "poster": "/video/projeler/eryaman-yesil-vadi-sitesi.jpg"
+      "src": "/media/projeler/eryaman-yesil-vadi-sitesi.mp4",
+      "poster": "/media/projeler/eryaman-yesil-vadi-sitesi.jpg"
     }
   },
   {
@@ -723,8 +723,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-ay-yildiz-sitesi.mp4",
-      "poster": "/video/projeler/eryaman-ay-yildiz-sitesi.jpg"
+      "src": "/media/projeler/eryaman-ay-yildiz-sitesi.mp4",
+      "poster": "/media/projeler/eryaman-ay-yildiz-sitesi.jpg"
     }
   },
   {
@@ -791,8 +791,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-ata-dostlar-sitesi.mp4",
-      "poster": "/video/projeler/eryaman-ata-dostlar-sitesi.jpg"
+      "src": "/media/projeler/eryaman-ata-dostlar-sitesi.mp4",
+      "poster": "/media/projeler/eryaman-ata-dostlar-sitesi.jpg"
     }
   },
   {
@@ -859,8 +859,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/integral-vize-eryaman-ofisi.mp4",
-      "poster": "/video/projeler/integral-vize-eryaman-ofisi.jpg"
+      "src": "/media/projeler/integral-vize-eryaman-ofisi.mp4",
+      "poster": "/media/projeler/integral-vize-eryaman-ofisi.jpg"
     }
   },
   {
@@ -1057,8 +1057,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/yenimahalle-yda-park.mp4",
-      "poster": "/video/projeler/yenimahalle-yda-park.jpg"
+      "src": "/media/projeler/yenimahalle-yda-park.mp4",
+      "poster": "/media/projeler/yenimahalle-yda-park.jpg"
     }
   },
   {
@@ -1121,8 +1121,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/saraykent-500-evler.mp4",
-      "poster": "/video/projeler/saraykent-500-evler.jpg"
+      "src": "/media/projeler/saraykent-500-evler.mp4",
+      "poster": "/media/projeler/saraykent-500-evler.jpg"
     }
   },
   {
@@ -1181,8 +1181,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-goksu-park-vadi-evleri.mp4",
-      "poster": "/video/projeler/eryaman-goksu-park-vadi-evleri.jpg"
+      "src": "/media/projeler/eryaman-goksu-park-vadi-evleri.mp4",
+      "poster": "/media/projeler/eryaman-goksu-park-vadi-evleri.jpg"
     }
   },
   {
@@ -1233,8 +1233,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/baglica-anahtar-teslim-daire.mp4",
-      "poster": "/video/projeler/baglica-anahtar-teslim-daire.jpg"
+      "src": "/media/projeler/baglica-anahtar-teslim-daire.mp4",
+      "poster": "/media/projeler/baglica-anahtar-teslim-daire.jpg"
     }
   },
   {
@@ -1285,8 +1285,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/integral-vize-tunali-ofisi.mp4",
-      "poster": "/video/projeler/integral-vize-tunali-ofisi.jpg"
+      "src": "/media/projeler/integral-vize-tunali-ofisi.mp4",
+      "poster": "/media/projeler/integral-vize-tunali-ofisi.jpg"
     }
   },
   {
@@ -1333,8 +1333,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/bahcelievler-anahtar-teslim-mobilya.mp4",
-      "poster": "/video/projeler/bahcelievler-anahtar-teslim-mobilya.jpg"
+      "src": "/media/projeler/bahcelievler-anahtar-teslim-mobilya.mp4",
+      "poster": "/media/projeler/bahcelievler-anahtar-teslim-mobilya.jpg"
     }
   },
   {
@@ -1418,8 +1418,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/yapracik-toki-konutlari.mp4",
-      "poster": "/video/projeler/yapracik-toki-konutlari.jpg"
+      "src": "/media/projeler/yapracik-toki-konutlari.mp4",
+      "poster": "/media/projeler/yapracik-toki-konutlari.jpg"
     }
   },
   {
@@ -1581,8 +1581,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-etaplar-anahtar-teslim-mobilya.mp4",
-      "poster": "/video/projeler/eryaman-etaplar-anahtar-teslim-mobilya.jpg"
+      "src": "/media/projeler/eryaman-etaplar-anahtar-teslim-mobilya.mp4",
+      "poster": "/media/projeler/eryaman-etaplar-anahtar-teslim-mobilya.jpg"
     }
   },
   {
@@ -1613,8 +1613,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/eryaman-safir-rezidans.mp4",
-      "poster": "/video/projeler/eryaman-safir-rezidans.jpg"
+      "src": "/media/projeler/eryaman-safir-rezidans.mp4",
+      "poster": "/media/projeler/eryaman-safir-rezidans.jpg"
     }
   },
   {
@@ -1708,8 +1708,8 @@ export const showcaseProjects: ShowcaseProject[] = [
       }
     ],
     "video": {
-      "src": "/video/projeler/haskoy-anahtar-teslim-mobilya.mp4",
-      "poster": "/video/projeler/haskoy-anahtar-teslim-mobilya.jpg"
+      "src": "/media/projeler/haskoy-anahtar-teslim-mobilya.mp4",
+      "poster": "/media/projeler/haskoy-anahtar-teslim-mobilya.jpg"
     }
   },
   {
