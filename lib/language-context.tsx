@@ -137,6 +137,9 @@ const translations: Record<Language, Record<string, string>> = {
     "team.role.director": "Firma Sahibi",
     "team.role.site": "Şantiye Şefi",
     "team.role.operations": "Operasyon Sorumlusu",
+    "team.role.partner": "Şirket Ortağı",
+    "team.role.tracking": "İş Takibi ve Müşteri İletişimi",
+    "team.role.field": "Saha Sorumlusu",
     
     // Portfolio
     "portfolio.title": "Portfolyo",
@@ -326,6 +329,9 @@ const translations: Record<Language, Record<string, string>> = {
     "team.role.director": "Owner",
     "team.role.site": "Site Manager",
     "team.role.operations": "Operations Manager",
+    "team.role.partner": "Partner",
+    "team.role.tracking": "Job Tracking & Client Relations",
+    "team.role.field": "Field Supervisor",
     
     // Portfolio
     "portfolio.title": "Portfolio",

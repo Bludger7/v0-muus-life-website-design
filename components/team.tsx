@@ -19,14 +19,14 @@ export function Team() {
       image: "/img/ekip-mucahit-okcu.webp",
     },
     {
+      name: "Fevzi",
+      role: t("team.role.partner"),
+      image: "/img/ekip-fevzi.webp",
+    },
+    {
       name: "Aleyna Kılınç",
       role: t("team.role.architect"),
       image: "/img/ekip-aleyna-kilinc.webp",
-    },
-    {
-      name: "Sena Çopur",
-      role: t("team.role.architect"),
-      image: "/img/ekip-sena-copur.webp",
     },
     {
       name: "Emrah Zengin",
@@ -37,7 +37,17 @@ export function Team() {
       name: "Yunus Emre İnanç",
       role: t("team.role.operations"),
       image: "/img/ekip-yunus-emre-inanc.webp",
-    }
+    },
+    {
+      name: "Birsen",
+      role: t("team.role.tracking"),
+      image: "/img/ekip-birsen.webp",
+    },
+    {
+      name: "Enes",
+      role: t("team.role.field"),
+      image: "/img/ekip-enes.webp",
+    },
   ]
 
   const handleMucahitClick = () => {
@@ -114,8 +124,8 @@ export function Team() {
             ))}
           </div>
           
-          {/* Son 2 kişi - ortada */}
-          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 max-w-2xl mx-auto">
+          {/* Diğer ekip */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12">
             {teamMembers.slice(3).map((member, index) => (
               <div
                 key={index + 3}
