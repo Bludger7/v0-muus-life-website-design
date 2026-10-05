@@ -1,6 +1,6 @@
-// Hizmet landing sayfalari. Metinler genel ve dogrulanabilir tutuldu:
-// marka, fiyat ve sure vaadi yok (Mucahit'ten bilgi gelince eklenecek).
-// Malzeme listeleri Drive > Noyer_Home WEBSITE klasor yapisindan alindi.
+// Hizmet landing sayfalari. Govde, kapak, donanim, tezgah, fiyat etkenleri,
+// mutfak teslim suresi (25 gun) ve 1 yil garanti Mucahit'in verdigi bilgilerdir
+// (5 Eki 2026). Diger hizmetler icin teslim suresi verilmedi; yazilmadi.
 
 export type Service = {
   slug: string
@@ -26,8 +26,21 @@ const WARRANTY_FAQ = {
 }
 const PRICE_FAQ = {
   q: "Fiyat neye göre belirleniyor?",
-  a: "Fiyat; ölçü ve modül sayısı, seçilen kapak malzemesi, iç donanım (ray, menteşe, aksesuar) ve montaj koşullarına göre değişir. Bu yüzden ezbere fiyat vermek yerine keşif sonrası net teklif hazırlıyoruz.",
+  a: "Fiyatı en çok metretül ve metrekare ölçüsü, seçilen kapak türü ve aksesuarlar belirler. Menteşe ve ray markası ile pantolonluk, iç çekmece gibi özel aksesuarlar fiyatı değiştirir. Bu yüzden ezbere fiyat vermek yerine keşif sonrası net teklif hazırlıyoruz.",
 }
+const MATERIAL_FAQ = {
+  q: "Gövdede ve donanımda hangi malzemeleri kullanıyorsunuz?",
+  a: "Gövdede tercihinize göre MDFlam veya Suntalam kullanıyoruz. Menteşe ve raylarda standart olarak Samet kullanıyor, bütçe ve isteğe göre Häfele veya Blum donanım da uyguluyoruz.",
+}
+const KAPAKLAR = [
+  { name: "Suntalam kapak", text: "Ekonomik, dayanıklı ve geniş renk/desen seçeneği." },
+  { name: "MDFlam kapak", text: "Pürüzsüz yüzeyli, bakımı kolay ve dayanıklı kapak." },
+  { name: "Highgloss kapak", text: "Işığı yansıtan parlak yüzey; küçük alanlarda ferahlık sağlar." },
+  { name: "Akrilik kapak", text: "Yüksek parlaklıkta, kolay temizlenen modern kapak." },
+  { name: "Balon (membran) kapak", text: "Çizgili ve profilli modellere uygun, klasik ve modern seçenek." },
+  { name: "Lake kapak", text: "Mat veya parlak, istenen renkte boyanan pürüzsüz yüzey." },
+  { name: "MDF üzeri masif kaplama kapak", text: "Doğal ahşap dokusu ve sıcak görünüm." },
+]
 
 export const services: Service[] = [
   {
@@ -36,21 +49,17 @@ export const services: Service[] = [
     name: "Mutfak Mobilyaları",
     h1: "Ankara Ölçüye Özel Mutfak Dolabı",
     title: "Ankara Mutfak Dolabı | Ölçüye Özel Üretim ve Montaj | Noyer Home",
-    description: "Ankara'da ölçüye özel mutfak dolabı: yerinde keşif, lake, akrilik, highgloss ve ahşap kaplama seçenekleri, kendi atölyemizde üretim ve montaj.",
+    description: "Ankara'da ölçüye özel mutfak dolabı: yerinde keşif, lake, akrilik, highgloss ve masif kaplama kapak, kuvars ve porselen tezgâh, yaklaşık 25 günde üretim ve montaj.",
     intro: [
       "Mutfak, evin en çok kullanılan ve ölçüye en hassas alanı. Hazır modüller duvar, tesisat ve pencere ölçülerine çoğu zaman uymaz; boşluklar ve kullanılamayan köşeler kalır.",
       "Noyer Home olarak mutfağınızı yerinde ölçüp dolapları milimetrik olarak kendi atölyemizde üretiyor, montajını kendi ekibimizle yapıyoruz. Üst dolaplar, boy dolapları, ada ve depolama çözümleri mekânınıza göre planlanıyor.",
     ],
     materials: [
-      { name: "Lake", text: "Mat veya parlak, istenen renkte boyanan pürüzsüz kapak yüzeyi." },
-      { name: "Akrilik", text: "Yüksek parlaklıkta, kolay temizlenen modern kapak seçeneği." },
-      { name: "Highgloss", text: "Işığı yansıtan parlak yüzey; küçük mutfaklarda ferahlık sağlar." },
-      { name: "Ahşap kaplama", text: "Doğal ahşap dokusu ve sıcak görünüm." },
-      { name: "Balon kapak", text: "Klasik ve modern çizgilere uyan, ekonomik kapak seçeneği." },
-      { name: "Panel kapak", text: "Farklı doku ve renk seçenekleriyle dayanıklı kapak yüzeyleri." },
+      ...KAPAKLAR,
+      { name: "Tezgâh seçenekleri", text: "Granit, kompozit, Çimstone kuvars, akrilik ve porselen tezgâh." },
     ],
     includes: ["Alt ve üst dolaplar", "Boy dolabı ve ankastre dolapları", "Mutfak adası", "Kiler ve çekmece düzenleri", "Aydınlatmalı raf ve vitrin dolapları"],
-    faq: [PROCESS_FAQ, PRICE_FAQ, WARRANTY_FAQ, { q: "Eski mutfağın sökümünü yapıyor musunuz?", a: "Keşif sırasında mevcut durumu birlikte değerlendiriyoruz; söküm ve hazırlık işleri teklif kapsamında ayrıca belirtilir." }],
+    faq: [PROCESS_FAQ, { q: "Mutfak dolabı kaç günde teslim edilir?", a: "Mutfak dolaplarında ortalama teslim süresi 25 gündür. Kesin takvim ölçü, seçilen malzeme ve proje kapsamına göre teklifte belirtilir." }, PRICE_FAQ, MATERIAL_FAQ, { q: "Hangi tezgâhları uyguluyorsunuz?", a: "Granit, kompozit, Çimstone kuvars, akrilik ve porselen tezgâh seçenekleri sunuyoruz. Tezgâh seçimini kullanım alışkanlığınıza ve bütçenize göre birlikte yapıyoruz." }, WARRANTY_FAQ, { q: "Eski mutfağın sökümünü yapıyor musunuz?", a: "Keşif sırasında mevcut durumu birlikte değerlendiriyoruz; söküm ve hazırlık işleri teklif kapsamında ayrıca belirtilir." }],
     projects: ["metafor-rezidans-anahtar-teslim-mobilya-projemiz", "sogutlu-bahce-anahtar-teslim-mutfak-projemiz", "turgut-ozal-mahallesi-anahtar-teslim-mutfak-projemiz", "gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi", "haskoy-anahtar-teslim-mobilya", "mamak-skyline-tower"],
   },
   {
@@ -59,20 +68,17 @@ export const services: Service[] = [
     name: "Gardırop ve Giyinme Odaları",
     h1: "Ankara Ölçüye Özel Gardırop ve Giyinme Odası",
     title: "Ankara Gardırop ve Giyinme Odası | Ölçüye Özel | Noyer Home",
-    description: "Ankara'da ölçüye özel gardırop, sürgülü dolap ve giyinme odası (walk-in) üretimi. Lake, MDFlam, camlı ve ahşap kaplama seçenekleri, yerinde montaj.",
+    description: "Ankara'da ölçüye özel gardırop, sürgülü dolap ve giyinme odası (walk-in) üretimi. Lake, MDFlam, akrilik, camlı ve masif kaplama kapak, yerinde montaj.",
     intro: [
       "Duvardan duvara gardırop ya da ayrı bir giyinme odası; asıl fark iç düzende ortaya çıkar. Askı, çekmece, raf ve ayakkabılık bölümlerini kullanım alışkanlıklarınıza göre planlıyoruz.",
       "Tavana kadar ölçüye özel üretim sayesinde boşluk kalmaz, toz birikmez ve odanın tüm yüksekliği depolamaya katılır.",
     ],
     materials: [
-      { name: "Lake", text: "Düz, temiz ve renk seçimi geniş kapak yüzeyi." },
-      { name: "MDFlam", text: "Dayanıklı, bakımı kolay ve ekonomik gövde/kapak seçeneği." },
+      ...KAPAKLAR,
       { name: "Camlı kapak", text: "Fümé veya şeffaf cam; giyinme odalarında vitrin etkisi." },
-      { name: "Ahşap kaplama", text: "Doğal ahşap görünümüyle sıcak bir yatak odası dili." },
-      { name: "Balon kapak", text: "Çizgili ve dekoratif yüzeyler." },
     ],
     includes: ["Kanatlı ve sürgülü gardıroplar", "Walk-in giyinme odası", "Aydınlatmalı iç düzen", "Çekmece ve takı bölmeleri", "Çocuk ve genç odası dolapları"],
-    faq: [PROCESS_FAQ, PRICE_FAQ, WARRANTY_FAQ, { q: "Çatı katı veya eğimli duvara dolap yapılır mı?", a: "Evet. Ölçüye özel üretim yaptığımız için eğimli tavan, kolon ve niş gibi alanlara uygun dolaplar planlayabiliyoruz." }],
+    faq: [PROCESS_FAQ, PRICE_FAQ, MATERIAL_FAQ, WARRANTY_FAQ, { q: "Çatı katı veya eğimli duvara dolap yapılır mı?", a: "Evet. Ölçüye özel üretim yaptığımız için eğimli tavan, kolon ve niş gibi alanlara uygun dolaplar planlayabiliyoruz." }],
     projects: ["eryaman-safir-rezidans", "eryaman-etaplar-anahtar-teslim-mobilya", "mamak-skyline-tower", "adres-ankara-anahtar-teslim-mobilya-projemiz", "eryaman-ata-dostlar-sitesi", "yenimahalle-yda-park"],
   },
   {
@@ -87,12 +93,12 @@ export const services: Service[] = [
       "Ünitenin genişliğini, yüksekliğini ve depolama ihtiyacını yerinde ölçüp planlıyor, atölyemizde üretip montajını yapıyoruz.",
     ],
     materials: [
-      { name: "Lake", text: "Mat veya parlak, istenen renkte yüzey." },
-      { name: "Ahşap kaplama ve lambri", text: "Duvar boyunca ahşap çıta ve panel detayları." },
+      ...KAPAKLAR,
+      { name: "Lambri ve duvar paneli", text: "Duvar boyunca ahşap çıta ve panel detayları." },
       { name: "Mermer görünümlü yüzeyler", text: "TV arkası ve dresuar yüzeylerinde vurgu." },
     ],
     includes: ["Duvar tipi ve yerden TV üniteleri", "Lambri ve duvar panelleri", "Kitaplık ve vitrin dolapları", "Gizli kablo kanalları", "LED aydınlatmalı niş ve raflar"],
-    faq: [PROCESS_FAQ, PRICE_FAQ, WARRANTY_FAQ, { q: "Kablolar görünmez mi?", a: "Ünite tasarlanırken priz ve anten noktaları dikkate alınır; kablolar ünite içinden ve kanallardan geçirilerek gizlenir." }],
+    faq: [PROCESS_FAQ, PRICE_FAQ, MATERIAL_FAQ, WARRANTY_FAQ, { q: "Kablolar görünmez mi?", a: "Ünite tasarlanırken priz ve anten noktaları dikkate alınır; kablolar ünite içinden ve kanallardan geçirilerek gizlenir." }],
     projects: ["baglica-anahtar-teslim-daire", "ovacik-lavanta-sitesi", "adres-ankara-anahtar-teslim-mobilya-projemiz", "panorama-beytepe-villalari", "eryaman-yesil-vadi-sitesi"],
   },
   {
@@ -107,13 +113,10 @@ export const services: Service[] = [
       "Lavabo altı ünite, aynalı dolap, boy dolabı ve çamaşır makinesi/kurutucu dolapları dar alanlarda bile depolamayı artırır.",
     ],
     materials: [
-      { name: "Lake", text: "Nemli ortama uygun kaplama ve renk seçenekleri." },
-      { name: "MDFlam", text: "Dayanıklı ve bakımı kolay yüzeyler." },
-      { name: "Ahşap kaplama", text: "Banyoda sıcak ve doğal görünüm." },
-      { name: "Balon kapak", text: "Dekoratif yüzey seçenekleri." },
+      ...KAPAKLAR,
     ],
     includes: ["Lavabo altı dolaplar", "Aynalı ve aydınlatmalı dolaplar", "Boy dolapları", "Çamaşır makinesi ve kurutucu dolapları", "Havlu ve depolama nişleri"],
-    faq: [PROCESS_FAQ, PRICE_FAQ, WARRANTY_FAQ, { q: "Çamaşır makinesi ve kurutucu üst üste dolaba alınabilir mi?", a: "Evet. Cihaz ölçüleri ve havalandırma payı dikkate alınarak kapaklı dolap içinde üst üste yerleşim yapılabilir." }],
+    faq: [PROCESS_FAQ, PRICE_FAQ, MATERIAL_FAQ, WARRANTY_FAQ, { q: "Çamaşır makinesi ve kurutucu üst üste dolaba alınabilir mi?", a: "Evet. Cihaz ölçüleri ve havalandırma payı dikkate alınarak kapaklı dolap içinde üst üste yerleşim yapılabilir." }],
     projects: ["gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi", "sogutlu-bahce-anahtar-teslim-mutfak-projemiz", "metafor-rezidans-anahtar-teslim-mobilya-projemiz", "mamak-skyline-tower", "eryaman-goksu-park-vadi-evleri"],
   },
   {
@@ -128,13 +131,10 @@ export const services: Service[] = [
       "Vestiyer, ayakkabılık ve dresuarı giriş ölçünüze göre üretiyor, kapı açılış yönlerini ve geçiş alanını dikkate alarak yerleştiriyoruz.",
     ],
     materials: [
-      { name: "Lake", text: "Temiz ve modern kapak yüzeyi." },
-      { name: "MDFlam", text: "Yoğun kullanıma dayanıklı yüzeyler." },
-      { name: "Ahşap kaplama", text: "Sıcak ve doğal görünüm." },
-      { name: "Balon kapak", text: "Dekoratif çizgili yüzeyler." },
+      ...KAPAKLAR,
     ],
     includes: ["Vestiyer ve portmanto", "Ayakkabılık", "Oturma alanlı vestiyer", "Dresuar ve ayna", "Lambri ve duvar panelleri"],
-    faq: [PROCESS_FAQ, PRICE_FAQ, WARRANTY_FAQ, { q: "Dar bir antreye vestiyer sığar mı?", a: "Keşifte geçiş genişliğini ve kapı açılışlarını ölçüyoruz; sığ derinlikli dolaplar ve duvara monte çözümlerle dar girişlerde de verimli planlama yapılabiliyor." }],
+    faq: [PROCESS_FAQ, PRICE_FAQ, MATERIAL_FAQ, WARRANTY_FAQ, { q: "Dar bir antreye vestiyer sığar mı?", a: "Keşifte geçiş genişliğini ve kapı açılışlarını ölçüyoruz; sığ derinlikli dolaplar ve duvara monte çözümlerle dar girişlerde de verimli planlama yapılabiliyor." }],
     projects: ["metafor-rezidans-anahtar-teslim-mobilya-projemiz", "ovacik-lavanta-sitesi", "eryaman-ay-yildiz-sitesi", "ata-yildiz-goldelux-sitesi", "saraykent-500-evler"],
   },
   {
@@ -149,12 +149,12 @@ export const services: Service[] = [
       "Ofis, anaokulu, veteriner kliniği, kafe ve restoran gibi farklı ölçekte projelerde üretim ve montaj sürecini iş takvimine uygun planlıyoruz.",
     ],
     materials: [
-      { name: "Lake ve MDFlam", text: "Kurumsal renklere uygun, dayanıklı yüzeyler." },
-      { name: "Ahşap kaplama ve lambri", text: "Yönetici odaları ve karşılama alanları için." },
+      ...KAPAKLAR,
+      { name: "Lambri ve duvar paneli", text: "Yönetici odaları ve karşılama alanları için." },
       { name: "Cam ve metal detaylar", text: "Bölme ve vitrin uygulamaları." },
     ],
     includes: ["Karşılama bankoları", "Yönetici ve çalışma masaları", "Arşiv ve depolama dolapları", "Duvar panelleri ve lambri", "Kafe ve restoran mobilyaları"],
-    faq: [PROCESS_FAQ, WARRANTY_FAQ, { q: "Mesai saatleri dışında montaj yapılabilir mi?", a: "İş akışınızı aksatmamak için montaj takvimini sizinle birlikte planlıyoruz; uygun durumlarda mesai dışı çalışma yapılabilir." }],
+    faq: [PROCESS_FAQ, PRICE_FAQ, MATERIAL_FAQ, WARRANTY_FAQ, { q: "Mesai saatleri dışında montaj yapılabilir mi?", a: "İş akışınızı aksatmamak için montaj takvimini sizinle birlikte planlıyoruz; uygun durumlarda mesai dışı çalışma yapılabilir." }],
     projects: ["metromall-dubleks-ofis", "integral-vize-eryaman-ofisi", "integral-vize-tunali-ofisi", "gozde-cocuk-anaokulu", "incek-veteriner-mobilya-uygulamamiz", "next-level-loft-ofis"],
   },
 ]
