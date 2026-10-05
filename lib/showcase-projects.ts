@@ -93,7 +93,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "baglica-tv-unitesi",
-    "title": "Bağlıca TV Ünitesi",
+    "title": "Bağlıca Anahtar Teslim Daire",
     "location": "Bağlıca",
     "type": "TV Ünitesi",
     "images": [
@@ -117,7 +117,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "eryaman-gardirop-calisma",
-    "title": "Eryaman Gardırop ve Çalışma Ünitesi",
+    "title": "Eryaman Safir Rezidans",
     "location": "Eryaman",
     "type": "Gardırop",
     "images": [
