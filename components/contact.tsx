@@ -10,7 +10,7 @@ import { MapPin, Phone, MessageCircle, Instagram, Youtube, AlertCircle, CheckCir
 import { useLanguage } from "@/lib/language-context"
 import { trackContactFormSuccess, trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics"
 import {
-  WHATSAPP_QUOTE_URL,
+  WHATSAPP_QUOTE_URL, WHATSAPP_PHONE,
   PHONE_PRIMARY_DISPLAY,
   PHONE_PRIMARY_TEL,
   PHONE_SECONDARY_DISPLAY,
@@ -39,7 +39,16 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!formEnabled) return
+    if (!formEnabled) {
+      // E-posta anahtari yokken talep WhatsApp mesajina donusturulur.
+      const fd = new FormData(e.currentTarget)
+      const lines = ["Merhaba, Noyer Home web sitesinden teklif almak istiyorum."]
+      const labels: Record<string, string> = { name: "Ad Soyad", phone: "Telefon", email: "E-posta", furniture_type: "Mobilya", location: "Konum", approx_size: "Yaklaşık ölçü", message: "Mesaj" }
+      fd.forEach((v, k) => { if (labels[k] && typeof v === "string" && v.trim()) lines.push(`${labels[k]}: ${v.trim()}`) })
+      trackWhatsAppClick("contact")
+      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener")
+      return
+    }
 
     const form = e.currentTarget
     const formData = new FormData(form)
@@ -206,10 +215,10 @@ export function Contact() {
 
               <Button
                 type="submit"
-                disabled={!formEnabled || status === "loading"}
+                disabled={status === "loading"}
                 className="w-full h-11 md:h-12 text-sm md:text-base bg-[#704f36] hover:bg-slate-900 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {status === "loading" ? t("contact.sending") : t("contact.send")}
+                {status === "loading" ? t("contact.sending") : formEnabled ? t("contact.send") : t("contact.sendWhatsapp")}
               </Button>
             </form>
 

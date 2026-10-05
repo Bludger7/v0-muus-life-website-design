@@ -25,7 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.title": "Mekânınıza Özel Mobilyalar Üretiyoruz",
     "hero.subtitle": "Ölçüye özel mobilya üretimi — keşiften montaja tek elden",
-    "hero.cta": "Çalışmalarımızı Keşfedin",
+    "hero.cta": "Projelerimizi İnceleyin",
     "hero.cta2": "Hizmetlerimizi İnceleyin",
     "hero.ctaWhatsapp": "WhatsApp'tan Teklif Al",
 
@@ -164,6 +164,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.file": "Dosya Ekle (İsteğe bağlı)",
     "contact.fileSelect": "Dosya seçin veya sürükleyin",
     "contact.send": "Gönder",
+    "contact.sendWhatsapp": "Talebi WhatsApp ile Gönder",
     "contact.whatsapp": "WhatsApp ile iletişim",
     "contact.address": "Adres",
     "contact.phone": "İletişim",
@@ -215,7 +216,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.title": "We Craft Furniture Tailored to Your Space",
     "hero.subtitle": "Custom furniture production — from survey to installation, all from one source",
-    "hero.cta": "Explore Our Work",
+    "hero.cta": "See Our Projects",
     "hero.cta2": "View Our Services",
     "hero.ctaWhatsapp": "Get a Quote on WhatsApp",
 
@@ -355,6 +356,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.message": "Your Message",
     "contact.file": "Attach File (Optional)",
     "contact.fileSelect": "Select or drag files",
+    "contact.sendWhatsapp": "Send via WhatsApp",
     "contact.send": "Send",
     "contact.whatsapp": "Contact via WhatsApp",
     "contact.address": "Address",

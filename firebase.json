@@ -5,6 +5,18 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/urunler{,/**}",
+        "destination": "/projeler/",
+        "type": 301
+      },
+      {
+        "source": "/ofis-calismalari{,/**}",
+        "destination": "/projeler/",
+        "type": 301
+      }
     ]
   }
 }

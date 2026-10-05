@@ -26,14 +26,18 @@ export function Footer() {
               <Link href="/hizmetler" className="hover:text-[var(--color-background)] transition-colors">
                 {t("nav.services")}
               </Link>
-              {/* TUR 2A: /projeler ve /kurumsal-projeler baglantilari, proje
-                  gorselleri dogrulanana kadar cikarildi. Tur 2B'de geri gelecek. */}
+              <Link href="/projeler" className="hover:text-white transition-colors">
+                {t("nav.products")}
+              </Link>
               <Link href="/hakkimizda" className="hover:text-white transition-colors">
                 {t("nav.about")}
               </Link>
               <Link href="/iletisim" className="hover:text-white transition-colors">
                 {t("nav.contact")}
               </Link>
+              <a href="https://creativemimari.com" target="_blank" rel="noopener" className="hover:text-white transition-colors">
+                Creative İç Mimarlık
+              </a>
             </nav>
           </div>
           {/* Address */}

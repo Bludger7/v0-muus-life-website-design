@@ -8,13 +8,7 @@ import { useLanguage } from "@/lib/language-context"
 import { WHATSAPP_QUOTE_URL } from "@/lib/contact-info"
 import { trackWhatsAppClick } from "@/lib/analytics"
 
-// TUR 2A: Hero arka planindaki slider fotograflari (slider-1..5) kaldirildi.
-// Bu gorsellerin gercek uygulama fotografi oldugu dogrulanmadigi icin yayindan
-// cekildiler; dosyalar arsiv/webp-dogrulama-bekleyen/ klasorunde.
-//
-// Yerine PROJE FOTOGRAFI ICERMEYEN, tamamen CSS ile kurulmus marka arka plani
-// kullaniliyor: antrasit (#3f3a37) zemin, ceviz (#704f36) isik lekeleri, krem
-// (#f8f5f0) tonunda ince lamel dokusu ve dusuk opaklikta logo filigrani.
+// Arka plan: gercek teslim fotografi (Metafor Rezidans mutfak) + marka renkli karartma.
 
 export function Hero() {
   const { t } = useLanguage()
@@ -47,6 +41,10 @@ export function Hero() {
             className="w-[88vw] max-w-3xl opacity-[0.06] brightness-0 invert select-none pointer-events-none"
           />
         </div>
+
+        {/* Gercek proje fotografi */}
+        <img src="/img/projeler/metafor-vestiyer-mutfak-1.webp" alt="" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-[#2b2622]/70" />
 
         {/* Metin okunurlugu icin alt karartma */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#3f3a37]/30 via-transparent to-[#28241f]/75" />
@@ -84,16 +82,13 @@ export function Hero() {
               {t("hero.ctaWhatsapp")}
             </Button>
           </a>
-          {/* TUR 2A: Proje galerisi dogrulama bekledigi icin ikincil buton
-              /hizmetler sayfasina yonlendirir. Tur 2B'de galeri acildiginda
-              tekrar /projeler + t("hero.cta") yapilacak. */}
-          <Link href="/hizmetler" className="w-full sm:w-auto">
+          <Link href="/projeler" className="w-full sm:w-auto">
             <Button
               size="lg"
               variant="outline"
               className="rounded-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-base shadow-lg transition-all hover:scale-105 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white w-full sm:w-auto"
             >
-              {t("hero.cta2")}
+              {t("hero.cta")}
             </Button>
           </Link>
         </div>
