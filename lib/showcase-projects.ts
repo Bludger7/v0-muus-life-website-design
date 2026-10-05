@@ -5,8 +5,8 @@ export type ShowcaseProject = { slug: string; title: string; location: string; t
 export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "sogutbahce-mutfak-banyo",
-    "title": "Söğütbahçe Mutfak ve Banyo",
-    "location": "Söğütbahçe",
+    "title": "Söğütlü Bahçe Anahtar Teslim Mutfak Projemiz",
+    "location": "Söğütlü Bahçe",
     "type": "Mutfak · Banyo",
     "images": [
       {
@@ -45,8 +45,8 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "metafor-vestiyer-mutfak",
-    "title": "Metafor Vestiyer ve Mutfak",
-    "location": "Metafor",
+    "title": "Metafor Rezidans Anahtar Teslim Mobilya Projemiz",
+    "location": "Metafor Rezidans",
     "type": "Mutfak · Vestiyer · Banyo",
     "images": [
       {
@@ -141,8 +141,8 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "beyaz-lake-mutfak",
-    "title": "Beyaz Lake Mutfak",
-    "location": "Ankara",
+    "title": "Turgut Özal Mahallesi Anahtar Teslim Mutfak Projemiz",
+    "location": "Turgut Özal Mahallesi",
     "type": "Mutfak",
     "images": [
       {
