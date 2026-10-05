@@ -29,6 +29,7 @@ export default function HakkimizdaPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
+      <h1 className="sr-only">Noyer Home Hakkında</h1>
       <div className="pt-16">
         <About />
         <Team />

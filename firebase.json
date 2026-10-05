@@ -16,6 +16,11 @@
         "source": "/ofis-calismalari{,/**}",
         "destination": "/projeler/",
         "type": 301
+      },
+      {
+        "source": "/kurumsal-projeler{,/**}",
+        "destination": "/projeler/",
+        "type": 301
       }
     ]
   }

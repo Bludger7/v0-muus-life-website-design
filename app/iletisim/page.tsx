@@ -28,6 +28,7 @@ export default function IletisimPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
+      <h1 className="sr-only">Noyer Home İletişim ve Teklif</h1>
       <div className="pt-16">
         <Contact />
       </div>

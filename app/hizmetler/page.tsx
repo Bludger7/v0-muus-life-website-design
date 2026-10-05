@@ -30,6 +30,7 @@ export default function HizmetlerPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
+      <h1 className="sr-only">Ölçüye Özel Mobilya Hizmetlerimiz</h1>
       <div className="pt-16">
         {/* Tek hizmet yapisi: kategori grid'i + surec seridi.
             Eski "Kurumsal / Kisiye Ozel" anlatimi ayni isi tekrar ettigi icin kaldirildi. */}

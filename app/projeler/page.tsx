@@ -18,6 +18,7 @@ export default function ProjelerPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
+      <h1 className="sr-only">Noyer Home Projeleri</h1>
       <div className="pt-16">
         <ProjectShowcase />
       </div>

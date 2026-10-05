@@ -43,7 +43,7 @@ export function Hero() {
         </div>
 
         {/* Gercek proje fotografi */}
-        <img src="/img/projeler/metafor-vestiyer-mutfak-1.webp" alt="" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/img/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz-1.webp" alt="" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#2b2622]/70" />
 
         {/* Metin okunurlugu icin alt karartma */}

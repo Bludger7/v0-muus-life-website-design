@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Montserrat, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import "./globals.css"
 import { FloatingSocials } from "@/components/floating-socials"
@@ -113,7 +112,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <LanguageProvider>
           {children}
         </LanguageProvider>
-        <Analytics />
         <FloatingSocials />
       </body>
     </html>
