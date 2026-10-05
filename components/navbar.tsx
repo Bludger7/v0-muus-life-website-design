@@ -35,6 +35,7 @@ export function Navbar() {
   const navLinks = [
     { href: "/", label: t("nav.home") },
     { href: "/hizmetler", label: t("nav.services") },
+    { href: "/projeler", label: t("nav.products") },
     { href: "/hakkimizda", label: t("nav.about") },
     { href: "/iletisim", label: t("nav.contact") },
   ]

@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { TrustBand } from "@/components/trust-band"
 import { ServiceCategories } from "@/components/service-categories"
+import { ProjectShowcase } from "@/components/project-showcase"
 import { ProcessStrip } from "@/components/process-strip"
 import InstagramFeed from "@/components/instagram-feed"
 import { QuoteCta } from "@/components/quote-cta"
@@ -39,9 +40,7 @@ export default function Home() {
       <ServiceCategories />
       <ProcessStrip />
       <InstagramFeed />
-      {/* TUR 2A: Proje vitrini (<Portfolio />) gecici olarak kaldirildi.
-          Gosterdigi gorsellerin gercek uygulama fotografi oldugu dogrulanmadi.
-          Tur 2B'de dogrulanmis gorsellerle geri acilacak. */}
+      <ProjectShowcase />
       <Contact />
       <QuoteCta location="home" />
       <Footer />

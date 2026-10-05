@@ -1,21 +1,17 @@
-// TUR 2A: Proje gorselleri dogrulanana kadar galeri yayinda degil.
-// Sayfa erisilebilir kalir ama noindex tasir, sitemap'te yoktur ve menu/footer'da
-// bagi bulunmaz. Gercek gorseller onaylandiginda Tur 2B'de <ProjectGallery />
-// geri acilacak (bilesen ve veri dosyasi repoda duruyor).
+// Proje vitrini: lib/showcase-projects.ts (yalnizca teslim/son hal fotograflari).
 import type { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
-import { GalleryPlaceholder } from "@/components/gallery-placeholder"
+import { ProjectShowcase } from "@/components/project-showcase"
 import { Footer } from "@/components/footer"
 import { SITE_URL } from "@/lib/contact-info"
 
-const title = "Proje Arşivi | Noyer Home"
-const description = "Proje arşivimiz hazırlanıyor. Ölçüye özel mobilya talebiniz için bizimle iletişime geçebilirsiniz."
+const title = "Projelerimiz | Noyer Home Ankara"
+const description = "Noyer Home atölyesinde ölçüye özel üretilip Ankara'da monte edilen mutfak, gardırop, TV ünitesi ve vestiyer projelerinden teslim fotoğrafları."
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: `${SITE_URL}/projeler/` },
-  robots: { index: false, follow: true },
 }
 
 export default function ProjelerPage() {
@@ -23,7 +19,7 @@ export default function ProjelerPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
       <div className="pt-16">
-        <GalleryPlaceholder location="projeler" />
+        <ProjectShowcase />
       </div>
       <Footer />
     </main>
