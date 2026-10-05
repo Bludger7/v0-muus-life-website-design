@@ -130,7 +130,7 @@ function ProjectModal({ p, onClose }: { p: ShowcaseProject; onClose: () => void 
       </div>
       <div className="relative flex-1 flex items-center justify-center min-h-0" onClick={(e) => e.stopPropagation()}>
         {cur.kind === "video" ? (
-          <video key={cur.src} src={cur.src} poster={cur.thumb} controls autoPlay muted playsInline loop className="max-w-[94vw] max-h-full" />
+          <video key={cur.src} ref={(v) => { if (v) { v.muted = true; v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.play().catch(() => {}) } }} src={cur.src} poster={cur.thumb} controls autoPlay muted playsInline loop preload="metadata" className="max-w-[94vw] max-h-full" />
         ) : (
           <img src={cur.src} alt={`${p.title} ${i + 1}`} className="max-w-[94vw] max-h-full object-contain" />
         )}
