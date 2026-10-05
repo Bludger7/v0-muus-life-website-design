@@ -43,7 +43,7 @@ export function ProjectShowcase({ heading = true, limit }: { heading?: boolean; 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
           {list.map((p) => (
-            <button key={p.slug} type="button" onClick={() => setOpen(p)}
+            <Link key={p.slug} href={`/projeler/${p.slug}/`}
               className="group flex flex-col justify-start text-left overflow-hidden rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <img src={cover(p)} alt={p.title} loading="lazy"
@@ -71,7 +71,7 @@ export function ProjectShowcase({ heading = true, limit }: { heading?: boolean; 
                   <MapPin className="w-4 h-4" /> {p.location === "Ankara" ? "Ankara" : `${p.location}, Ankara`}
                 </p>
               </div>
-            </button>
+            </Link>
           ))}
         </div>
 
@@ -91,14 +91,14 @@ export function ProjectShowcase({ heading = true, limit }: { heading?: boolean; 
 
 type Slide = { kind: "img"; src: string; thumb: string; render?: boolean } | { kind: "video"; src: string; thumb: string }
 
-function ProjectModal({ p, onClose }: { p: ShowcaseProject; onClose: () => void }) {
+export function ProjectModal({ p, onClose, start = 0 }: { p: ShowcaseProject; onClose: () => void; start?: number }) {
   const slides: Slide[] = useMemo(() => {
     const s: Slide[] = p.images.filter((i) => !i.render).map((i) => ({ kind: "img" as const, ...i }))
     if (p.video) s.push({ kind: "video", src: p.video.src, thumb: p.video.poster })
     p.images.filter((i) => i.render).forEach((i) => s.push({ kind: "img", ...i }))
     return s
   }, [p])
-  const [i, setI] = useState(0)
+  const [i, setI] = useState(start)
   const n = slides.length
   const cur = slides[i]
 

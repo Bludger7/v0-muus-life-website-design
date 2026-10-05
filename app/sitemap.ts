@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next"
 import { SITE_URL } from "@/lib/contact-info"
+import { services } from "@/lib/services"
+import { showcaseProjects } from "@/lib/showcase-projects"
 
 // Yalnizca yayinda ve indexlenebilir olan canonical sayfalar.
 //
@@ -18,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/cerez-politikasi/", priority: 0.2, changeFrequency: "yearly" },
   ]
 
+  services.forEach((x) => pages.push({ path: `/${x.slug}/`, priority: 0.9, changeFrequency: "monthly" }))
+  showcaseProjects.forEach((x) => pages.push({ path: `/projeler/${x.slug}/`, priority: 0.6, changeFrequency: "yearly" }))
   return pages.map((p) => ({
     url: `${SITE_URL}${p.path}`,
     changeFrequency: p.changeFrequency,

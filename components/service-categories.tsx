@@ -5,6 +5,8 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { ArrowRight, ChefHat, Shirt, Tv, Bath, DoorOpen, Building2, Images, X, ChevronLeft, ChevronRight } from "lucide-react"
 import { productionCovers, productionGallery } from "@/lib/production-gallery"
+import { services } from "@/lib/services"
+const serviceSlug = (k: string) => services.find((x) => x.key === k)?.slug
 import { useLanguage } from "@/lib/language-context"
 
 // Kart kapaklari ve galeri: lib/production-gallery.ts (Drive > Noyer_Home WEBSITE).
@@ -85,10 +87,10 @@ export function ServiceCategories() {
                 <div className="flex flex-col flex-1 p-5 md:p-6">
                   <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1">{t(`cat.${cat.key}.desc`)}</p>
                   <Link
-                    href="/iletisim"
+                    href={serviceSlug(cat.key) ? `/${serviceSlug(cat.key)}/` : "/iletisim"}
                     className="inline-flex items-center justify-center gap-2 h-10 px-4 rounded-lg bg-[#704f36] text-white text-sm font-medium hover:bg-[#5c402b] transition-colors w-full sm:w-auto sm:self-start"
                   >
-                    {t("cat.quote")}
+                    {serviceSlug(cat.key) ? "Detaylı İncele" : t("cat.quote")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
