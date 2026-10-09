@@ -5,7 +5,7 @@ import { ArrowRight, MapPin, MessageCircle } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ProjectDetailGallery } from "@/components/project-detail-gallery"
-import { showcaseProjects } from "@/lib/showcase-projects"
+import { showcaseProjects, placeLabel } from "@/lib/showcase-projects"
 import { servicesForProject } from "@/lib/services"
 import { SITE_URL, WHATSAPP_QUOTE_URL } from "@/lib/contact-info"
 
@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 
 const find = (slug: string) => showcaseProjects.find((p) => p.slug === slug)
-const place = (loc: string) => (loc === "Ankara" ? "Ankara" : `${loc}, Ankara`)
+const place = placeLabel
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params

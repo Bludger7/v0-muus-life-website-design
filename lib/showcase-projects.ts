@@ -11,6 +11,9 @@ export type ShowcaseProject = {
   video: { src: string; poster: string } | null
 }
 
+/** Kart/başlıklarda gösterilen konum: Ankara dışı şehirler (İstanbul) ilçe gibi "…, Ankara" yazılmaz. */
+export const placeLabel = (loc: string) => (loc === "Ankara" || loc === "İstanbul" ? loc : `${loc}, Ankara`)
+
 export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "metafor-rezidans-anahtar-teslim-mobilya-projemiz",
@@ -794,6 +797,71 @@ export const showcaseProjects: ShowcaseProject[] = [
       "src": "/media/projeler/eryaman-ata-dostlar-sitesi.mp4",
       "poster": "/media/projeler/eryaman-ata-dostlar-sitesi.jpg"
     }
+  },
+  {
+    "slug": "integral-vize-istanbul-ofis-anahtar-teslim-projemiz",
+    "title": "İntegral Vize İstanbul Ofis Anahtar Teslim Projemiz",
+    "location": "İstanbul",
+    "category": "kurumsal",
+    "images": [
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-1.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-1-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-2.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-2-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-3.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-3-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-4.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-4-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-5.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-5-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-6.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-6-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-7.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-7-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-8.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-8-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-9.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-9-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-10.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-10-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-11.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-11-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-12.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-12-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-13.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-13-k.webp"
+      },
+      {
+        "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-14.webp",
+        "thumb": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-14-k.webp"
+      }
+    ],
+    "video": null
   },
   {
     "slug": "integral-vize-eryaman-ofisi",

@@ -19,7 +19,7 @@ export function Team() {
       image: "/img/ekip-mucahit-okcu.webp",
     },
     {
-      name: "Fevzi",
+      name: "Fevzi Okcu",
       role: t("team.role.partner"),
       image: "/img/ekip-fevzi.webp",
     },

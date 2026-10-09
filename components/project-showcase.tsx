@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
 import { ArrowRight, Images, MapPin, X, ChevronLeft, ChevronRight, PlayCircle } from "lucide-react"
-import { showcaseProjects, type ShowcaseProject } from "@/lib/showcase-projects"
+import { placeLabel, showcaseProjects, type ShowcaseProject } from "@/lib/showcase-projects"
 
 type Filter = "all" | "konut" | "kurumsal"
 const FILTERS: [Filter, string][] = [["all", "Tümü"], ["konut", "Konut"], ["kurumsal", "Ofis ve Kurumsal"]]
@@ -68,7 +68,7 @@ export function ProjectShowcase({ heading = true, limit }: { heading?: boolean; 
                 <p className="text-xs uppercase tracking-wider text-[#704f36] mb-1.5">{p.category === "kurumsal" ? "Ofis ve Kurumsal" : "Konut"}</p>
                 <h3 className="text-base md:text-lg font-bold text-slate-900 mb-2">{p.title}</h3>
                 <p className="inline-flex items-center gap-1.5 text-sm text-slate-500">
-                  <MapPin className="w-4 h-4" /> {p.location === "Ankara" ? "Ankara" : `${p.location}, Ankara`}
+                  <MapPin className="w-4 h-4" /> {placeLabel(p.location)}
                 </p>
               </div>
             </Link>
@@ -122,7 +122,7 @@ export function ProjectModal({ p, onClose, start = 0 }: { p: ShowcaseProject; on
       <div className="flex items-center justify-between gap-4 px-4 md:px-6 py-3 text-white" onClick={(e) => e.stopPropagation()}>
         <div className="min-w-0">
           <p className="font-semibold truncate">{p.title}</p>
-          <p className="text-xs text-white/60">{p.location === "Ankara" ? "Ankara" : `${p.location}, Ankara`}</p>
+          <p className="text-xs text-white/60">{placeLabel(p.location)}</p>
         </div>
         <button type="button" onClick={onClose} aria-label="Kapat" className="shrink-0 w-11 h-11 rounded-full bg-white/15 flex items-center justify-center">
           <X className="w-5 h-5" />

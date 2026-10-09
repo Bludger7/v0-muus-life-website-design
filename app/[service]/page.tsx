@@ -5,8 +5,8 @@ import { Check, MessageCircle, MapPin } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ProcessStrip } from "@/components/process-strip"
-import { services, serviceBySlug } from "@/lib/services"
-import { showcaseProjects } from "@/lib/showcase-projects"
+import { services, serviceBySlug, serviceInfo } from "@/lib/services"
+import { placeLabel, showcaseProjects } from "@/lib/showcase-projects"
 import { productionCovers, productionGallery } from "@/lib/production-gallery"
 import { SITE_URL, WHATSAPP_QUOTE_URL } from "@/lib/contact-info"
 
@@ -96,7 +96,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           </div>
         </div>
 
-        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mt-14 mb-5">Malzeme ve kapak seçenekleri</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mt-14 mb-5">Kapak seçenekleri</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {s.materials.map((m) => (
             <div key={m.name} className="rounded-xl border border-slate-100 p-5">
@@ -105,6 +105,18 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             </div>
           ))}
         </div>
+
+        <section aria-labelledby="bilgi" className="mt-14 rounded-2xl bg-[#f7f4ef] p-6 md:p-10">
+          <h2 id="bilgi" className="text-xl md:text-2xl font-bold text-slate-900 mb-6">Malzeme, teslim ve fiyat bilgileri</h2>
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-7">
+            {serviceInfo(s).map((b) => (
+              <div key={b.title}>
+                <h3 className="font-semibold text-slate-900 mb-2">{b.title}</h3>
+                {b.paragraphs.map((t) => <p key={t.slice(0, 24)} className="text-sm text-slate-700 leading-relaxed mb-2 last:mb-0">{t}</p>)}
+              </div>
+            ))}
+          </div>
+        </section>
 
         {models.length > 0 && (
           <>
@@ -134,7 +146,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                 </div>
                 <div className="p-4">
                   <p className="font-semibold text-slate-900 group-hover:text-[#704f36]">{p.title}</p>
-                  <p className="text-sm text-slate-500">{p.location === "Ankara" ? "Ankara" : `${p.location}, Ankara`}</p>
+                  <p className="text-sm text-slate-500">{placeLabel(p.location)}</p>
                 </div>
               </Link>
             ))}
