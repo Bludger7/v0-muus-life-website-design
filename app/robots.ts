@@ -16,8 +16,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // Yalnizca build ic ciktilari; icerik degeri yok.
-        disallow: ["/_next/"],
+        // /_next/ ENGELLENMEZ: sayfalarin CSS ve JS dosyalari bu yolun altinda.
+        // Engellendiginde Googlebot sayfayi islerken kaynaklari yukleyemiyor
+        // (Search Console URL Denetimi, 16 Kasim 2026).
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
