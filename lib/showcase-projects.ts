@@ -20,8 +20,9 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "metafor-rezidans-anahtar-teslim-mobilya-projemiz",
     "title": "Metafor Rezidans Anahtar Teslim Mobilya Projemiz",
-    "location": "Metafor Rezidans",
+    "location": "Zübeyde Hanım, Altındağ",
     "category": "konut",
+    "detail": "Mutfak dolaplarını, vestiyeri, ayakkabılığı ve banyo dolabını ürettik.",
     "images": [
       {
         "src": "/img/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz-1.webp",
@@ -199,6 +200,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Panorama Beytepe Villaları",
     "location": "Beytepe",
     "category": "konut",
+    "detail": "Mutfak dolaplarını ve ada mutfağı, TV ünitesini, seperatörü ve tavanın ahşap giydirmelerini ürettik. Çocuk odaları, gardıroplar, lavabo dolabı ve yemek masası da atölyemizden çıktı.",
     "images": [
       {
         "src": "/img/projeler/panorama-beytepe-villalari-1.webp",
@@ -385,7 +387,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "metromall-dubleks-ofis",
     "title": "Metromall Dubleks Ofis",
-    "location": "Metromall",
+    "location": "Eryaman, Etimesgut",
     "category": "kurumsal",
     "detail": "Girişteki ışıklı logolu resepsiyon bankosunu ürettik.",
     "images": [
@@ -454,8 +456,9 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "adres-ankara-anahtar-teslim-mobilya-projemiz",
     "title": "Adres Ankara Anahtar Teslim Mobilya Projemiz",
-    "location": "Ankara",
+    "location": "Işınlar, Yenimahalle",
     "category": "konut",
+    "detail": "Salon ve oturma odası için iki TV ünitesini, mutfakta kahve köşesini ve kiler dolabını ürettik. Vestiyer, dresuar, makyaj masası, iki komodin ve iki gardırop da atölyemizden çıktı.",
     "images": [
       {
         "src": "/img/projeler/adres-ankara-anahtar-teslim-mobilya-projemiz-1.webp",
@@ -566,8 +569,9 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "gozde-cocuk-anaokulu",
     "title": "Gözde Çocuk Anaokulu",
-    "location": "Ankara",
+    "location": "Yenimahalle",
     "category": "kurumsal",
+    "detail": "Bar bankosunu ve arka raflarını, kitaplıkları, çocuk ayakkabı ve giysi dolaplarını, lavabo dolaplarını ürettik. Duvar giydirmeleri, dekoratif duvar panelleri, ahşap ağaçlar, duvar koltuğu ve amfi de atölyemizde yapıldı.",
     "images": [
       {
         "src": "/img/projeler/gozde-cocuk-anaokulu-1.webp",
@@ -976,7 +980,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "ovacik-lavanta-sitesi",
     "title": "Ovacık Lavanta Sitesi",
-    "location": "Ovacık",
+    "location": "Ovacık, Keçiören",
     "category": "konut",
     "detail": "Mutfakta U tezgahlı dolap hattını ve barı, salonda lambri TV ünitesini, antrede lake vestiyeri ve yatak odasında makyaj masasını ürettik.",
     "images": [
@@ -1041,8 +1045,8 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "ata-yildiz-goldelux-sitesi",
-    "title": "Ata Yıldız Göldelux Sitesi",
-    "location": "Eryaman",
+    "title": "Ata Yıldız Göldelüks 2",
+    "location": "Yeni Batı, Yenimahalle",
     "category": "konut",
     "detail": "Yatak odasında boiserie duvar panelini ve makyaj masasını ürettik.",
     "images": [
@@ -1177,7 +1181,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "saraykent-500-evler",
     "title": "Saraykent 500 Evler",
-    "location": "Saraykent",
+    "location": "Saraycık, Sincan",
     "category": "konut",
     "detail": "Mutfağa boy dolaplar ve açık kahve köşesi ekledik. Antrede gömme dolabı, koridor ve banyoda ışıklı raf ünitelerini, çamaşırhanede çekmeceli sepet sistemini ürettik.",
     "images": [
@@ -1409,7 +1413,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "bahcelievler-anahtar-teslim-mobilya",
     "title": "Bahçelievler Anahtar Teslim Mobilya",
-    "location": "Bahçelievler",
+    "location": "Bahçelievler, Çankaya",
     "category": "konut",
     "detail": "Yatak odasında yatak üstü dolabı, döşemeli başlık panelini, LED nişli komodinleri ve boy gardırobu tek bir duvar sistemi olarak ürettik.",
     "images": [
@@ -1545,8 +1549,9 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "sogutlu-bahce-anahtar-teslim-mutfak-projemiz",
     "title": "Söğütlü Bahçe Anahtar Teslim Mutfak Projemiz",
-    "location": "Söğütlü Bahçe",
+    "location": "Ata Mahallesi, Yenimahalle",
     "category": "konut",
+    "detail": "Mutfak dolaplarını, banyo ve WC dolaplarını ürettik.",
     "images": [
       {
         "src": "/img/projeler/sogutlu-bahce-anahtar-teslim-mutfak-projemiz-1.webp",
@@ -1584,10 +1589,11 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
-    "slug": "turgut-ozal-mahallesi-anahtar-teslim-mobilya",
-    "title": "Turgut Özal Mahallesi Anahtar Teslim Mobilya",
-    "location": "Turgut Özal Mahallesi",
+    "slug": "batikent-ferra-sitesi",
+    "title": "Batıkent Ferra Sitesi",
+    "location": "Batıkent, Yenimahalle",
     "category": "konut",
+    "detail": "Mutfak dolaplarını ve ada mutfağı, TV ünitesini ve dresuarı ürettik. Yatak odasında iki gardırop, yatak başlığı arkası paneli ve makyaj masası da atölyemizden çıktı.",
     "images": [
       {
         "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-1.webp",
@@ -1745,6 +1751,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "İncek Veteriner Mobilya Uygulamamız",
     "location": "İncek",
     "category": "kurumsal",
+    "detail": "Klinik için kedi kafeslerini ürettik.",
     "images": [
       {
         "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-1.webp",
@@ -1800,10 +1807,11 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
-    "slug": "turgut-ozal-mahallesi-anahtar-teslim-mutfak-projemiz",
-    "title": "Turgut Özal Mahallesi Anahtar Teslim Mutfak Projemiz",
-    "location": "Turgut Özal Mahallesi",
+    "slug": "faras-bulvar-1-sitesi",
+    "title": "Faras Bulvar 1 Sitesi",
+    "location": "Turgut Özal, Yenimahalle",
     "category": "konut",
+    "detail": "Mutfak dolaplarını ve seperatörü ürettik.",
     "images": [
       {
         "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mutfak-projemiz-1.webp",
@@ -1823,7 +1831,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "haskoy-anahtar-teslim-mobilya",
     "title": "Hasköy Anahtar Teslim Mobilya",
-    "location": "Hasköy",
+    "location": "Hasköy, Keçiören",
     "category": "konut",
     "detail": "Mutfakta krem ve koyu gri kapakları bir arada kullandık. Ankastre fırın için dolap hattını ve LED aydınlatmalı cam vitrin dolabını ürettik.",
     "images": [
@@ -1940,46 +1948,55 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "İncek Balık Restoranı",
     "location": "İncek",
     "category": "kurumsal",
+    "detail": "Masaları, sandalyeleri, servantları, kasa dolabını ve lavabo dolaplarını ürettik. Duvar lambrileri, duvar panelleri ve dekoratif duvar giydirmeleri de atölyemizden çıktı.",
     "images": [
       {
-        "src": "/img/projeler/incek-balik-restorani-1.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-1-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-01.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-01-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-2.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-2-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-02.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-02-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-3.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-3-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-03.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-03-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-4.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-4-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-04.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-04-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-5.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-5-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-05.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-05-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-6.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-6-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-06.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-06-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-7.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-7-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-07.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-07-k.webp"
       },
       {
-        "src": "/img/projeler/incek-balik-restorani-8.webp",
-        "thumb": "/img/projeler/incek-balik-restorani-8-k.webp",
-        "render": true
+        "src": "/img/projeler/incek-balik-restorani-uygulama-08.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-08-k.webp"
+      },
+      {
+        "src": "/img/projeler/incek-balik-restorani-uygulama-09.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-09-k.webp"
+      },
+      {
+        "src": "/img/projeler/incek-balik-restorani-uygulama-10.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-10-k.webp"
+      },
+      {
+        "src": "/img/projeler/incek-balik-restorani-uygulama-11.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-11-k.webp"
+      },
+      {
+        "src": "/img/projeler/incek-balik-restorani-uygulama-12.webp",
+        "thumb": "/img/projeler/incek-balik-restorani-uygulama-12-k.webp"
       }
     ],
     "video": null

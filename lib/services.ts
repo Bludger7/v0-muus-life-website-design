@@ -48,7 +48,7 @@ export const services: Service[] = [
     ],
     includes: ["Alt ve üst dolaplar", "Boy dolabı ve ankastre dolapları", "Mutfak adası", "Kiler ve çekmece düzenleri", "Aydınlatmalı raf ve vitrin dolapları"],
     faq: [PROCESS_FAQ, { q: "Eski mutfağın sökümünü yapıyor musunuz?", a: "Keşif sırasında mevcut durumu birlikte değerlendiriyoruz; söküm ve hazırlık işleri teklif kapsamında ayrıca belirtilir." }],
-    projects: ["metafor-rezidans-anahtar-teslim-mobilya-projemiz", "sogutlu-bahce-anahtar-teslim-mutfak-projemiz", "turgut-ozal-mahallesi-anahtar-teslim-mutfak-projemiz", "gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi", "haskoy-anahtar-teslim-mobilya", "mamak-skyline-tower"],
+    projects: ["metafor-rezidans-anahtar-teslim-mobilya-projemiz", "sogutlu-bahce-anahtar-teslim-mutfak-projemiz", "faras-bulvar-1-sitesi", "gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi", "haskoy-anahtar-teslim-mobilya", "mamak-skyline-tower"],
   },
   {
     slug: "gardirop-giyinme-odasi-ankara",

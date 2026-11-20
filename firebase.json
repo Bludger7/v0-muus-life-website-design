@@ -21,6 +21,16 @@
         "source": "/kurumsal-projeler{,/**}",
         "destination": "/projeler/",
         "type": 301
+      },
+      {
+        "source": "/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya{,/**}",
+        "destination": "/projeler/batikent-ferra-sitesi/",
+        "type": 301
+      },
+      {
+        "source": "/projeler/turgut-ozal-mahallesi-anahtar-teslim-mutfak-projemiz{,/**}",
+        "destination": "/projeler/faras-bulvar-1-sitesi/",
+        "type": 301
       }
     ]
   }
