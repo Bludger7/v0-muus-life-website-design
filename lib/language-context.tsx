@@ -94,13 +94,14 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     "about.title": "Hakkımızda",
-    "about.p1": "Noyer Home, kişiye özel ve kurumsal ölçekli mobilya üretiminde, tasarımı mühendislik disipliniyle birleştiren çağdaş bir üretim markasıdır. Her projede estetik bütünlüğü, malzeme kalitesini ve uzun ömürlü kullanım deneyimini aynı standartta sunmayı hedefler.",
-    "about.p2": "Üretim yaklaşımımız; ölçüye özel tasarım, yüksek dayanıklılık ve kusursuz işçilik üzerine kuruludur. Ev, ofis ve ticari alanlar için geliştirilen tüm çözümlerimiz, baştan sona kontrollü ve şeffaf bir süreçle hayata geçirilir.",
-    "about.p3": "Noyer Home, tekil yaşam alanlarından kapsamlı kurumsal projelere kadar her işinde kalıcı memnuniyet, sürdürülebilir kalite ve zamansız tasarım anlayışını esas alır.",
+    "about.p1": "Noyer Home olarak Ankara'da evler, ofisler ve ticari mekânlar için ölçüye özel mobilya tasarlar ve kendi atölyemizde üretiriz. Hazır modüle mekânı uydurmak yerine mobilyayı mekâna uydururuz; her parçayı mekânın ölçülerine ve günlük kullanımına göre şekillendiririz.",
+    "about.p2": "Her iş keşifle başlar. Mekânı yerinde ölçer, orayı nasıl kullandığınızı ve neye ihtiyaç duyduğunuzu dinleriz. Tasarımı bu ölçülere göre çizer; gövde ve kapak malzemesini, menteşe ve ray gibi aksesuarları, tezgâhı sizinle birlikte seçeriz. Tasarımı onayladığınızda üretime geçer, montajı kendi ekibimizle tamamlarız.",
+    "about.p3": "Ölçüye özel üretimin faydası en çok standart ölçülerin oturmadığı yerlerde görülür. Örneğin hazır dolabın sığmadığı dar bir niş, doğru ölçüyle kullanışlı bir depolama alanına dönüşebilir. Ölçüyü alan, çizen ve üreten ekip aynı çatı altında çalıştığı için keşifte konuşulan ayrıntı üretime kadar taşınır. Malzeme seçiminde de açık konuşuruz: Hangi kapak türünün nerede iyi sonuç verdiğini, hangisinin bütçeyi nasıl etkilediğini anlatırız, kararı siz verirsiniz.",
     "about.mission": "Misyonumuz",
-    "about.mission.text": "İhtiyaca özel, yüksek kaliteli ve uzun ömürlü mobilyalar üretmek. Her müşterimizin yaşam ve çalışma alanını, işlevselliği artıran ve kalite standardını yükselten çözümlerle yeniden şekillendirmek.",
+    "about.mission.text": "Mekânın ölçüsüne, kullanım alışkanlığına ve bütçeye uygun, günlük kullanımı kolaylaştıran mobilyalar üretmek.",
     "about.vision": "Vizyonumuz",
-    "about.vision.text": "Türkiye'de ve uluslararası pazarda kişiye özel ve kurumsal mobilya üretimi denildiğinde akla gelen öncü marka olmak.",
+    "about.vision.text": "Ankara'da ölçüye özel mobilya arayanların güvendiği atölye olmak.",
+    "about.projectsLink": "Projelerimizi İnceleyin",
     
     // Services
     "services.title": "Hizmetlerimiz",
@@ -294,13 +295,14 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     "about.title": "About Us",
-    "about.p1": "Noyer Home is a contemporary production brand that combines design with engineering discipline in custom and corporate-scale furniture production. In every project, we aim to deliver aesthetic integrity, material quality, and long-lasting user experience at the same standard.",
-    "about.p2": "Our production approach is built on custom design, high durability, and flawless craftsmanship. All our solutions developed for homes, offices, and commercial spaces are realized through a controlled and transparent process from start to finish.",
-    "about.p3": "Noyer Home is based on lasting satisfaction, sustainable quality, and timeless design philosophy in all its work, from individual living spaces to comprehensive corporate projects.",
+    "about.p1": "At Noyer Home we design made-to-measure furniture for homes, offices and commercial spaces in Ankara, and we build it in our own workshop. Rather than making the room fit a ready-made module, we make the furniture fit the room; every piece is shaped around the dimensions of the space and the way it is used day to day.",
+    "about.p2": "Every job starts with a site visit. We measure the space on site and listen to how you use it and what you need. We draw the design to those measurements, and choose the carcass and door materials, the fittings such as hinges and runners, and the worktop together with you. Once you approve the design we move into production, and our own team completes the installation.",
+    "about.p3": "Made-to-measure furniture pays off most where standard sizes do not fit. A narrow niche that is too small for a standard cabinet can become useful storage with a made-to-measure unit. Because the people who measure, draw and build work under one roof, the details discussed at the site visit carry through to production. We are just as open about materials: we explain which door finish works well where and how each one affects the budget, and the decision is yours.",
     "about.mission": "Our Mission",
-    "about.mission.text": "To produce custom, high-quality, and long-lasting furniture. To reshape the living and working spaces of each of our customers with solutions that enhance functionality and raise quality standards.",
+    "about.mission.text": "To build furniture that suits the dimensions of the space, the way it is used and the budget, and that makes everyday use easier.",
     "about.vision": "Our Vision",
-    "about.vision.text": "To be the leading brand that comes to mind when custom and corporate furniture production is mentioned in Turkey and international markets.",
+    "about.vision.text": "To be the workshop that people looking for made-to-measure furniture in Ankara trust.",
+    "about.projectsLink": "View Our Projects",
     
     // Services
     "services.title": "Our Services",

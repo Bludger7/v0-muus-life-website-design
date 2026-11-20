@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
 
 // TUR 2A: Bolumdeki atolye gorseli (atolye-uretim.webp) kaldirildi. Gorselin
@@ -41,6 +42,16 @@ export function About() {
               <span aria-hidden="true" className="block w-10 h-0.5 bg-[#704f36]/60" />
               <p className="text-xs md:text-sm text-slate-600 leading-relaxed">{t("about.vision.text")}</p>
             </div>
+          </div>
+
+          {/* Projeler baglantisi */}
+          <div className="mt-10 md:mt-12 text-center">
+            <Link
+              href="/projeler"
+              className="inline-flex items-center justify-center h-11 px-5 rounded-lg border border-[#704f36] text-[#704f36] text-sm font-medium hover:bg-[#704f36] hover:text-white transition-colors"
+            >
+              {t("about.projectsLink")}
+            </Link>
           </div>
         </div>
       </div>
