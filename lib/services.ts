@@ -37,7 +37,7 @@ export const services: Service[] = [
     name: "Mutfak Mobilyaları",
     h1: "Ankara Ölçüye Özel Mutfak Dolabı",
     title: "Ankara Mutfak Dolabı | Ölçüye Özel Üretim ve Montaj | Noyer Home",
-    description: "Ankara'da ölçüye özel mutfak dolabı: yerinde keşif, lake, akrilik, highgloss ve doğal ahşap kaplama kapak, kuvars ve porselen tezgâh, ortalama 25 günde üretim ve montaj.",
+    description: "Ankara'da ölçüye özel mutfak dolabı: yerinde keşif, lake, akrilik, highgloss ve doğal ahşap kaplama kapak, kuvars ve porselen tezgâh, üretim ve montaj.",
     intro: [
       "Mutfak, evin en çok kullanılan ve ölçüye en hassas alanı. Hazır modüller duvar, tesisat ve pencere ölçülerine çoğu zaman uymaz; boşluklar ve kullanılamayan köşeler kalır.",
       "Noyer Home olarak mutfağınızı yerinde ölçüp dolapları milimetrik olarak kendi atölyemizde üretiyor, montajını kendi ekibimizle yapıyoruz. Üst dolaplar, boy dolapları, ada ve depolama çözümleri mekânınıza göre planlanıyor.",
@@ -148,11 +148,11 @@ const TEZGAH_INFO: InfoBlock = {
 }
 const TESLIM_MUTFAK: InfoBlock = {
   title: "Üretim ve Teslim Süresi",
-  paragraphs: ["Mutfak projelerimizde ortalama teslim süresi 25 gündür. Projenin kapsamına, seçilen malzemelere ve özel üretim detaylarına göre teslim takvimi değişebilir. Projenize ait teslim süresi teklif aşamasında netleştirilir."],
+  paragraphs: ["Uygulama süresi; mutfağın ölçülerine, seçilen malzemelere ve işin kapsamına göre belirlenir. Projenize ait teslim süresi teklif aşamasında netleştirilir."],
 }
 const TESLIM_GENEL: InfoBlock = {
   title: "Üretim ve Teslim Süresi",
-  paragraphs: ["Mutfak, gardırop, TV ünitesi ve diğer özel üretim mobilyalarımızda ortalama teslim süresi 25 gündür. Projenin kapsamı, seçilen malzemeler ve özel üretim detaylarına göre teslim takvimi değişebilir. Siparişinize ait teslim süresi teklif aşamasında netleştirilir."],
+  paragraphs: ["Uygulama süresi; mobilyanın ölçülerine, seçilen malzemelere ve işin kapsamına göre belirlenir. Siparişinize ait teslim süresi teklif aşamasında netleştirilir."],
 }
 const FIYAT_INFO: InfoBlock = {
   title: "Fiyatlandırma",
