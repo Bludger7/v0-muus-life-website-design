@@ -55,7 +55,7 @@ function Clip({ n, url }: { n: number; url: string }) {
         )}
       </button>
       <a href={url} target="_blank" rel="noopener noreferrer" aria-label="Instagram'da aç"
-        className="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-slate-800 hover:text-[#704f36]">
+        className="absolute top-2 right-2 w-11 h-11 rounded-full bg-white/90 flex items-center justify-center text-slate-800 hover:text-[#704f36]">
         <Instagram className="w-4 h-4" />
       </a>
     </div>

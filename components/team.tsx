@@ -29,6 +29,11 @@ export function Team() {
       image: "/img/ekip-aleyna-kilinc.webp",
     },
     {
+      name: "Yiğit Onurlu",
+      role: t("team.role.architect"),
+      image: "/img/ekip-yigit-onurlu.webp",
+    },
+    {
       name: "Emrah Zengin",
       role: t("team.role.site"),
       image: "/img/ekip-emrah-zengin.webp",
@@ -99,9 +104,9 @@ export function Team() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* İlk 3 kişi */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 lg:gap-12 mb-4 md:mb-8 lg:mb-12">
-            {teamMembers.slice(0, 3).map((member, index) => (
+          {/* İlk 4 kişi */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12 mb-4 md:mb-8 lg:mb-12">
+            {teamMembers.slice(0, 4).map((member, index) => (
               <div
                 key={index}
                 className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
@@ -126,11 +131,11 @@ export function Team() {
           
           {/* Diğer ekip */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12">
-            {teamMembers.slice(3).map((member, index) => (
+            {teamMembers.slice(4).map((member, index) => (
               <div
-                key={index + 3}
+                key={index + 4}
                 className={`group text-center transition-all hover:transform hover:-translate-y-2 duration-300 ${
-                  shakeIndex === index + 3  ? "animate-shake" : ""
+                  shakeIndex === index + 4  ? "animate-shake" : ""
                 }`}
               >
                 <div className="relative aspect-square mb-3 md:mb-6 overflow-hidden rounded-sm shadow-md">

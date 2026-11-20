@@ -56,7 +56,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Navbar />
       <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-28 pb-16 max-w-6xl">
         <nav className="text-xs text-slate-500 mb-4" aria-label="Sayfa yolu">
-          <Link href="/" className="hover:text-[#704f36]">Ana Sayfa</Link> / <Link href="/projeler/" className="hover:text-[#704f36]">Projeler</Link> / <span className="text-slate-700">{p.title}</span>
+          <Link href="/" className="inline-block py-3.5 -my-3.5 hover:text-[#704f36]">Ana Sayfa</Link> / <Link href="/projeler/" className="inline-block py-3.5 -my-3.5 hover:text-[#704f36]">Projeler</Link> / <span className="text-slate-700">{p.title}</span>
         </nav>
         <p className="text-xs uppercase tracking-wider text-[#704f36] mb-2">{p.category === "kurumsal" ? "Ofis ve Kurumsal" : "Konut"}</p>
         <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-3">{p.title}</h1>

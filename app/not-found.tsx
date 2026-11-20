@@ -20,7 +20,7 @@ export default function NotFound() {
   return (
     <main className="min-h-screen bg-[var(--color-background)] flex flex-col items-center justify-center px-4 py-16 text-center">
       <Link href="/" className="mb-8 inline-flex">
-        <Image src="/logo.png" alt="Noyer Home" width={160} height={54} className="h-11 w-auto" priority />
+        <Image src="/logo-600.webp" alt="Noyer Home" width={160} height={54} className="h-11 w-auto" priority />
       </Link>
 
       <p className="text-5xl md:text-6xl font-bold text-[#704f36]">404</p>

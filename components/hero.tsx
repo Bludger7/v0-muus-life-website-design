@@ -33,7 +33,7 @@ export function Hero() {
         {/* Logo filigrani */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
-            src="/logo.png"
+            src="/logo-1200.webp"
             alt=""
             width={900}
             height={300}

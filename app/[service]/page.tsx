@@ -71,7 +71,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           <div className="absolute inset-0 bg-gradient-to-t from-[#2b2622]/90 via-[#2b2622]/40 to-transparent" />
           <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-end pb-10 max-w-6xl">
             <nav className="text-xs text-white/70 mb-3" aria-label="Sayfa yolu">
-              <Link href="/" className="hover:text-white">Ana Sayfa</Link> / <Link href="/hizmetler/" className="hover:text-white">Hizmetler</Link> / <span className="text-white">{s.name}</span>
+              <Link href="/" className="inline-block py-3.5 -my-3.5 hover:text-white">Ana Sayfa</Link> / <Link href="/hizmetler/" className="inline-block py-3.5 -my-3.5 hover:text-white">Hizmetler</Link> / <span className="text-white">{s.name}</span>
             </nav>
             <h1 className="text-2xl md:text-5xl font-bold text-white max-w-3xl">{s.h1}</h1>
             <p className="inline-flex items-center gap-1.5 text-white/80 text-sm mt-3"><MapPin className="w-4 h-4" /> Ankara&apos;nın tüm ilçelerinde yerinde keşif</p>

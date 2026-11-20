@@ -54,7 +54,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="Noyer Home" width={140} height={48} className="h-10 md:h-12 w-auto" />
+          <Image src="/logo-600.webp" alt="Noyer Home" width={140} height={48} className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -85,14 +85,14 @@ export function Navbar() {
         <div className="flex items-center gap-3 lg:hidden">
           <button 
             onClick={toggleLanguage}
-            className="flex items-center gap-1 text-slate-700 cursor-pointer hover:text-slate-900 transition-colors"
+            className="flex items-center justify-center gap-1 min-h-11 min-w-11 text-slate-700 cursor-pointer hover:text-slate-900 transition-colors"
           >
             <Globe className="w-4 h-4" />
             <span className="text-xs font-semibold">{language.toUpperCase()}</span>
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-slate-700 hover:text-slate-900 transition-colors"
+            className="p-2 min-h-11 min-w-11 flex items-center justify-center text-slate-700 hover:text-slate-900 transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

@@ -102,7 +102,7 @@ export function Contact() {
                   name="name"
                   placeholder={t("contact.name")}
                   required
-                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-base"
                 />
               </div>
               <div className="space-y-2">
@@ -114,7 +114,7 @@ export function Contact() {
                   inputMode="tel"
                   placeholder="05XX XXX XX XX"
                   required
-                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-base"
                 />
               </div>
               <div className="space-y-2">
@@ -124,7 +124,7 @@ export function Contact() {
                   name="email"
                   placeholder={t("contact.email")}
                   type="email"
-                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-base"
                 />
               </div>
               <div className="space-y-2">
@@ -134,7 +134,7 @@ export function Contact() {
                   name="furniture_type"
                   required
                   defaultValue=""
-                  className="w-full h-11 md:h-12 px-3 rounded-md bg-slate-50 border border-slate-200 focus:border-slate-400 focus:outline-none text-sm md:text-base text-slate-900"
+                  className="w-full h-11 md:h-12 px-3 rounded-md bg-slate-50 border border-slate-200 focus:border-slate-400 focus:outline-none text-base text-slate-900"
                 >
                   <option value="" disabled>
                     {t("contact.furnitureTypeSelect")}
@@ -153,7 +153,7 @@ export function Contact() {
                   name="location"
                   placeholder={t("contact.locationPlaceholder")}
                   required
-                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-base"
                 />
               </div>
               <div className="space-y-2">
@@ -162,7 +162,7 @@ export function Contact() {
                   id="contact-size"
                   name="approx_size"
                   placeholder={t("contact.sizePlaceholder")}
-                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-sm md:text-base"
+                  className="h-11 md:h-12 bg-slate-50 border-slate-200 focus:border-slate-400 text-base"
                 />
               </div>
               <div className="space-y-2">
@@ -172,7 +172,7 @@ export function Contact() {
                   name="message"
                   placeholder={t("contact.message")}
                   required
-                  className="min-h-32 md:min-h-40 bg-slate-50 border-slate-200 focus:border-slate-400 resize-none text-sm md:text-base"
+                  className="min-h-32 md:min-h-40 bg-slate-50 border-slate-200 focus:border-slate-400 resize-none text-base"
                 />
               </div>
 
