@@ -22,6 +22,8 @@ function Clip({ n, url }: { n: number; url: string }) {
   const title = t(`social.media.reel.${n}`)
   const ref = useRef<HTMLVideoElement>(null)
   const [playing, setPlaying] = useState(false)
+  const src = `/media/sosyal/noyer-reel-${n}`
+  const videoSrc = `${src}.mp4`
   useEffect(() => {
     const v = ref.current
     if (!v) return
@@ -30,22 +32,38 @@ function Clip({ n, url }: { n: number; url: string }) {
     v.setAttribute("muted", "")
     v.setAttribute("playsinline", "")
     v.setAttribute("webkit-playsinline", "")
-    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: 0.25 })
-    io.observe(v)
-    return () => io.disconnect()
-  }, [])
+    const near = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return
+      if (!v.hasAttribute("src")) v.src = videoSrc
+      near.disconnect()
+    }, { rootMargin: "400px" })
+    const visible = new IntersectionObserver(([entry]) => {
+      if (entry.intersectionRatio >= 0.25) {
+        if (!v.hasAttribute("src")) v.src = videoSrc
+        v.play().catch(() => {})
+      } else {
+        v.pause()
+      }
+    }, { threshold: 0.25 })
+    near.observe(v)
+    visible.observe(v)
+    return () => {
+      near.disconnect()
+      visible.disconnect()
+    }
+  }, [videoSrc])
   const toggle = () => {
     const v = ref.current
     if (!v) return
+    if (!v.hasAttribute("src")) v.src = videoSrc
     if (v.paused) v.play().catch(() => {})
     else v.pause()
   }
-  const src = `/media/sosyal/noyer-reel-${n}`
   return (
     <div className="relative w-full aspect-[9/16] overflow-hidden rounded-xl shadow-md bg-slate-200">
       <button type="button" onClick={toggle} aria-label={`${t(playing ? "social.media.pause" : "social.media.play")} (${title})`} className="absolute inset-0 w-full h-full">
         <img src={`${src}.jpg`} alt={title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
-        <video ref={ref} src={`${src}.mp4`} poster={`${src}.jpg`} muted autoPlay loop playsInline preload="metadata"
+        <video ref={ref} poster={`${src}.jpg`} muted loop playsInline preload="metadata"
           onPlaying={() => setPlaying(true)} onPause={() => setPlaying(false)}
           className="absolute inset-0 w-full h-full object-cover" />
         {!playing && (
