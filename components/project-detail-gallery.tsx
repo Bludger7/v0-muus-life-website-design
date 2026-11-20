@@ -18,12 +18,12 @@ export function ProjectDetailGallery({ p }: { p: ShowcaseProject }) {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           {finals.map((im, k) => (
             <button key={im.src} type="button" onClick={() => setOpen(idx("f", k))} className={tile}>
-              <img src={im.thumb} alt={`${p.title} — uygulama fotoğrafı ${k + 1}`} loading={k < 3 ? "eager" : "lazy"} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={im.thumb} alt={`${p.title}, uygulama fotoğrafı ${k + 1}`} loading={k < 3 ? "eager" : "lazy"} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </button>
           ))}
           {p.video && (
             <button type="button" onClick={() => setOpen(idx("v", 0))} className={tile}>
-              <img src={p.video.poster} alt={`${p.title} — video`} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={p.video.poster} alt={`${p.title}, video`} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
               <span className="absolute inset-0 flex items-center justify-center bg-black/25"><PlayCircle className="w-14 h-14 text-white" /></span>
             </button>
           )}
@@ -36,7 +36,7 @@ export function ProjectDetailGallery({ p }: { p: ShowcaseProject }) {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {renders.map((im, k) => (
               <button key={im.src} type="button" onClick={() => setOpen(idx("r", k))} className={tile}>
-                <img src={im.thumb} alt={`${p.title} — 3D tasarım ${k + 1}`} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={im.thumb} alt={`${p.title}, 3D tasarım ${k + 1}`} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
                 <span className="absolute bottom-2 left-2 rounded-full bg-[#704f36] px-2 py-0.5 text-[11px] text-white">3D Tasarım</span>
               </button>
             ))}

@@ -19,7 +19,7 @@ export function Hero() {
       className="relative h-[85vh] md:h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#3f3a37]"
     >
       {/* ---- Marka arka plani (dekoratif, tamamen CSS) ---- */}
-      <div aria-hidden="true" className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0">
         {/* Temel antrasit gradyan */}
         <div className="absolute inset-0 bg-[linear-gradient(160deg,#4a443f_0%,#3f3a37_45%,#312c29_100%)]" />
 
@@ -43,7 +43,7 @@ export function Hero() {
         </div>
 
         {/* Gercek proje fotografi */}
-        <img src="/img/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz-1.webp" alt="" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/img/projeler/metafor-rezidans-anahtar-teslim-mobilya-projemiz-1.webp" alt={t("hero.photoAlt")} fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#2b2622]/70" />
 
         {/* Metin okunurlugu icin alt karartma */}

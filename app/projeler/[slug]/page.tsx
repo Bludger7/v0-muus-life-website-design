@@ -24,10 +24,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const onlyRender = p.images.length > 0 && p.images.every((i) => i.render)
   const title = `${p.title} | ${place(p.location)} | Noyer Home`
   const description = onlyRender
-    ? `${p.title} — ${place(p.location)}. Noyer Home 3D tasarım çalışması ve ölçüye özel mobilya planlaması.`
+    ? `${p.title}, ${place(p.location)}. Noyer Home 3D tasarım çalışması ve ölçüye özel mobilya planlaması.`
     : p.detail
       ? `${p.title}, ${place(p.location)}. ${p.detail}`
-      : `${p.title} — ${place(p.location)}. Noyer Home atölyesinde ölçüye özel üretilip yerinde monte edilen mobilyalardan teslim fotoğrafları.`
+      : `${p.title}, ${place(p.location)}. Noyer Home atölyesinde ölçüye özel üretilip yerinde monte edilen mobilyalardan teslim fotoğrafları.`
   const img = p.images[0]?.src ?? p.video?.poster
   return {
     title,

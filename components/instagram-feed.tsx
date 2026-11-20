@@ -18,6 +18,8 @@ const REELS = [
 ]
 
 function Clip({ n, url }: { n: number; url: string }) {
+  const { t } = useLanguage()
+  const title = t(`social.media.reel.${n}`)
   const ref = useRef<HTMLVideoElement>(null)
   const [playing, setPlaying] = useState(false)
   useEffect(() => {
@@ -41,8 +43,8 @@ function Clip({ n, url }: { n: number; url: string }) {
   const src = `/media/sosyal/noyer-reel-${n}`
   return (
     <div className="relative w-full aspect-[9/16] overflow-hidden rounded-xl shadow-md bg-slate-200">
-      <button type="button" onClick={toggle} aria-label={playing ? "Videoyu durdur" : "Videoyu oynat"} className="absolute inset-0 w-full h-full">
-        <img src={`${src}.jpg`} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+      <button type="button" onClick={toggle} aria-label={`${t(playing ? "social.media.pause" : "social.media.play")} (${title})`} className="absolute inset-0 w-full h-full">
+        <img src={`${src}.jpg`} alt={title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <video ref={ref} src={`${src}.mp4`} poster={`${src}.jpg`} muted autoPlay loop playsInline preload="metadata"
           onPlaying={() => setPlaying(true)} onPause={() => setPlaying(false)}
           className="absolute inset-0 w-full h-full object-cover" />

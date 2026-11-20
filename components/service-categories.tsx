@@ -51,7 +51,7 @@ export function ServiceCategories() {
                   <button
                     type="button"
                     onClick={() => setOpen(cat.key)}
-                    aria-label={`${t(`cat.${cat.key}`)} — ${t("cat.gallery")}`}
+                    aria-label={`${t(`cat.${cat.key}`)}, ${t("cat.gallery")}`}
                     className="relative h-44 md:h-48 overflow-hidden text-left cursor-zoom-in"
                   >
                     <Image
