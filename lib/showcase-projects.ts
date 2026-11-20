@@ -1044,6 +1044,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Ata Yıldız Göldelux Sitesi",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Yatak odasında boiserie duvar panelini ve makyaj masasını ürettik.",
     "images": [
       {
         "src": "/img/projeler/ata-yildiz-goldelux-sitesi-1.webp",
@@ -1304,6 +1305,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Bağlıca Anahtar Teslim Daire",
     "location": "Bağlıca",
     "category": "konut",
+    "detail": "Salonda aydınlatmalı TV ünitesini ve antredeki konsolu ürettik.",
     "images": [
       {
         "src": "/img/projeler/baglica-anahtar-teslim-daire-1.webp",
@@ -1409,6 +1411,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Bahçelievler Anahtar Teslim Mobilya",
     "location": "Bahçelievler",
     "category": "konut",
+    "detail": "Yatak odasında yatak üstü dolabı, döşemeli başlık panelini, LED nişli komodinleri ve boy gardırobu tek bir duvar sistemi olarak ürettik.",
     "images": [
       {
         "src": "/img/projeler/bahcelievler-anahtar-teslim-mobilya-1.webp",
@@ -1771,6 +1774,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "GOP Mahallesi Anahtar Teslim Mutfak ve Banyo Uygulaması",
     "location": "GOP Mahallesi",
     "category": "konut",
+    "detail": "Mutfakta ankastre fırın için boy dolabı ve cam vitrini, banyoda lavabo dolabını, çamaşırhanede ise çamaşır ve kurutma makineleri için üst üste yerleşimli dolabı ürettik.",
     "images": [
       {
         "src": "/img/projeler/gop-mahallesi-anahtar-teslim-mutfak-ve-banyo-uygulamasi-1.webp",
@@ -1821,6 +1825,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Hasköy Anahtar Teslim Mobilya",
     "location": "Hasköy",
     "category": "konut",
+    "detail": "Mutfakta krem ve koyu gri kapakları bir arada kullandık. Ankastre fırın için dolap hattını ve LED aydınlatmalı cam vitrin dolabını ürettik.",
     "images": [
       {
         "src": "/img/projeler/haskoy-anahtar-teslim-mobilya-1.webp",
