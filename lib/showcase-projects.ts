@@ -9,6 +9,8 @@ export type ShowcaseProject = {
   category: "konut" | "kurumsal"
   images: ShowcaseImage[]
   video: { src: string; poster: string } | null
+  /** Projeye ozgu, dogrulanmis kisa aciklama (istege bagli). Kaynak: Creative sitesindeki onayli proje metni + Baskan teyidi (20 Kasim 2026). */
+  detail?: string
 }
 
 /** Kart/başlıklarda gösterilen konum: Ankara dışı şehirler (İstanbul) ilçe gibi "…, Ankara" yazılmaz. */
@@ -88,6 +90,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Mamak Skyline Tower",
     "location": "Mamak",
     "category": "konut",
+    "detail": "Salonda TV ve şömine duvarı ünitesini, mutfakta L tezgahlı dolap hattını, antrede aynalı boy dolabı ve çalışma odasının dolap ile masasını ürettik.",
     "images": [
       {
         "src": "/img/projeler/mamak-skyline-tower-1.webp",
@@ -299,46 +302,79 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Next Level Loft Ofis",
     "location": "Söğütözü",
     "category": "kurumsal",
+    "detail": "Makam odaları dışındaki özel ölçü mobilya ve duvar giydirmelerini Noyer Home atölyesinde ürettik.",
     "images": [
       {
-        "src": "/img/projeler/next-level-loft-ofis-1.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-1-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-01.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-01-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-2.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-2-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-02.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-02-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-3.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-3-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-03.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-03-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-4.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-4-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-04.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-04-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-5.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-5-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-05.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-05-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-6.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-6-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-06.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-06-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-7.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-7-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-07.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-07-k.webp"
       },
       {
-        "src": "/img/projeler/next-level-loft-ofis-8.webp",
-        "thumb": "/img/projeler/next-level-loft-ofis-8-k.webp",
-        "render": true
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-08.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-08-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-09.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-09-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-10.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-10-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-11.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-11-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-12.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-12-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-13.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-13-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-14.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-14-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-15.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-15-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-16.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-16-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-17.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-17-k.webp"
+      },
+      {
+        "src": "/img/projeler/next-level-loft-ofis-uygulama-18.webp",
+        "thumb": "/img/projeler/next-level-loft-ofis-uygulama-18-k.webp"
       }
     ],
     "video": {
@@ -351,6 +387,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Metromall Dubleks Ofis",
     "location": "Metromall",
     "category": "kurumsal",
+    "detail": "Girişteki ışıklı logolu resepsiyon bankosunu ürettik.",
     "images": [
       {
         "src": "/img/projeler/metromall-dubleks-ofis-1.webp",
@@ -599,6 +636,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Yeşil Vadi Sitesi",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Mutfağı ışıklı cam vitrin dolaplarla kurduk ve yanına kiler dolabı ekledik.",
     "images": [
       {
         "src": "/img/projeler/eryaman-yesil-vadi-sitesi-1.webp",
@@ -667,6 +705,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Ay Yıldız Sitesi",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Salonda ceviz kaplama TV duvarını ürettik. Yemek alanındaki ünite ve kitaplık aynı malzemeyle yapıldı.",
     "images": [
       {
         "src": "/img/projeler/eryaman-ay-yildiz-sitesi-1.webp",
@@ -735,6 +774,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Ata Dostlar Sitesi",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Mutfakta cam kapaklı üst dolapları ve koridordaki çıta panel duvarı ürettik.",
     "images": [
       {
         "src": "/img/projeler/eryaman-ata-dostlar-sitesi-1.webp",
@@ -803,6 +843,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "İntegral Vize İstanbul Ofis Anahtar Teslim Projemiz",
     "location": "İstanbul",
     "category": "kurumsal",
+    "detail": "Danışman masalarını ve yönetici odası mobilyalarını ürettik.",
     "images": [
       {
         "src": "/img/projeler/integral-vize-istanbul-ofis-anahtar-teslim-projemiz-1.webp",
@@ -868,6 +909,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "İntegral Vize Eryaman Ofisi",
     "location": "Eryaman",
     "category": "kurumsal",
+    "detail": "Resepsiyon bankosunu, danışman masalarını ve yönetici odasının kitaplığını ürettik.",
     "images": [
       {
         "src": "/img/projeler/integral-vize-eryaman-ofisi-1.webp",
@@ -936,6 +978,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Ovacık Lavanta Sitesi",
     "location": "Ovacık",
     "category": "konut",
+    "detail": "Mutfakta U tezgahlı dolap hattını ve barı, salonda lambri TV ünitesini, antrede lake vestiyeri ve yatak odasında makyaj masasını ürettik.",
     "images": [
       {
         "src": "/img/projeler/ovacik-lavanta-sitesi-1.webp",
@@ -1066,6 +1109,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Yenimahalle YDA Park",
     "location": "Yenimahalle",
     "category": "konut",
+    "detail": "Mutfakta L tezgahlı dolap hattını, boy dolapları ve camlı vitrin dolabını ürettik. Salonda TV ve şömine ünitesini tek duvarda topladık.",
     "images": [
       {
         "src": "/img/projeler/yenimahalle-yda-park-1.webp",
@@ -1134,6 +1178,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Saraykent 500 Evler",
     "location": "Saraykent",
     "category": "konut",
+    "detail": "Mutfağa boy dolaplar ve açık kahve köşesi ekledik. Antrede gömme dolabı, koridor ve banyoda ışıklı raf ünitelerini, çamaşırhanede çekmeceli sepet sistemini ürettik.",
     "images": [
       {
         "src": "/img/projeler/saraykent-500-evler-1.webp",
@@ -1198,6 +1243,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Göksu Park Vadi Evleri",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Banyolarda lavabo dolaplarını ve boy dolapları, mutfakta kahve köşesini, giyinme odasında sürgülü dolabı ve çamaşır dolabını ürettik.",
     "images": [
       {
         "src": "/img/projeler/eryaman-goksu-park-vadi-evleri-1.webp",
@@ -1310,6 +1356,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "İntegral Vize Tunalı Ofisi",
     "location": "Tunalı",
     "category": "kurumsal",
+    "detail": "Şömineli TV duvarını, aydınlatmalı bar raflarını, aydınlatmalı yönetici masasını ve raf ünitelerini ürettik.",
     "images": [
       {
         "src": "/img/projeler/integral-vize-tunali-ofisi-1.webp",
@@ -1410,6 +1457,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Turkuaz Konutları Anahtar Teslim Mobilya",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Mutfağı L planla kurduk: ahşap kaplama üst dolapları açık renk alt dolaplar ve mermer desenli tezgahla birlikte kullandık.",
     "images": [
       {
         "src": "/img/projeler/eryaman-turkuaz-konutlari-anahtar-teslim-mobilya-1.webp",
@@ -1451,6 +1499,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Yapracık TOKİ Konutları",
     "location": "Yapracık",
     "category": "konut",
+    "detail": "Salonda çıtalı panel TV duvarını, mutfakta üst dolapları, cam vitrini ve boy dolapları ürettik.",
     "images": [
       {
         "src": "/img/projeler/yapracik-toki-konutlari-1.webp",
@@ -1593,6 +1642,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Konum Eryaman",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Mutfak ve yemek alanını TV dolabıyla birleştirdik. Yatak odasında TV ve makyaj ünitesini, antrede konsolu ürettik.",
     "images": [
       {
         "src": "/img/projeler/konum-eryaman-1.webp",
@@ -1626,6 +1676,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Etaplar Anahtar Teslim Mobilya",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Mutfakta cam vitrin dolapları, ışıklı tezgah hattını ve boy dolap ile kiler sistemini ürettik.",
     "images": [
       {
         "src": "/img/projeler/eryaman-etaplar-anahtar-teslim-mobilya-1.webp",
@@ -1658,6 +1709,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     "title": "Eryaman Safir Rezidans",
     "location": "Eryaman",
     "category": "konut",
+    "detail": "Yatak odasında boy dolapları ve ahşap detaylı çalışma nişini, salonda aydınlatmalı cam vitrin dolabını ürettik.",
     "images": [
       {
         "src": "/img/projeler/eryaman-safir-rezidans-1.webp",

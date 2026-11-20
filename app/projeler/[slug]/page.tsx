@@ -25,7 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${p.title} | ${place(p.location)} | Noyer Home`
   const description = onlyRender
     ? `${p.title} — ${place(p.location)}. Noyer Home 3D tasarım çalışması ve ölçüye özel mobilya planlaması.`
-    : `${p.title} — ${place(p.location)}. Noyer Home atölyesinde ölçüye özel üretilip yerinde monte edilen mobilyalardan teslim fotoğrafları.`
+    : p.detail
+      ? `${p.title}, ${place(p.location)}. ${p.detail}`
+      : `${p.title} — ${place(p.location)}. Noyer Home atölyesinde ölçüye özel üretilip yerinde monte edilen mobilyalardan teslim fotoğrafları.`
   const img = p.images[0]?.src ?? p.video?.poster
   return {
     title,
@@ -61,11 +63,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <p className="text-xs uppercase tracking-wider text-[#704f36] mb-2">{p.category === "kurumsal" ? "Ofis ve Kurumsal" : "Konut"}</p>
         <h1 className="text-2xl md:text-4xl font-bold text-slate-900 mb-3">{p.title}</h1>
         <p className="inline-flex items-center gap-1.5 text-sm text-slate-500 mb-6"><MapPin className="w-4 h-4" /> {place(p.location)}</p>
-        <p className="text-slate-600 leading-relaxed max-w-3xl mb-8">
+        <p className={`text-slate-600 leading-relaxed max-w-3xl ${p.detail ? "mb-3" : "mb-8"}`}>
           {p.images.some((i) => !i.render)
             ? `Bu projede mobilyaları ${place(p.location)} adresindeki mekâna özel ölçü alarak tasarladık, Noyer Home atölyesinde ürettik ve yerinde monte ettik. Aşağıda teslim sonrası çekilmiş fotoğrafları${p.video ? " ve videoyu" : ""} inceleyebilirsiniz.`
             : `${place(p.location)} için hazırladığımız 3D tasarım çalışması. Mobilyalar mekânın ölçülerine göre planlandı.`}
         </p>
+        {p.detail && <p className="text-slate-600 leading-relaxed max-w-3xl mb-8">{p.detail}</p>}
         <ProjectDetailGallery p={p} />
 
         {svc.length > 0 && (
