@@ -27,9 +27,8 @@ export const ADDRESS = {
 /** Dogrulanmis tek sosyal hesap. */
 export const INSTAGRAM_URL = "https://www.instagram.com/noyer.home/"
 
-/** Hafta ici calisma saatleri (sitede yayinda). Cumartesi bilgisi teyit edilmedi, eklenmedi. */
-export const OPENING_HOURS = {
-  days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-  opens: "09:00",
-  closes: "18:00",
-}
+/** Calisma saatleri: Creative ile ayni (Baskan karari, 16 Kasim 2026). Pazar kapali. */
+export const OPENING_HOURS = [
+  { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "19:00" },
+  { days: ["Saturday"], opens: "10:00", closes: "18:00" },
+]

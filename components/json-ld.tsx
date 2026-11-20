@@ -11,7 +11,7 @@ import {
 // Yalnizca kodda ve yayindaki iletisim bilgilerinde dogrulanan alanlar kullanilir.
 // Bilincli olarak DISARIDA birakilanlar (veri dogrulanmadigi icin):
 //   foundingDate, numberOfEmployees, aggregateRating, review, geo/latitude/longitude,
-//   priceRange, cumartesi calisma saatleri, hizmet verilen marka listesi, uretim kapasitesi.
+//   priceRange, hizmet verilen marka listesi, uretim kapasitesi.
 // Instagram disinda sosyal hesap eklenmemistir.
 
 const organization = {
@@ -59,14 +59,12 @@ const furnitureStore = {
     addressCountry: ADDRESS.country,
   },
   areaServed: { "@type": "City", name: "Ankara" },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: OPENING_HOURS.days,
-      opens: OPENING_HOURS.opens,
-      closes: OPENING_HOURS.closes,
-    },
-  ],
+  openingHoursSpecification: OPENING_HOURS.map((h) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: h.days,
+    opens: h.opens,
+    closes: h.closes,
+  })),
   contactPoint: [
     { "@type": "ContactPoint", telephone: PHONE_PRIMARY_TEL, contactType: "customer service", areaServed: "TR", availableLanguage: ["tr"] },
     { "@type": "ContactPoint", telephone: PHONE_SECONDARY_TEL, contactType: "customer service", areaServed: "TR", availableLanguage: ["tr"] },

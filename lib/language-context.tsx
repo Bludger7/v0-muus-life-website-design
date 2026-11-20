@@ -168,7 +168,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.whatsapp": "WhatsApp ile iletişim",
     "contact.address": "Adres",
     "contact.phone": "İletişim",
-    "contact.hours": "Hafta içi 09:00 - 18:00",
+    "contact.hours": "Hafta içi 09:00 - 19:00, Cumartesi 10:00 - 18:00, Pazar kapalı",
     "contact.social": "Sosyal Medya",
     "contact.showMap": "Haritada Göster",
     // Contact form (Web3Forms)
@@ -361,7 +361,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.whatsapp": "Contact via WhatsApp",
     "contact.address": "Address",
     "contact.phone": "Contact",
-    "contact.hours": "Weekdays 09:00 - 18:00",
+    "contact.hours": "Weekdays 09:00 - 19:00, Saturday 10:00 - 18:00, closed Sunday",
     "contact.social": "Social Media",
     "contact.showMap": "Show on Map",
     // Contact form (Web3Forms)
