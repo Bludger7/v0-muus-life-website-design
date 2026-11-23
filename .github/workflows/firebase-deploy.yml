@@ -34,6 +34,8 @@ jobs:
         run: |
           if test -f firebase-debug.log; then
             grep -Eo 'HTTP Error: [0-9]{3}|status[=: ]+[0-9]{3}|PERMISSION_DENIED|SERVICE_DISABLED|IAM_PERMISSION_DENIED|[a-zA-Z]+\.[a-zA-Z]+\.[a-zA-Z]+ (denied|required)|invalid_grant|invalid_target|unauthorized_client|invalid_request' firebase-debug.log | sort -u || true
+            # Print stack locations and error classes only, never raw debug lines.
+            grep -Eo '(firebase-tools|google-auth-library)/[a-zA-Z0-9_./-]+\.js:[0-9]+:[0-9]+|TypeError|ReferenceError|ENOENT|ETIMEDOUT|ECONNRESET|ENOTFOUND|ERR_[A-Z_]+|Cannot read properties of (undefined|null)' firebase-debug.log | tail -30 || true
           fi
       - name: Canlıya yayımla
         if: github.event_name == 'push' && !contains(github.event.head_commit.message, '[preview only]')
