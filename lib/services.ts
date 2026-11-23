@@ -112,7 +112,7 @@ export const services: Service[] = [
     materials: [...KAPAKLAR],
     includes: ["Vestiyer ve portmanto", "Ayakkabılık", "Oturma alanlı vestiyer", "Dresuar ve ayna", "Lambri ve duvar panelleri"],
     faq: [PROCESS_FAQ, { q: "Dar bir antreye vestiyer sığar mı?", a: "Keşifte geçiş genişliğini ve kapı açılışlarını ölçüyoruz; sığ derinlikli dolaplar ve duvara monte çözümlerle dar girişlerde de verimli planlama yapılabiliyor." }],
-    projects: ["metafor-rezidans-anahtar-teslim-mobilya-projemiz", "ovacik-lavanta-sitesi", "eryaman-ay-yildiz-sitesi", "ata-yildiz-goldelux-sitesi", "saraykent-500-evler"],
+    projects: ["metafor-rezidans-anahtar-teslim-mobilya-projemiz", "ovacik-lavanta-sitesi", "ay-yildiz-sitesi", "ata-yildiz-goldelux-sitesi", "saraykent-500-evler"],
   },
   {
     slug: "kurumsal-ofis-mobilyasi-ankara",

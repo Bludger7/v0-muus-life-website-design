@@ -144,12 +144,10 @@ const translations: Record<Language, Record<string, string>> = {
     "team.subtitle": "Profesyonel ekibimizle her projede mükemmelliği hedefliyoruz. Deneyim ve yaratıcılığı bir araya getirerek hayalinizdeki mekanları gerçeğe dönüştürüyoruz.",
     "team.role.founder": "Kurucu Ortak",
     "team.role.architect": "İç Mimar",
-    "team.role.director": "Firma Sahibi",
+    "team.role.founderPartner": "Kurucu ve Şirket Ortağı",
     "team.role.site": "Şantiye Şefi",
-    "team.role.operations": "Operasyon Sorumlusu",
-    "team.role.partner": "Şirket Ortağı",
-    "team.role.tracking": "İş Takibi ve Müşteri İletişimi",
-    "team.role.field": "Saha Sorumlusu",
+    "team.role.operations": "Operasyon Yöneticisi",
+    "team.role.projectManager": "İç Mimar, Proje ve Ofis Yöneticisi",
     
     // Portfolio
     "portfolio.title": "Portfolyo",
@@ -347,12 +345,10 @@ const translations: Record<Language, Record<string, string>> = {
     "team.subtitle": "We aim for excellence in every project with our professional team. By combining experience and creativity, we turn the spaces of your dreams into reality.",
     "team.role.founder": "Co-Founder",
     "team.role.architect": "Interior Architect",
-    "team.role.director": "Owner",
+    "team.role.founderPartner": "Founder and Partner",
     "team.role.site": "Site Manager",
     "team.role.operations": "Operations Manager",
-    "team.role.partner": "Partner",
-    "team.role.tracking": "Job Tracking & Client Relations",
-    "team.role.field": "Field Supervisor",
+    "team.role.projectManager": "Interior Architect, Project and Office Manager",
     
     // Portfolio
     "portfolio.title": "Portfolio",

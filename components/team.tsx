@@ -15,23 +15,33 @@ export function Team() {
   const teamMembers = [
     {
       name: "Mücahit Okcu",
-      role: t("team.role.director"),
+      role: t("team.role.founderPartner"),
       image: "/img/ekip-mucahit-okcu.webp",
     },
     {
       name: "Fevzi Okcu",
-      role: t("team.role.partner"),
+      role: t("team.role.founderPartner"),
       image: "/img/ekip-fevzi.webp",
     },
     {
       name: "Aleyna Kılınç",
-      role: t("team.role.architect"),
+      role: t("team.role.projectManager"),
       image: "/img/ekip-aleyna-kilinc.webp",
     },
     {
       name: "Yiğit Onurlu",
       role: t("team.role.architect"),
       image: "/img/ekip-yigit-onurlu.webp",
+    },
+    {
+      name: "Birsen Coşkun",
+      role: t("team.role.architect"),
+      image: "/img/ekip-birsen.webp",
+    },
+    {
+      name: "Nuran Kanat",
+      role: t("team.role.architect"),
+      image: "/img/ekip-nuran-kanat.webp",
     },
     {
       name: "Emrah Zengin",
@@ -42,16 +52,6 @@ export function Team() {
       name: "Yunus Emre İnanç",
       role: t("team.role.operations"),
       image: "/img/ekip-yunus-emre-inanc.webp",
-    },
-    {
-      name: "Birsen",
-      role: t("team.role.tracking"),
-      image: "/img/ekip-birsen.webp",
-    },
-    {
-      name: "Enes",
-      role: t("team.role.field"),
-      image: "/img/ekip-enes.webp",
     },
   ]
 

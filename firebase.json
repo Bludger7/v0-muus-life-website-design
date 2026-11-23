@@ -24,12 +24,22 @@
       },
       {
         "source": "/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya{,/**}",
-        "destination": "/projeler/batikent-ferra-sitesi/",
+        "destination": "/projeler/yeni-bati-anahtar-teslim-mobilya/",
         "type": 301
       },
       {
         "source": "/projeler/turgut-ozal-mahallesi-anahtar-teslim-mutfak-projemiz{,/**}",
         "destination": "/projeler/faras-bulvar-1-sitesi/",
+        "type": 301
+      },
+      {
+        "source": "/projeler/eryaman-ay-yildiz-sitesi{,/**}",
+        "destination": "/projeler/ay-yildiz-sitesi/",
+        "type": 301
+      },
+      {
+        "source": "/projeler/bahcelievler-anahtar-teslim-mobilya{,/**}",
+        "destination": "/projeler/emek-anahtar-teslim-mobilya/",
         "type": 301
       }
     ]

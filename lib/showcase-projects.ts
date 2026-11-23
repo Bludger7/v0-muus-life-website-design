@@ -637,7 +637,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "eryaman-yesil-vadi-sitesi",
-    "title": "Eryaman Yeşil Vadi Sitesi",
+    "title": "Eryaman Yeşil Vadim Konutları",
     "location": "Eryaman",
     "category": "konut",
     "detail": "Mutfağı ışıklı cam vitrin dolaplarla kurduk ve yanına kiler dolabı ekledik.",
@@ -705,9 +705,9 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
-    "slug": "eryaman-ay-yildiz-sitesi",
-    "title": "Eryaman Ay Yıldız Sitesi",
-    "location": "Eryaman",
+    "slug": "ay-yildiz-sitesi",
+    "title": "Ay Yıldız Sitesi",
+    "location": "Ata Mahallesi, Yenimahalle",
     "category": "konut",
     "detail": "Salonda ceviz kaplama TV duvarını ürettik. Yemek alanındaki ünite ve kitaplık aynı malzemeyle yapıldı.",
     "images": [
@@ -1411,9 +1411,9 @@ export const showcaseProjects: ShowcaseProject[] = [
     }
   },
   {
-    "slug": "bahcelievler-anahtar-teslim-mobilya",
-    "title": "Bahçelievler Anahtar Teslim Mobilya",
-    "location": "Bahçelievler, Çankaya",
+    "slug": "emek-anahtar-teslim-mobilya",
+    "title": "Emek Anahtar Teslim Mobilya",
+    "location": "Emek, Çankaya",
     "category": "konut",
     "detail": "Yatak odasında yatak üstü dolabı, döşemeli başlık panelini, LED nişli komodinleri ve boy gardırobu tek bir duvar sistemi olarak ürettik.",
     "images": [
@@ -1596,6 +1596,36 @@ export const showcaseProjects: ShowcaseProject[] = [
     "detail": "Mutfak dolaplarını ve ada mutfağı, TV ünitesini ve dresuarı ürettik. Yatak odasında iki gardırop, yatak başlığı arkası paneli ve makyaj masası da atölyemizden çıktı.",
     "images": [
       {
+        "src": "/img/projeler/batikent-ferra-sitesi-teslim-1.webp",
+        "thumb": "/img/projeler/batikent-ferra-sitesi-teslim-1-k.webp"
+      },
+      {
+        "src": "/img/projeler/batikent-ferra-sitesi-teslim-2.webp",
+        "thumb": "/img/projeler/batikent-ferra-sitesi-teslim-2-k.webp"
+      },
+      {
+        "src": "/img/projeler/batikent-ferra-sitesi-teslim-3.webp",
+        "thumb": "/img/projeler/batikent-ferra-sitesi-teslim-3-k.webp"
+      },
+      {
+        "src": "/img/projeler/batikent-ferra-sitesi-teslim-4.webp",
+        "thumb": "/img/projeler/batikent-ferra-sitesi-teslim-4-k.webp"
+      },
+      {
+        "src": "/img/projeler/batikent-ferra-sitesi-teslim-5.webp",
+        "thumb": "/img/projeler/batikent-ferra-sitesi-teslim-5-k.webp"
+      }
+    ],
+    "video": null
+  },
+  {
+    "slug": "yeni-bati-anahtar-teslim-mobilya",
+    "title": "Yeni Batı Anahtar Teslim Daire",
+    "location": "Yeni Batı Mahallesi, Yenimahalle",
+    "category": "konut",
+    "detail": "Salon ve oturma odası için iki TV ünitesiyle L çalışma masasını Noyer Home atölyesinde ürettik.",
+    "images": [
+      {
         "src": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-1.webp",
         "thumb": "/img/projeler/turgut-ozal-mahallesi-anahtar-teslim-mobilya-1-k.webp"
       },
@@ -1647,6 +1677,36 @@ export const showcaseProjects: ShowcaseProject[] = [
     "video": null
   },
   {
+    "slug": "eryaman-lale-evleri-mutfak-yenileme",
+    "title": "Eryaman Lale Evleri Mutfak Yenileme",
+    "location": "Şehit Osman Avcı Mahallesi, Eryaman, Etimesgut",
+    "category": "konut",
+    "detail": "Mutfağın özel ölçü dolaplarını atölyemizde ürettik. Tezgâhı ve eviyeyi yeniledik, tesisat ve elektrik işçiliğini tamamladık.",
+    "images": [
+      {
+        "src": "/img/projeler/eryaman-lale-evleri-teslim-1.webp",
+        "thumb": "/img/projeler/eryaman-lale-evleri-teslim-1-k.webp"
+      },
+      {
+        "src": "/img/projeler/eryaman-lale-evleri-teslim-2.webp",
+        "thumb": "/img/projeler/eryaman-lale-evleri-teslim-2-k.webp"
+      },
+      {
+        "src": "/img/projeler/eryaman-lale-evleri-teslim-3.webp",
+        "thumb": "/img/projeler/eryaman-lale-evleri-teslim-3-k.webp"
+      },
+      {
+        "src": "/img/projeler/eryaman-lale-evleri-teslim-4.webp",
+        "thumb": "/img/projeler/eryaman-lale-evleri-teslim-4-k.webp"
+      },
+      {
+        "src": "/img/projeler/eryaman-lale-evleri-teslim-5.webp",
+        "thumb": "/img/projeler/eryaman-lale-evleri-teslim-5-k.webp"
+      }
+    ],
+    "video": null
+  },
+  {
     "slug": "konum-eryaman",
     "title": "Konum Eryaman",
     "location": "Eryaman",
@@ -1682,8 +1742,8 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "eryaman-etaplar-anahtar-teslim-mobilya",
-    "title": "Eryaman Etaplar Anahtar Teslim Mobilya",
-    "location": "Eryaman",
+    "title": "Eryaman 3. Etap Daire",
+    "location": "Şehit Osman Avcı Mahallesi, Eryaman",
     "category": "konut",
     "detail": "Mutfakta cam vitrin dolapları, ışıklı tezgah hattını ve boy dolap ile kiler sistemini ürettik.",
     "images": [
@@ -1749,7 +1809,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "incek-veteriner-mobilya-uygulamamiz",
     "title": "İncek Veteriner Mobilya Uygulamamız",
-    "location": "İncek",
+    "location": "Beytepe, Çankaya",
     "category": "kurumsal",
     "detail": "Klinik için kedi kafeslerini ürettik.",
     "images": [
@@ -1848,7 +1908,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     "slug": "natura-incek",
     "title": "Natura İncek",
-    "location": "İncek",
+    "location": "Taşpınar, Gölbaşı",
     "category": "konut",
     "images": [
       {
