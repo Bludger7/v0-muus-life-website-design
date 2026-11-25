@@ -1808,7 +1808,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   },
   {
     "slug": "incek-veteriner-mobilya-uygulamamiz",
-    "title": "İncek Veteriner Mobilya Uygulamamız",
+    "title": "Beytepe Veteriner Kliniği Mobilya Uygulamamız",
     "location": "Beytepe, Çankaya",
     "category": "kurumsal",
     "detail": "Klinik için kedi kafeslerini ürettik.",

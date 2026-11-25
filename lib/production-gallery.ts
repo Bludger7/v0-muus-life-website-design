@@ -898,7 +898,7 @@ export const productionGallery: Record<string, GalleryGroup[]> = {
       ]
     },
     {
-      "material": "İncek Veteriner Mobilya Uygulamamız",
+      "material": "Beytepe Veteriner Kliniği Mobilya Uygulamamız",
       "images": [
         {
           "src": "/img/projeler/incek-veteriner-mobilya-uygulamamiz-1.webp",
