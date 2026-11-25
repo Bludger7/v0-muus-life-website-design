@@ -24,6 +24,7 @@ jobs:
       - run: npm run build
       - uses: google-github-actions/auth@v3
         with:
+          service_account: noyer-github-hosting@muus-life.iam.gserviceaccount.com
           project_id: muus-life
           workload_identity_provider: projects/1084433958253/locations/global/workloadIdentityPools/noyer-github-deploy/providers/github
       - name: Önizlemeyi yayımla
